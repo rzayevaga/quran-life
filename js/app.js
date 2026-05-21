@@ -243,7 +243,6 @@
         }
     }
 
- 
     function applySettings() {
         document.body.classList.toggle('night-mode', state.settings.nightMode);
         elements.ayahArabic.style.fontSize = state.settings.arabicFontSize + 'px';
@@ -253,7 +252,7 @@
         elements.nightMode.checked = state.settings.nightMode;
         elements.effects3D.checked = state.settings.effects3D;
         elements.autoScroll.checked = state.settings.autoScroll;
-        elements.reminderToggle.checked = state.settings.reminder; 
+        elements.reminderToggle.checked = state.settings.reminder;
         elements.arabicFontSize.value = state.settings.arabicFontSize;
         elements.transFontSize.value = state.settings.transFontSize;
 
@@ -263,8 +262,6 @@
         } else {
             metaTheme.setAttribute('content', '#1a0a00');
         }
-
-    
     }
 
     function saveSettings() {
@@ -294,39 +291,57 @@
 
     let reminderInterval;
 
-
-    function scheduleReminders() {
-        cancelReminders();
+    
+    function handleReminderToggle() {
         const perm = Notification.permission;
 
         if (perm === 'granted') {
-            reminderInterval = setInterval(() => {
-                const hour = new Date().getHours();
-                if (hour === 6 || hour === 18) {
-                    new Notification('Quran oxumağı unutma', {
-                        body: 'Allahın kəlamı ilə ürəyini nurlandır.',
-                        icon: 'icons/icon-192.png'
-                    });
-                }
-            }, 60000);
-            showToast('Xatırlatma aktiv edildi');
+            
+            state.settings.reminder = !state.settings.reminder;
+            elements.reminderToggle.checked = state.settings.reminder;
+            saveSettings();
+            if (state.settings.reminder) {
+                scheduleReminders();
+            } else {
+                cancelReminders();
+                showToast('Xatırlatma deaktiv edildi');
+            }
         } else if (perm === 'default') {
+        
             Notification.requestPermission().then(p => {
                 if (p === 'granted') {
+                    state.settings.reminder = true;
+                    elements.reminderToggle.checked = true;
+                    saveSettings();
                     scheduleReminders();
                 } else {
-                    showToast('Bildiriş icazəsi verilmədi');
                     state.settings.reminder = false;
                     elements.reminderToggle.checked = false;
                     saveSettings();
+                    showToast('Bildiriş icazəsi verilmədi');
                 }
             });
         } else if (perm === 'denied') {
-            showToast('Bildirişlər bloklanıb. Brauzer ayarlarından icazə verin.');
             state.settings.reminder = false;
             elements.reminderToggle.checked = false;
             saveSettings();
+            showToast('Bildirişlər bloklanıb. Brauzer ayarlarından icazə verin.');
         }
+    }
+
+    function scheduleReminders() {
+        cancelReminders();
+        if (Notification.permission !== 'granted') return;
+        reminderInterval = setInterval(() => {
+            const hour = new Date().getHours();
+            if (hour === 6 || hour === 18) {
+                new Notification('Quran oxumağı unutma', {
+                    body: 'Allahın kəlamı ilə ürəyini nurlandır.',
+                    icon: 'icons/icon-192.png'
+                });
+            }
+        }, 60000);
+        showToast('Xatırlatma aktiv edildi');
     }
 
     function cancelReminders() {
@@ -467,16 +482,10 @@
             saveSettings();
         });
 
-        // *** DÜZƏLİŞ 3: Toggle yalnız istifadəçi kliklədikdə reminder-i idarə etsin ***
-        elements.reminderToggle.addEventListener('change', function() {
-            state.settings.reminder = this.checked;
-            saveSettings();
-            if (state.settings.reminder) {
-                scheduleReminders();
-            } else {
-                cancelReminders();
-                showToast('Xatırlatma deaktiv edildi');
-            }
+    
+        elements.reminderToggle.addEventListener('click', function(e) {
+            e.preventDefault(); 
+            handleReminderToggle();
         });
 
         elements.closeSettings.addEventListener('click', function() {
@@ -527,7 +536,7 @@
     function initServiceWorker() {
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', () => {
-                navigator.serviceWorker.register('/sw.js').catch(() => {});
+                navigator.serviceWorker.register('./sw.js').catch(() => {});
             });
         }
     }
@@ -547,7 +556,7 @@
         listenForSWUpdates();
         setInterval(autoSetNightMode, 60000);
 
-        
+
         if (state.settings.reminder && Notification.permission === 'granted') {
             scheduleReminders();
         }
