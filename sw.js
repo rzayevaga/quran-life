@@ -1,20 +1,28 @@
 // sw.js
-const CACHE_NAME = 'quran-life-v4.0.0'; 
+const CACHE_NAME = 'quran-life-v2.0.1';
 const ASSETS = [
-    '/',
-    '/index.html',
-    '/css/style.css',
-    '/js/app.js',
-    '/data/quran.json',
-    '/manifest.json',
-    '/icons/icon-192.png',
-    '/icons/icon-512.png'
+    './',
+    './index.html',
+    './css/style.css',
+    './js/app.js',
+    './data/quran.json',
+    './manifest.json',
+    './icons/icon-192.png',
+    './icons/icon-512.png'
 ];
 
 self.addEventListener('install', event => {
     self.skipWaiting();
     event.waitUntil(
-        caches.open(CACHE_NAME).then(cache => cache.addAll(ASSETS))
+        caches.open(CACHE_NAME).then(cache => {
+            return Promise.all(
+                ASSETS.map(url => {
+                    return cache.add(url).catch(err => {
+                        console.warn('Failed to cache', url, err);
+                    });
+                })
+            );
+        })
     );
 });
 
@@ -37,7 +45,13 @@ self.addEventListener('activate', event => {
 
 self.addEventListener('fetch', event => {
     event.respondWith(
-        caches.match(event.request).then(response => response || fetch(event.request))
+        caches.match(event.request).then(response => {
+            return response || fetch(event.request).catch(() => {
+                if (event.request.mode === 'navigate') {
+                    return caches.match('./index.html');
+                }
+            });
+        })
     );
 });
 
