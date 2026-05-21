@@ -302,20 +302,61 @@
             const hour = new Date().getHours();
             if (hour === 6 || hour === 18) {
                 if (Notification.permission === 'granted') {
-                    new Notification('Quran oxumağı unutma', { body: 'Allahın kəlamı ilə ürəyini nurlandır.', icon: 'icons/icon-192.png' });
+                    new Notification('Quran oxumağı unutma', {
+                        body: 'Allahın kəlamı ilə ürəyini nurlandır.',
+                        icon: 'icons/icon-192.png'
+                    });
                 } else if (Notification.permission === 'default') {
                     Notification.requestPermission();
                 }
             }
         }, 60000);
-        if (Notification.permission === 'default') {
-            Notification.requestPermission();
-        }
     }
 
     function cancelReminders() {
         if (reminderInterval) clearInterval(reminderInterval);
     }
+
+
+    function listenForSWUpdates() {
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.addEventListener('message', (event) => {
+                if (event.data && event.data.type === 'UPDATE_AVAILABLE') {
+                    showUpdateBanner();
+                }
+            });
+        }
+    }
+
+    function showUpdateBanner() {
+        const existing = document.getElementById('updateBanner');
+        if (existing) existing.remove();
+
+        const banner = document.createElement('div');
+        banner.id = 'updateBanner';
+        banner.style.cssText = `
+            position: fixed; bottom: 100px; left: 50%; transform: translateX(-50%);
+            background: #ff7b2c; color: #fff; padding: 12px 20px;
+            border-radius: 30px; z-index: 999; box-shadow: 0 8px 30px rgba(0,0,0,0.5);
+            display: flex; gap: 12px; align-items: center; font-size: 14px;
+            animation: slideUp 0.4s ease-out; font-family: 'Inter', sans-serif;
+        `;
+        banner.innerHTML = `
+            <span>Yeni versiya mövcuddur</span>
+            <button id="updateAppBtn" style="padding:6px 16px; border-radius:15px; border:none; background:#fff; color:#ff7b2c; font-weight:700; cursor:pointer;">Yenilə</button>
+        `;
+        document.body.appendChild(banner);
+
+        document.getElementById('updateAppBtn').addEventListener('click', () => {
+            if (navigator.serviceWorker) {
+                navigator.serviceWorker.getRegistration().then(reg => {
+                    reg && reg.waiting && reg.waiting.postMessage({ type: 'SKIP_WAITING' });
+                });
+            }
+            window.location.reload();
+        });
+    }
+    
 
     function handlePwaInstall() {
         window.addEventListener('beforeinstallprompt', (e) => {
@@ -484,6 +525,7 @@
         switchTab('quran');
         handlePwaInstall();
         initServiceWorker();
+        listenForSWUpdates();  
         setInterval(autoSetNightMode, 60000);
     }
 
