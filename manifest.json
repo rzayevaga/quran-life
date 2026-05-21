@@ -2,6 +2,7 @@
 {
     "name": "Qur'an Life [LM]",
     "short_name": "Qur'an Life",
+    "version": "3.0.0",
     "description": "Quran oxu, tərcümə və transkripsiya ilə.",
     "start_url": "/",
     "display": "standalone",
