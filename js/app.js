@@ -243,6 +243,7 @@
         }
     }
 
+ 
     function applySettings() {
         document.body.classList.toggle('night-mode', state.settings.nightMode);
         elements.ayahArabic.style.fontSize = state.settings.arabicFontSize + 'px';
@@ -252,7 +253,7 @@
         elements.nightMode.checked = state.settings.nightMode;
         elements.effects3D.checked = state.settings.effects3D;
         elements.autoScroll.checked = state.settings.autoScroll;
-        elements.reminderToggle.checked = state.settings.reminder;
+        elements.reminderToggle.checked = state.settings.reminder; 
         elements.arabicFontSize.value = state.settings.arabicFontSize;
         elements.transFontSize.value = state.settings.transFontSize;
 
@@ -263,11 +264,7 @@
             metaTheme.setAttribute('content', '#1a0a00');
         }
 
-        if (state.settings.reminder) {
-            scheduleReminders();
-        } else {
-            cancelReminders();
-        }
+    
     }
 
     function saveSettings() {
@@ -296,27 +293,45 @@
     }
 
     let reminderInterval;
+
+
     function scheduleReminders() {
         cancelReminders();
-        reminderInterval = setInterval(() => {
-            const hour = new Date().getHours();
-            if (hour === 6 || hour === 18) {
-                if (Notification.permission === 'granted') {
+        const perm = Notification.permission;
+
+        if (perm === 'granted') {
+            reminderInterval = setInterval(() => {
+                const hour = new Date().getHours();
+                if (hour === 6 || hour === 18) {
                     new Notification('Quran oxumağı unutma', {
                         body: 'Allahın kəlamı ilə ürəyini nurlandır.',
                         icon: 'icons/icon-192.png'
                     });
-                } else if (Notification.permission === 'default') {
-                    Notification.requestPermission();
                 }
-            }
-        }, 60000);
+            }, 60000);
+            showToast('Xatırlatma aktiv edildi');
+        } else if (perm === 'default') {
+            Notification.requestPermission().then(p => {
+                if (p === 'granted') {
+                    scheduleReminders();
+                } else {
+                    showToast('Bildiriş icazəsi verilmədi');
+                    state.settings.reminder = false;
+                    elements.reminderToggle.checked = false;
+                    saveSettings();
+                }
+            });
+        } else if (perm === 'denied') {
+            showToast('Bildirişlər bloklanıb. Brauzer ayarlarından icazə verin.');
+            state.settings.reminder = false;
+            elements.reminderToggle.checked = false;
+            saveSettings();
+        }
     }
 
     function cancelReminders() {
         if (reminderInterval) clearInterval(reminderInterval);
     }
-
 
     function listenForSWUpdates() {
         if ('serviceWorker' in navigator) {
@@ -356,7 +371,6 @@
             window.location.reload();
         });
     }
-    
 
     function handlePwaInstall() {
         window.addEventListener('beforeinstallprompt', (e) => {
@@ -453,11 +467,16 @@
             saveSettings();
         });
 
+        // *** DÜZƏLİŞ 3: Toggle yalnız istifadəçi kliklədikdə reminder-i idarə etsin ***
         elements.reminderToggle.addEventListener('change', function() {
             state.settings.reminder = this.checked;
-            applySettings();
             saveSettings();
-            showToast(this.checked ? 'Xatırlatma aktiv' : 'Xatırlatma deaktiv');
+            if (state.settings.reminder) {
+                scheduleReminders();
+            } else {
+                cancelReminders();
+                showToast('Xatırlatma deaktiv edildi');
+            }
         });
 
         elements.closeSettings.addEventListener('click', function() {
@@ -525,8 +544,13 @@
         switchTab('quran');
         handlePwaInstall();
         initServiceWorker();
-        listenForSWUpdates();  
+        listenForSWUpdates();
         setInterval(autoSetNightMode, 60000);
+
+        
+        if (state.settings.reminder && Notification.permission === 'granted') {
+            scheduleReminders();
+        }
     }
 
     document.addEventListener('DOMContentLoaded', init);
