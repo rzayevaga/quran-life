@@ -1,0 +1,17 @@
+{
+  "id": 12,
+  "name_ar": "يوسف",
+  "name_az": "Yusif",
+  "name_trans": "Yusuf",
+  "type": "Məkkə",
+  "ayah_count": 111,
+  "juz": 12,
+  "ayahs": [
+    {
+      "number": 1,
+      "arabic": "الر ۚ تِلْكَ آيَاتُ الْكِتَابِ الْمُبِينِ",
+      "transliteration": "Alif-Lam-Ra. Tilka ayatul-Kitabil-Mubin",
+      "translation_az": "Əlif, Lam, Ra. Bunlar aydın Kitabın ayələridir."
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "id": 40,
+  "name_ar": "غافر",
+  "name_az": "Ğafir",
+  "name_trans": "Ghafir",
+  "type": "Məkkə",
+  "ayah_count": 85,
+  "juz": 24,
+  "ayahs": [
+    {
+      "number": 1,
+      "arabic": "حم",
+      "transliteration": "Ha-Mim",
+      "translation_az": "Ha, Mim."
+    }
+  ]
+}

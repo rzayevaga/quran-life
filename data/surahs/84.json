@@ -1,0 +1,17 @@
+{
+  "id": 84,
+  "name_ar": "الإنشقاق",
+  "name_az": "İnşiqaq",
+  "name_trans": "Al-Inshiqaq",
+  "type": "Məkkə",
+  "ayah_count": 25,
+  "juz": 30,
+  "ayahs": [
+    {
+      "number": 1,
+      "arabic": "إِذَا السَّمَاءُ انشَقَّتْ",
+      "transliteration": "Idhas-sama'u inshaqqat",
+      "translation_az": "Göy parçalanacağı zaman,"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "id": 16,
+  "name_ar": "النحل",
+  "name_az": "Nəhl",
+  "name_trans": "An-Nahl",
+  "type": "Məkkə",
+  "ayah_count": 128,
+  "juz": 14,
+  "ayahs": [
+    {
+      "number": 1,
+      "arabic": "أَتَىٰ أَمْرُ اللَّهِ فَلَا تَسْتَعْجِلُوهُ...",
+      "transliteration": "Ata amrullahi fala tasta'jiluh...",
+      "translation_az": "Allahın əmri gələcəkdir. Onu tələsik istəməyin..."
+    }
+  ]
+}

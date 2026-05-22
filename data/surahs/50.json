@@ -1,0 +1,17 @@
+{
+  "id": 50,
+  "name_ar": "ق",
+  "name_az": "Qaf",
+  "name_trans": "Qaf",
+  "type": "Məkkə",
+  "ayah_count": 45,
+  "juz": 26,
+  "ayahs": [
+    {
+      "number": 1,
+      "arabic": "ق ۚ وَالْقُرْآنِ الْمَجِيدِ",
+      "transliteration": "Qaf, wal-Qur'anil-Majid",
+      "translation_az": "Qaf! Şanlı Qurana and olsun!"
+    }
+  ]
+}

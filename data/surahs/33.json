@@ -1,0 +1,17 @@
+{
+  "id": 33,
+  "name_ar": "الأحزاب",
+  "name_az": "Əhzab",
+  "name_trans": "Al-Ahzab",
+  "type": "Mədinə",
+  "ayah_count": 73,
+  "juz": 21,
+  "ayahs": [
+    {
+      "number": 1,
+      "arabic": "يَا أَيُّهَا النَّبِيُّ اتَّقِ اللَّهَ...",
+      "transliteration": "Ya ayyuhan-nabiyyut-taqillah...",
+      "translation_az": "Ey Peyğəmbər! Allahdan qorx..."
+    }
+  ]
+}

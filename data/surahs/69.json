@@ -1,0 +1,17 @@
+{
+  "id": 69,
+  "name_ar": "الحاقة",
+  "name_az": "Haqqə",
+  "name_trans": "Al-Haqqa",
+  "type": "Məkkə",
+  "ayah_count": 52,
+  "juz": 29,
+  "ayahs": [
+    {
+      "number": 1,
+      "arabic": "الْحَاقَّةُ",
+      "transliteration": "Al-Haqqah",
+      "translation_az": "Haqq olan Qiyamət!"
+    }
+  ]
+}

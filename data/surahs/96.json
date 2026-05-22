@@ -1,0 +1,17 @@
+{
+  "id": 96,
+  "name_ar": "العلق",
+  "name_az": "Ələq",
+  "name_trans": "Al-'Alaq",
+  "type": "Məkkə",
+  "ayah_count": 19,
+  "juz": 30,
+  "ayahs": [
+    {
+      "number": 1,
+      "arabic": "اقْرَأْ بِاسْمِ رَبِّكَ الَّذِي خَلَقَ",
+      "transliteration": "Iqra' bismi rabbikalladhi khalaq",
+      "translation_az": "Oxu yaradan Rəbbinin adı ilə!"
+    }
+  ]
+}

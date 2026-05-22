@@ -1,0 +1,17 @@
+{
+  "id": 94,
+  "name_ar": "الشرح",
+  "name_az": "Şərh",
+  "name_trans": "Ash-Sharh",
+  "type": "Məkkə",
+  "ayah_count": 8,
+  "juz": 30,
+  "ayahs": [
+    {
+      "number": 1,
+      "arabic": "أَلَمْ نَشْرَحْ لَكَ صَدْرَكَ",
+      "transliteration": "Alam nashrah laka sadrak",
+      "translation_az": "Məgər Biz sənin üçün köksünü açmadıqmı?"
+    }
+  ]
+}

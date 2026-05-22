@@ -1,0 +1,53 @@
+{
+  "id": 1,
+  "name_ar": "الفاتحة",
+  "name_az": "Fatihə",
+  "name_trans": "Al-Fatiha",
+  "type": "Məkkə",
+  "ayah_count": 7,
+  "juz": 1,
+  "ayahs": [
+    {
+      "number": 1,
+      "arabic": "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ",
+      "transliteration": "Bismillahir-Rahmanir-Rahim",
+      "translation_az": "Mərhəmətli və Rəhmli Allahın adı ilə!"
+    },
+    {
+      "number": 2,
+      "arabic": "الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ",
+      "transliteration": "Alhamdu lillahi Rabbil-'alamin",
+      "translation_az": "Həmd (şükür və tərif) aləmlərin Rəbbi Allaha məxsusdur!"
+    },
+    {
+      "number": 3,
+      "arabic": "الرَّحْمَٰنِ الرَّحِيمِ",
+      "transliteration": "Ar-Rahmanir-Rahim",
+      "translation_az": "Mərhəmətli və Rəhmli olana!"
+    },
+    {
+      "number": 4,
+      "arabic": "مَالِكِ يَوْمِ الدِّينِ",
+      "transliteration": "Maliki yawmid-din",
+      "translation_az": "Haqq-Hesab gününün sahibinə!"
+    },
+    {
+      "number": 5,
+      "arabic": "إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ",
+      "transliteration": "Iyyaka na'budu wa iyyaka nasta'in",
+      "translation_az": "Yalnız Sənə ibadət edirik və yalnız Səndən kömək diləyirik!"
+    },
+    {
+      "number": 6,
+      "arabic": "اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ",
+      "transliteration": "Ihdinas-siratal-mustaqim",
+      "translation_az": "Bizi doğru yola yönəlt!"
+    },
+    {
+      "number": 7,
+      "arabic": "صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوبِ عَلَيْهِمْ وَلَا الضَّالِّينَ",
+      "transliteration": "Siratal-ladhina an'amta 'alayhim ghayril-maghdubi 'alayhim wa lad-dallin",
+      "translation_az": "Nemət verdiyin kəslərin yoluna! Qəzəbə düçar olmuşların və azmışların yox!"
+    }
+  ]
+}

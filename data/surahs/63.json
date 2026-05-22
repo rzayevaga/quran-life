@@ -1,0 +1,17 @@
+{
+  "id": 63,
+  "name_ar": "المنافقون",
+  "name_az": "Munafiqun",
+  "name_trans": "Al-Munafiqun",
+  "type": "Mədinə",
+  "ayah_count": 11,
+  "juz": 28,
+  "ayahs": [
+    {
+      "number": 1,
+      "arabic": "إِذَا جَاءَكَ الْمُنَافِقُونَ قَالُوا نَشْهَدُ إِنَّكَ لَرَسُولُ اللَّهِ...",
+      "transliteration": "Idha ja'akal-munafiquna qalu...",
+      "translation_az": "Munafiqlər sənin yanına gəldikləri zaman deyirlər: Şəhadət veririk ki, sən Allahın Rəsulusan..."
+    }
+  ]
+}

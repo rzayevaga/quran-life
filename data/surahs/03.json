@@ -1,0 +1,23 @@
+{
+  "id": 3,
+  "name_ar": "آل عمران",
+  "name_az": "Ali-İmran",
+  "name_trans": "Aal-E-Imran",
+  "type": "Mədinə",
+  "ayah_count": 200,
+  "juz": 3,
+  "ayahs": [
+    {
+      "number": 1,
+      "arabic": "الم",
+      "transliteration": "Alif-Lam-Mim",
+      "translation_az": "Əlif, Lam, Mim."
+    },
+    {
+      "number": 2,
+      "arabic": "اللَّهُ لَا إِلَٰهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ",
+      "transliteration": "Allahu la ilaha illa Huwal-Hayyul-Qayyum",
+      "translation_az": "Allah! Ondan başqa ilah yoxdur. O, əbədi Diridir, hər şeyi Qoruyub Saxlayandır."
+    }
+  ]
+}

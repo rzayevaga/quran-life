@@ -1,0 +1,17 @@
+{
+  "id": 83,
+  "name_ar": "المطففين",
+  "name_az": "Mutəffifin",
+  "name_trans": "Al-Mutaffifin",
+  "type": "Məkkə",
+  "ayah_count": 36,
+  "juz": 30,
+  "ayahs": [
+    {
+      "number": 1,
+      "arabic": "وَيْلٌ لِّلْمُطَفِّفِينَ",
+      "transliteration": "Waylul-lil-mutaffifin",
+      "translation_az": "Vay halına çəkidə və ölçüdə aldadanların!"
+    }
+  ]
+}

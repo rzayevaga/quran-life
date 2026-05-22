@@ -37,6 +37,7 @@
     let mapInstance = null;
     let userMarker = null;
     let uploadedAzanUrl = null;
+    let lastHourlyAyahStamp = null;
 
     const AZAN_OPTIONS = [
         { file: 'https://www.aladhan.com/audio/azan/1/azan1.mp3', name: 'Məkkə (1)' },
@@ -168,6 +169,27 @@
         elements.favoriteBtn.classList.toggle('active-fav', isFav);
 
         animateAyahCard();
+        saveLastReadPosition();
+    }
+
+    function saveLastReadPosition() {
+        localStorage.setItem('quran-last-position', JSON.stringify({
+            surahIndex: state.currentSurahIndex,
+            ayahIndex: state.currentAyahIndex,
+            ts: Date.now()
+        }));
+    }
+
+    function restoreLastReadPosition() {
+        try {
+            const saved = JSON.parse(localStorage.getItem('quran-last-position') || 'null');
+            if (!saved) return;
+            if (saved.surahIndex >= 0 && saved.surahIndex < QURAN_DATA.surahs.length) {
+                state.currentSurahIndex = saved.surahIndex;
+                const count = QURAN_DATA.surahs[saved.surahIndex].ayah_count;
+                state.currentAyahIndex = Math.max(0, Math.min(saved.ayahIndex || 0, count - 1));
+            }
+        } catch (e) {}
     }
 
     function animateAyahCard() {
@@ -545,8 +567,31 @@
                 n.className = 'notif-item';
                 n.textContent = `${new Date().toLocaleTimeString('az-AZ')} — ${title}: ${body}`;
                 elements.notificationPanel.prepend(n);
+                while (elements.notificationPanel.children.length > 50) {
+                    elements.notificationPanel.lastElementChild.remove();
+                }
+                persistNotificationFeed();
             }
         }
+    }
+
+    function persistNotificationFeed() {
+        if (!elements.notificationPanel) return;
+        const entries = Array.from(elements.notificationPanel.children).map(el => el.textContent).slice(0, 50);
+        localStorage.setItem('quran-notification-feed', JSON.stringify(entries));
+    }
+
+    function restoreNotificationFeed() {
+        if (!elements.notificationPanel) return;
+        try {
+            const entries = JSON.parse(localStorage.getItem('quran-notification-feed') || '[]');
+            entries.forEach(text => {
+                const n = document.createElement('div');
+                n.className = 'notif-item';
+                n.textContent = text;
+                elements.notificationPanel.appendChild(n);
+            });
+        } catch (e) {}
     }
 
     function handleDailyAyahToggle() {
@@ -652,7 +697,11 @@
                 prayerTimesCache = cached;
                 return;
             }
-            const resp = await fetch(`https://api.aladhan.com/v1/timingsByCity?city=${encodeURIComponent(city)}&country=Azerbaijan&method=${method}`);
+            let apiUrl = `https://api.aladhan.com/v1/timingsByCity?city=${encodeURIComponent(city)}&country=Azerbaijan&method=${method}`;
+            if (state.userLocation?.lat && state.userLocation?.lng) {
+                apiUrl = `https://api.aladhan.com/v1/timings/${today}?latitude=${state.userLocation.lat}&longitude=${state.userLocation.lng}&method=${method}`;
+            }
+            const resp = await fetch(apiUrl);
             if (!resp.ok) throw new Error('Şəbəkə xətası');
             const data = await resp.json();
             prayerTimesCache = { city, method, date: today, timings: data.data.timings };
@@ -1051,6 +1100,9 @@
     function startHourlyAyahNotifications() {
         setInterval(() => {
             if (Notification.permission === 'granted') {
+                const hourStamp = new Date().toISOString().slice(0, 13);
+                if (lastHourlyAyahStamp === hourStamp) return;
+                lastHourlyAyahStamp = hourStamp;
                 const a = getRandomAyah();
                 sendNotification(`Saatlıq ayə — ${a.surahName} ${a.number}`, a.translation.substring(0,120));
             }
@@ -1060,6 +1112,7 @@
     function init() {
         cacheElements();
         loadSettings();
+        restoreLastReadPosition();
         populateSurahSelect();
         initAzanSelect();
         autoSetNightMode();
@@ -1068,6 +1121,7 @@
         createParticles();
         bindEvents();
         switchTab('quran');
+        restoreNotificationFeed();
         handlePwaInstall();
         initServiceWorker();
         setInterval(autoSetNightMode, 60000);

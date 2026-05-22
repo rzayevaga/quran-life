@@ -1,0 +1,17 @@
+{
+  "id": 91,
+  "name_ar": "الشمس",
+  "name_az": "Şəms",
+  "name_trans": "Ash-Shams",
+  "type": "Məkkə",
+  "ayah_count": 15,
+  "juz": 30,
+  "ayahs": [
+    {
+      "number": 1,
+      "arabic": "وَالشَّمْسِ وَضُحَاهَا",
+      "transliteration": "Wash-shamsi wa duhaha",
+      "translation_az": "And olsun Günəşə və onun işığına!"
+    }
+  ]
+}

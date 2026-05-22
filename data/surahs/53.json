@@ -1,0 +1,17 @@
+{
+  "id": 53,
+  "name_ar": "النجم",
+  "name_az": "Nəcm",
+  "name_trans": "An-Najm",
+  "type": "Məkkə",
+  "ayah_count": 62,
+  "juz": 27,
+  "ayahs": [
+    {
+      "number": 1,
+      "arabic": "وَالنَّجْمِ إِذَا هَوَىٰ",
+      "transliteration": "Wan-najmi idha hawa",
+      "translation_az": "Batmaqda olan ulduza and olsun ki,"
+    }
+  ]
+}

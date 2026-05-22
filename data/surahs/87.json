@@ -1,0 +1,17 @@
+{
+  "id": 87,
+  "name_ar": "الأعلى",
+  "name_az": "Əla",
+  "name_trans": "Al-A'la",
+  "type": "Məkkə",
+  "ayah_count": 19,
+  "juz": 30,
+  "ayahs": [
+    {
+      "number": 1,
+      "arabic": "سَبِّحِ اسْمَ رَبِّكَ الْأَعْلَى",
+      "transliteration": "Sabbihisma rabbikal-a'la",
+      "translation_az": "Ən Uca Rəbbinin adını təqdis et!"
+    }
+  ]
+}

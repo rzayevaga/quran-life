@@ -1,0 +1,17 @@
+{
+  "id": 79,
+  "name_ar": "النازعات",
+  "name_az": "Naziat",
+  "name_trans": "An-Nazi'at",
+  "type": "Məkkə",
+  "ayah_count": 46,
+  "juz": 30,
+  "ayahs": [
+    {
+      "number": 1,
+      "arabic": "وَالنَّازِعَاتِ غَرْقًا",
+      "transliteration": "Wan-nazi'ati gharqa",
+      "translation_az": "And olsun şiddətlə çəkib alanlara!"
+    }
+  ]
+}

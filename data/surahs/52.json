@@ -1,0 +1,17 @@
+{
+  "id": 52,
+  "name_ar": "الطور",
+  "name_az": "Tur",
+  "name_trans": "At-Tur",
+  "type": "Məkkə",
+  "ayah_count": 49,
+  "juz": 27,
+  "ayahs": [
+    {
+      "number": 1,
+      "arabic": "وَالطُّورِ",
+      "transliteration": "Wat-Tur",
+      "translation_az": "And olsun Tur dağına!"
+    }
+  ]
+}
