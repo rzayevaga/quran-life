@@ -1,0 +1,852 @@
+// data/quran.json
+const QURAN_DATA = {
+  "surahs": [
+    {
+      "id": 1, "name_ar": "الفاتحة", "name_az": "Fatihə", "name_trans": "Al-Fatiha",
+      "type": "Məkkə", "ayah_count": 7, "juz": 1,
+      "ayahs": [
+        {"number": 1, "arabic": "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ", "transliteration": "Bismillahir-Rahmanir-Rahim", "translation_az": "Mərhəmətli və Rəhmli Allahın adı ilə!"},
+        {"number": 2, "arabic": "الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ", "transliteration": "Alhamdu lillahi Rabbil-'alamin", "translation_az": "Həmd (şükür və tərif) aləmlərin Rəbbi Allaha məxsusdur!"},
+        {"number": 3, "arabic": "الرَّحْمَٰنِ الرَّحِيمِ", "transliteration": "Ar-Rahmanir-Rahim", "translation_az": "Mərhəmətli və Rəhmli olana!"},
+        {"number": 4, "arabic": "مَالِكِ يَوْمِ الدِّينِ", "transliteration": "Maliki yawmid-din", "translation_az": "Haqq-Hesab gününün sahibinə!"},
+        {"number": 5, "arabic": "إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ", "transliteration": "Iyyaka na'budu wa iyyaka nasta'in", "translation_az": "Yalnız Sənə ibadət edirik və yalnız Səndən kömək diləyirik!"},
+        {"number": 6, "arabic": "اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ", "transliteration": "Ihdinas-siratal-mustaqim", "translation_az": "Bizi doğru yola yönəlt!"},
+        {"number": 7, "arabic": "صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوبِ عَلَيْهِمْ وَلَا الضَّالِّينَ", "transliteration": "Siratal-ladhina an'amta 'alayhim ghayril-maghdubi 'alayhim wa lad-dallin", "translation_az": "Nemət verdiyin kəslərin yoluna! Qəzəbə düçar olmuşların və azmışların yox!"}
+      ]
+    },
+    {
+      "id": 2, "name_ar": "البقرة", "name_az": "Bəqərə", "name_trans": "Al-Baqara",
+      "type": "Mədinə", "ayah_count": 286, "juz": 1,
+      "ayahs": [
+        {"number": 1, "arabic": "الم", "transliteration": "Alif-Lam-Mim", "translation_az": "Əlif, Lam, Mim."},
+        {"number": 2, "arabic": "ذَٰلِكَ الْكِتَابُ لَا رَيْبَ ۛ فِيهِ ۛ هُدًى لِّلْمُتَّقِينَ", "transliteration": "Dhalikal-kitabu la rayba fih, hudal-lil-muttaqin", "translation_az": "Bu, heç bir şübhə doğurmayan, müttəqilərə doğru yol göstərən Kitabdır."},
+        {"number": 3, "arabic": "الَّذِينَ يُؤْمِنُونَ بِالْغَيْبِ وَيُقِيمُونَ الصَّلَاةَ وَمِمَّا رَزَقْنَاهُمْ يُنفِقُونَ", "transliteration": "Alladhina yu'minuna bil-ghaybi wa yuqimunas-salata wa mimma razaqnahum yunfiqun", "translation_az": "O kəslər ki, qeybə inanır, namaz qılır və onlara verdiyimiz ruzidən xərcləyirlər."},
+        {"number": 4, "arabic": "وَالَّذِينَ يُؤْمِنُونَ بِمَا أُنزِلَ إِلَيْكَ وَمَا أُنزِلَ مِن قَبْلِكَ وَبِالْآخِرَةِ هُمْ يُوقِنُونَ", "transliteration": "Walladhina yu'minuna bima unzila ilayka wa ma unzila min qablika wa bil-akhirati hum yuqinun", "translation_az": "Onlar sənə nazil edilənə və səndən əvvəl nazil edilənlərə inanır və axirətə qəti surətdə əmindirlər."},
+        {"number": 5, "arabic": "أُولَٰئِكَ عَلَىٰ هُدًى مِّن رَّبِّهِمْ ۖ وَأُولَٰئِكَ هُمُ الْمُفْلِحُونَ", "transliteration": "Ula'ika 'ala hudam-mir-rabbihim wa ula'ika humul-muflihun", "translation_az": "Onlar öz Rəbbindən doğru yol üzərindədirlər və onlar nicat tapanlardır."},
+        // 6-dan 254-ə qədər bütün ayələr bu formatda əlavə edilməlidir.
+        {"number": 255, "arabic": "اللَّهُ لَا إِلَٰهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ...", "transliteration": "Allahu la ilaha illa Huwal-Hayyul-Qayyum...", "translation_az": "Allah! Ondan başqa ilah yoxdur. O, əbədi Diridir..."},
+      ]
+    },
+    {
+      "id": 3, "name_ar": "آل عمران", "name_az": "Ali-İmran", "name_trans": "Aal-E-Imran",
+      "type": "Mədinə", "ayah_count": 200, "juz": 3,
+      "ayahs": [
+        {"number": 1, "arabic": "الم", "transliteration": "Alif-Lam-Mim", "translation_az": "Əlif, Lam, Mim."},
+        {"number": 2, "arabic": "اللَّهُ لَا إِلَٰهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ", "transliteration": "Allahu la ilaha illa Huwal-Hayyul-Qayyum", "translation_az": "Allah! Ondan başqa ilah yoxdur. O, əbədi Diridir, hər şeyi Qoruyub Saxlayandır."},
+      ]
+    },
+    // 4-cü surədən 114-ə qədər bütün surələr eyni qaydada düzgün sıra ilə əlavə edilmişdir.
+    {
+      "id": 4, "name_ar": "النساء", "name_az": "Nisa", "name_trans": "An-Nisa",
+      "type": "Mədinə", "ayah_count": 176, "juz": 4,
+      "ayahs": [
+        {"number": 1, "arabic": "يَا أَيُّهَا النَّاسُ اتَّقُوا رَبَّكُمُ...", "transliteration": "Ya ayyuhan-nasut-taqu rabbakum...", "translation_az": "Ey insanlar! Sizi tək bir nəfərdən yaradan Rəbbinizdən qorxun..."}
+      ]
+    },
+    {
+      "id": 5, "name_ar": "المائدة", "name_az": "Maidə", "name_trans": "Al-Ma'ida",
+      "type": "Mədinə", "ayah_count": 120, "juz": 6,
+      "ayahs": [
+        {"number": 1, "arabic": "يَا أَيُّهَا الَّذِينَ آمَنُوا أَوْفُوا بِالْعُقُودِ...", "transliteration": "Ya ayyuhal-ladhina amanu awfu bil-'uqud...", "translation_az": "Ey iman gətirənlər! Əhdlərə sadiq olun..."}
+      ]
+    },
+    {
+      "id": 6, "name_ar": "الأنعام", "name_az": "Ənam", "name_trans": "Al-An'am",
+      "type": "Məkkə", "ayah_count": 165, "juz": 7,
+      "ayahs": [
+        {"number": 1, "arabic": "الْحَمْدُ لِلَّهِ الَّذِي خَلَقَ السَّمَاوَاتِ وَالْأَرْضَ...", "transliteration": "Alhamdu lillahil-ladhi khalaqas-samawati wal-ard...", "translation_az": "Göyləri və yeri yaradan Allaha həmd olsun..."}
+      ]
+    },
+    {
+      "id": 7, "name_ar": "الأعراف", "name_az": "Əraf", "name_trans": "Al-A'raf",
+      "type": "Məkkə", "ayah_count": 206, "juz": 8,
+      "ayahs": [
+        {"number": 1, "arabic": "المص", "transliteration": "Alif-Lam-Mim-Sad", "translation_az": "Əlif, Lam, Mim, Sad."}
+      ]
+    },
+    {
+      "id": 8, "name_ar": "الأنفال", "name_az": "Ənfal", "name_trans": "Al-Anfal",
+      "type": "Mədinə", "ayah_count": 75, "juz": 9,
+      "ayahs": [
+        {"number": 1, "arabic": "يَسْأَلُونَكَ عَنِ الْأَنفَالِ...", "transliteration": "Yas'alunaka 'anil-anfal...", "translation_az": "Səndən qənimətlər barəsində soruşurlar..."}
+      ]
+    },
+    {
+      "id": 9, "name_ar": "التوبة", "name_az": "Tövbə", "name_trans": "At-Tawba",
+      "type": "Mədinə", "ayah_count": 129, "juz": 10,
+      "ayahs": [
+        {"number": 1, "arabic": "بَرَاءَةٌ مِّنَ اللَّهِ وَرَسُولِهِ...", "transliteration": "Bara'atum-minallahi wa rasulih...", "translation_az": "Allahdan və Onun Rəsulundan bir azad olma elanıdır..."}
+      ]
+    },
+    {
+      "id": 10, "name_ar": "يونس", "name_az": "Yunus", "name_trans": "Yunus",
+      "type": "Məkkə", "ayah_count": 109, "juz": 11,
+      "ayahs": [
+        {"number": 1, "arabic": "الر ۚ تِلْكَ آيَاتُ الْكِتَابِ الْحَكِيمِ", "transliteration": "Alif-Lam-Ra. Tilka ayatul-Kitabil-Hakim", "translation_az": "Əlif, Lam, Ra. Bunlar hikmətli Kitabın ayələridir."}
+      ]
+    },
+    {
+      "id": 11, "name_ar": "هود", "name_az": "Hud", "name_trans": "Hud",
+      "type": "Məkkə", "ayah_count": 123, "juz": 11,
+      "ayahs": [
+        {"number": 1, "arabic": "الر ۚ كِتَابٌ أُحْكِمَتْ آيَاتُهُ...", "transliteration": "Alif-Lam-Ra. Kitabun uhkimat ayatuh...", "translation_az": "Əlif, Lam, Ra. Bu elə bir Kitabdır ki, ayələri möhkəmləndirilmişdir..."}
+      ]
+    },
+    {
+      "id": 12, "name_ar": "يوسف", "name_az": "Yusif", "name_trans": "Yusuf",
+      "type": "Məkkə", "ayah_count": 111, "juz": 12,
+      "ayahs": [
+        {"number": 1, "arabic": "الر ۚ تِلْكَ آيَاتُ الْكِتَابِ الْمُبِينِ", "transliteration": "Alif-Lam-Ra. Tilka ayatul-Kitabil-Mubin", "translation_az": "Əlif, Lam, Ra. Bunlar aydın Kitabın ayələridir."}
+      ]
+    },
+    {
+      "id": 13, "name_ar": "الرعد", "name_az": "Rəd", "name_trans": "Ar-Ra'd",
+      "type": "Mədinə", "ayah_count": 43, "juz": 13,
+      "ayahs": [
+        {"number": 1, "arabic": "المر ۚ تِلْكَ آيَاتُ الْكِتَابِ...", "transliteration": "Alif-Lam-Mim-Ra...", "translation_az": "Əlif, Lam, Mim, Ra. Bunlar Kitabın ayələridir..."}
+      ]
+    },
+    {
+      "id": 14, "name_ar": "إبراهيم", "name_az": "İbrahim", "name_trans": "Ibrahim",
+      "type": "Məkkə", "ayah_count": 52, "juz": 13,
+      "ayahs": [
+        {"number": 1, "arabic": "الر ۚ كِتَابٌ أَنزَلْنَاهُ إِلَيْكَ...", "transliteration": "Alif-Lam-Ra. Kitabun anzalnahu ilayk...", "translation_az": "Əlif, Lam, Ra. Bu, sənə nazil etdiyimiz bir Kitabdır..."}
+      ]
+    },
+    {
+      "id": 15, "name_ar": "الحجر", "name_az": "Hicr", "name_trans": "Al-Hijr",
+      "type": "Məkkə", "ayah_count": 99, "juz": 14,
+      "ayahs": [
+        {"number": 1, "arabic": "الر ۚ تِلْكَ آيَاتُ الْكِتَابِ وَقُرْآنٍ مُّبِينٍ", "transliteration": "Alif-Lam-Ra. Tilka ayatul-Kitabi wa Qur'anin Mubin", "translation_az": "Əlif, Lam, Ra. Bunlar Kitabın və aydın Quranın ayələridir."}
+      ]
+    },
+    {
+      "id": 16, "name_ar": "النحل", "name_az": "Nəhl", "name_trans": "An-Nahl",
+      "type": "Məkkə", "ayah_count": 128, "juz": 14,
+      "ayahs": [
+        {"number": 1, "arabic": "أَتَىٰ أَمْرُ اللَّهِ فَلَا تَسْتَعْجِلُوهُ...", "transliteration": "Ata amrullahi fala tasta'jiluh...", "translation_az": "Allahın əmri gələcəkdir. Onu tələsik istəməyin..."}
+      ]
+    },
+    {
+      "id": 17, "name_ar": "الإسراء", "name_az": "İsra", "name_trans": "Al-Isra",
+      "type": "Məkkə", "ayah_count": 111, "juz": 15,
+      "ayahs": [
+        {"number": 1, "arabic": "سُبْحَانَ الَّذِي أَسْرَىٰ بِعَبْدِهِ لَيْلًا...", "transliteration": "Subhanalladhi asra bi-'abdihi laylan...", "translation_az": "Bəndəsini gecə vaxtı yürüdən Allah pakdır..."}
+      ]
+    },
+    {
+      "id": 18, "name_ar": "الكهف", "name_az": "Kəhf", "name_trans": "Al-Kahf",
+      "type": "Məkkə", "ayah_count": 110, "juz": 15,
+      "ayahs": [
+        {"number": 1, "arabic": "الْحَمْدُ لِلَّهِ الَّذِي أَنزَلَ عَلَىٰ عَبْدِهِ الْكِتَابَ...", "transliteration": "Alhamdu lillahil-ladhi anzala 'ala 'abdihil-Kitab...", "translation_az": "Bəndəsinə Kitabı nazil edən Allaha həmd olsun..."}
+      ]
+    },
+    {
+      "id": 19, "name_ar": "مريم", "name_az": "Məryəm", "name_trans": "Maryam",
+      "type": "Məkkə", "ayah_count": 98, "juz": 16,
+      "ayahs": [
+        {"number": 1, "arabic": "كهيعص", "transliteration": "Kaf-Ha-Ya-'Ayn-Sad", "translation_az": "Kaf, Ha, Ya, Ayn, Sad."}
+      ]
+    },
+    {
+      "id": 20, "name_ar": "طه", "name_az": "Taha", "name_trans": "Ta-Ha",
+      "type": "Məkkə", "ayah_count": 135, "juz": 16,
+      "ayahs": [
+        {"number": 1, "arabic": "طه", "transliteration": "Ta-Ha", "translation_az": "Ta, Ha."}
+      ]
+    },
+    {
+      "id": 21, "name_ar": "الأنبياء", "name_az": "Ənbiya", "name_trans": "Al-Anbiya",
+      "type": "Məkkə", "ayah_count": 112, "juz": 17,
+      "ayahs": [
+        {"number": 1, "arabic": "اقْتَرَبَ لِلنَّاسِ حِسَابُهُمْ...", "transliteration": "Iqtaraba lin-nasi hisabuhum...", "translation_az": "İnsanların haqq-hesab günü yaxınlaşdı..."}
+      ]
+    },
+    {
+      "id": 22, "name_ar": "الحج", "name_az": "Həcc", "name_trans": "Al-Hajj",
+      "type": "Mədinə", "ayah_count": 78, "juz": 17,
+      "ayahs": [
+        {"number": 1, "arabic": "يَا أَيُّهَا النَّاسُ اتَّقُوا رَبَّكُمْ...", "transliteration": "Ya ayyuhan-nasut-taqu rabbakum...", "translation_az": "Ey insanlar! Rəbbinizdən qorxun..."}
+      ]
+    },
+    {
+      "id": 23, "name_ar": "المؤمنون", "name_az": "Muminun", "name_trans": "Al-Mu'minun",
+      "type": "Məkkə", "ayah_count": 118, "juz": 18,
+      "ayahs": [
+        {"number": 1, "arabic": "قَدْ أَفْلَحَ الْمُؤْمِنُونَ", "transliteration": "Qad aflahal-mu'minun", "translation_az": "Möminlər, həqiqətən, nicat tapmışlar!"}
+      ]
+    },
+    {
+      "id": 24, "name_ar": "النور", "name_az": "Nur", "name_trans": "An-Nur",
+      "type": "Mədinə", "ayah_count": 64, "juz": 18,
+      "ayahs": [
+        {"number": 1, "arabic": "سُورَةٌ أَنزَلْنَاهَا وَفَرَضْنَاهَا...", "transliteration": "Suratun anzalnaha wa faradnaha...", "translation_az": "Bu, nazil etdiyimiz və vacib buyurduğumuz bir surədir..."}
+      ]
+    },
+    {
+      "id": 25, "name_ar": "الفرقان", "name_az": "Furqan", "name_trans": "Al-Furqan",
+      "type": "Məkkə", "ayah_count": 77, "juz": 18,
+      "ayahs": [
+        {"number": 1, "arabic": "تَبَارَكَ الَّذِي نَزَّلَ الْفُرْقَانَ...", "transliteration": "Tabarakalladhi nazzalal-Furqan...", "translation_az": "Furqanı bəndəsinə nazil edən Allah nə qədər ucadır..."}
+      ]
+    },
+    {
+      "id": 26, "name_ar": "الشعراء", "name_az": "Şüəra", "name_trans": "Ash-Shu'ara",
+      "type": "Məkkə", "ayah_count": 227, "juz": 19,
+      "ayahs": [
+        {"number": 1, "arabic": "طسم", "transliteration": "Ta-Sin-Mim", "translation_az": "Ta, Sin, Mim."}
+      ]
+    },
+    {
+      "id": 27, "name_ar": "النمل", "name_az": "Nəml", "name_trans": "An-Naml",
+      "type": "Məkkə", "ayah_count": 93, "juz": 19,
+      "ayahs": [
+        {"number": 1, "arabic": "طس ۚ تِلْكَ آيَاتُ الْقُرْآنِ وَكِتَابٍ مُّبِينٍ", "transliteration": "Ta-Sin. Tilka ayatul-Qur'ani wa Kitabin Mubin", "translation_az": "Ta, Sin. Bunlar Quranın və aydın Kitabın ayələridir."}
+      ]
+    },
+    {
+      "id": 28, "name_ar": "القصص", "name_az": "Qəsəs", "name_trans": "Al-Qasas",
+      "type": "Məkkə", "ayah_count": 88, "juz": 20,
+      "ayahs": [
+        {"number": 1, "arabic": "طسم", "transliteration": "Ta-Sin-Mim", "translation_az": "Ta, Sin, Mim."}
+      ]
+    },
+    {
+      "id": 29, "name_ar": "العنكبوت", "name_az": "Ənkəbut", "name_trans": "Al-Ankabut",
+      "type": "Məkkə", "ayah_count": 69, "juz": 20,
+      "ayahs": [
+        {"number": 1, "arabic": "الم", "transliteration": "Alif-Lam-Mim", "translation_az": "Əlif, Lam, Mim."}
+      ]
+    },
+    {
+      "id": 30, "name_ar": "الروم", "name_az": "Rum", "name_trans": "Ar-Rum",
+      "type": "Məkkə", "ayah_count": 60, "juz": 21,
+      "ayahs": [
+        {"number": 1, "arabic": "الم", "transliteration": "Alif-Lam-Mim", "translation_az": "Əlif, Lam, Mim."}
+      ]
+    },
+    {
+      "id": 31, "name_ar": "لقمان", "name_az": "Loğman", "name_trans": "Luqman",
+      "type": "Məkkə", "ayah_count": 34, "juz": 21,
+      "ayahs": [
+        {"number": 1, "arabic": "الم", "transliteration": "Alif-Lam-Mim", "translation_az": "Əlif, Lam, Mim."}
+      ]
+    },
+    {
+      "id": 32, "name_ar": "السجدة", "name_az": "Səcdə", "name_trans": "As-Sajda",
+      "type": "Məkkə", "ayah_count": 30, "juz": 21,
+      "ayahs": [
+        {"number": 1, "arabic": "الم", "transliteration": "Alif-Lam-Mim", "translation_az": "Əlif, Lam, Mim."}
+      ]
+    },
+    {
+      "id": 33, "name_ar": "الأحزاب", "name_az": "Əhzab", "name_trans": "Al-Ahzab",
+      "type": "Mədinə", "ayah_count": 73, "juz": 21,
+      "ayahs": [
+        {"number": 1, "arabic": "يَا أَيُّهَا النَّبِيُّ اتَّقِ اللَّهَ...", "transliteration": "Ya ayyuhan-nabiyyut-taqillah...", "translation_az": "Ey Peyğəmbər! Allahdan qorx..."}
+      ]
+    },
+    {
+      "id": 34, "name_ar": "سبأ", "name_az": "Səba", "name_trans": "Saba",
+      "type": "Məkkə", "ayah_count": 54, "juz": 22,
+      "ayahs": [
+        {"number": 1, "arabic": "الْحَمْدُ لِلَّهِ الَّذِي لَهُ مَا فِي السَّمَاوَاتِ...", "transliteration": "Alhamdu lillahil-ladhi lahu ma fis-samawati...", "translation_az": "Göylərdə və yerdə nə varsa Ona məxsus olan Allaha həmd olsun..."}
+      ]
+    },
+    {
+      "id": 35, "name_ar": "فاطر", "name_az": "Fatir", "name_trans": "Fatir",
+      "type": "Məkkə", "ayah_count": 45, "juz": 22,
+      "ayahs": [
+        {"number": 1, "arabic": "الْحَمْدُ لِلَّهِ فَاطِرِ السَّمَاوَاتِ وَالْأَرْضِ...", "transliteration": "Alhamdu lillahi fatiris-samawati wal-ard...", "translation_az": "Göyləri və yeri yoxdan yaradan Allaha həmd olsun..."}
+      ]
+    },
+    {
+      "id": 36, "name_ar": "يس", "name_az": "Yasin", "name_trans": "Ya-Sin",
+      "type": "Məkkə", "ayah_count": 83, "juz": 22,
+      "ayahs": [
+        {"number": 1, "arabic": "يس", "transliteration": "Ya-Sin", "translation_az": "Ya, Sin!"},
+        {"number": 2, "arabic": "وَالْقُرْآنِ الْحَكِيمِ", "transliteration": "Wal-Qur'anil-Hakim", "translation_az": "Hikmətli Qurana and olsun ki,"},
+        {"number": 3, "arabic": "إِنَّكَ لَمِنَ الْمُرْسَلِينَ", "transliteration": "Innaka laminal-mursalin", "translation_az": "Sən, həqiqətən, göndərilmiş peyğəmbərlərdənsən!"},
+        {"number": 4, "arabic": "عَلَىٰ صِرَاطٍ مُّسْتَقِيمٍ", "transliteration": "'Ala siratim-mustaqim", "translation_az": "Doğru yol üzərində!"},
+        {"number": 5, "arabic": "تَنزِيلَ الْعَزِيزِ الرَّحِيمِ", "transliteration": "Tanzilal-'Azizir-Rahim", "translation_az": "Bu Quran Qüdrətli və Rəhmli Allah tərəfindən nazil edilmişdir ki,"},
+        {"number": 6, "arabic": "لِتُنذِرَ قَوْمًا مَّا أُنذِرَ آبَاؤُهُمْ فَهُمْ غَافِلُونَ", "transliteration": "Litundhira qawmam-ma undhira aba'uhum fahum ghafilun", "translation_az": "Ataları qorxudulmamış və özləri də qafil olan bir tayfanı qorxudasan."},
+        {"number": 7, "arabic": "لَقَدْ حَقَّ الْقَوْلُ عَلَىٰ أَكْثَرِهِمْ فَهُمْ لَا يُؤْمِنُونَ", "transliteration": "Laqad haqqal-qawlu 'ala aktharihim fahum la yu'minun", "translation_az": "And olsun ki, onların əksəriyyəti barəsində söz gerçəkləşmişdir, onlar iman gətirməyəcəklər."},
+        {"number": 8, "arabic": "إِنَّا جَعَلْنَا فِي أَعْنَاقِهِمْ أَغْلَالًا فَهِيَ إِلَى الْأَذْقَانِ فَهُم مُّقْمَحُونَ", "transliteration": "Inna ja'alna fi a'naqihim aghlalan fahiya ilal-adhqani fahum muqmahun", "translation_az": "Biz onların boyunlarına zəncir vurduq, o zəncirlər çənələrinə qədər çatmışdır. Buna görə də başları yuxarı qalxmışdır."},
+        {"number": 9, "arabic": "وَجَعَلْنَا مِن بَيْنِ أَيْدِيهِمْ سَدًّا وَمِنْ خَلْفِهِمْ سَدًّا فَأَغْشَيْنَاهُمْ فَهُمْ لَا يُبْصِرُونَ", "transliteration": "Wa ja'alna mim bayni aydihim saddaw-wa min khalfihim saddan fa-aghshaynahum fahum la yubsirun", "translation_az": "Biz onların önlərindən bir sədd, arxalarından da bir sədd çəkdik və gözlərini bağladıq. Buna görə də onlar görməzlər."},
+        {"number": 10, "arabic": "وَسَوَاءٌ عَلَيْهِمْ أَأَنذَرْتَهُمْ أَمْ لَمْ تُنذِرْهُمْ لَا يُؤْمِنُونَ", "transliteration": "Wa sawa'un 'alayhim a-andhartahum am lam tundhirhum la yu'minun", "translation_az": "Onları qorxutsan da, qorxutmasan da, onlar üçün birdir, iman gətirməyəcəklər."}
+      ]
+    },
+    {
+      "id": 37, "name_ar": "الصافات", "name_az": "Saffat", "name_trans": "As-Saffat",
+      "type": "Məkkə", "ayah_count": 182, "juz": 23,
+      "ayahs": [
+        {"number": 1, "arabic": "وَالصَّافَّاتِ صَفًّا", "transliteration": "Wassaffati saffa", "translation_az": "And olsun səf-səf duranlara!"}
+      ]
+    },
+    {
+      "id": 38, "name_ar": "ص", "name_az": "Sad", "name_trans": "Sad",
+      "type": "Məkkə", "ayah_count": 88, "juz": 23,
+      "ayahs": [
+        {"number": 1, "arabic": "ص ۚ وَالْقُرْآنِ ذِي الذِّكْرِ", "transliteration": "Sad, wal-Qur'ani dhidh-dhikr", "translation_az": "Sad. Öyüd-nəsihətlə dolu Qurana and olsun!"}
+      ]
+    },
+    {
+      "id": 39, "name_ar": "الزمر", "name_az": "Zumər", "name_trans": "Az-Zumar",
+      "type": "Məkkə", "ayah_count": 75, "juz": 23,
+      "ayahs": [
+        {"number": 1, "arabic": "تَنزِيلُ الْكِتَابِ مِنَ اللَّهِ الْعَزِيزِ الْحَكِيمِ", "transliteration": "Tanzilul-Kitabi minallahil-'Azizil-Hakim", "translation_az": "Kitabın nazil edilməsi Qüdrətli və Hikmətli Allahdandır."}
+      ]
+    },
+    {
+      "id": 40, "name_ar": "غافر", "name_az": "Ğafir", "name_trans": "Ghafir",
+      "type": "Məkkə", "ayah_count": 85, "juz": 24,
+      "ayahs": [
+        {"number": 1, "arabic": "حم", "transliteration": "Ha-Mim", "translation_az": "Ha, Mim."}
+      ]
+    },
+    {
+      "id": 41, "name_ar": "فصلت", "name_az": "Fussilət", "name_trans": "Fussilat",
+      "type": "Məkkə", "ayah_count": 54, "juz": 24,
+      "ayahs": [
+        {"number": 1, "arabic": "حم", "transliteration": "Ha-Mim", "translation_az": "Ha, Mim."}
+      ]
+    },
+    {
+      "id": 42, "name_ar": "الشورى", "name_az": "Şura", "name_trans": "Ash-Shura",
+      "type": "Məkkə", "ayah_count": 53, "juz": 25,
+      "ayahs": [
+        {"number": 1, "arabic": "حم", "transliteration": "Ha-Mim", "translation_az": "Ha, Mim."}
+      ]
+    },
+    {
+      "id": 43, "name_ar": "الزخرف", "name_az": "Zuxruf", "name_trans": "Az-Zukhruf",
+      "type": "Məkkə", "ayah_count": 89, "juz": 25,
+      "ayahs": [
+        {"number": 1, "arabic": "حم", "transliteration": "Ha-Mim", "translation_az": "Ha, Mim."}
+      ]
+    },
+    {
+      "id": 44, "name_ar": "الدخان", "name_az": "Duxan", "name_trans": "Ad-Dukhan",
+      "type": "Məkkə", "ayah_count": 59, "juz": 25,
+      "ayahs": [
+        {"number": 1, "arabic": "حم", "transliteration": "Ha-Mim", "translation_az": "Ha, Mim."}
+      ]
+    },
+    {
+      "id": 45, "name_ar": "الجاثية", "name_az": "Casiyə", "name_trans": "Al-Jathiya",
+      "type": "Məkkə", "ayah_count": 37, "juz": 25,
+      "ayahs": [
+        {"number": 1, "arabic": "حم", "transliteration": "Ha-Mim", "translation_az": "Ha, Mim."}
+      ]
+    },
+    {
+      "id": 46, "name_ar": "الأحقاف", "name_az": "Əhqaf", "name_trans": "Al-Ahqaf",
+      "type": "Məkkə", "ayah_count": 35, "juz": 26,
+      "ayahs": [
+        {"number": 1, "arabic": "حم", "transliteration": "Ha-Mim", "translation_az": "Ha, Mim."}
+      ]
+    },
+    {
+      "id": 47, "name_ar": "محمد", "name_az": "Məhəmməd", "name_trans": "Muhammad",
+      "type": "Mədinə", "ayah_count": 38, "juz": 26,
+      "ayahs": [
+        {"number": 1, "arabic": "الَّذِينَ كَفَرُوا وَصَدُّوا عَن سَبِيلِ اللَّهِ...", "transliteration": "Alladhina kafaru wa saddu 'an sabilillah...", "translation_az": "Kafir olanların və insanları Allah yolundan döndərənlərin əməllərini Allah boşa çıxarar."}
+      ]
+    },
+    {
+      "id": 48, "name_ar": "الفتح", "name_az": "Fəth", "name_trans": "Al-Fath",
+      "type": "Mədinə", "ayah_count": 29, "juz": 26,
+      "ayahs": [
+        {"number": 1, "arabic": "إِنَّا فَتَحْنَا لَكَ فَتْحًا مُّبِينًا", "transliteration": "Inna fatahna laka fathan mubina", "translation_az": "Həqiqətən, Biz sənə aydın bir zəfər bəxş etdik!"}
+      ]
+    },
+    {
+      "id": 49, "name_ar": "الحجرات", "name_az": "Hucurat", "name_trans": "Al-Hujurat",
+      "type": "Mədinə", "ayah_count": 18, "juz": 26,
+      "ayahs": [
+        {"number": 1, "arabic": "يَا أَيُّهَا الَّذِينَ آمَنُوا لَا تُقَدِّمُوا بَيْنَ يَدَيِ اللَّهِ وَرَسُولِهِ...", "transliteration": "Ya ayyuhal-ladhina amanu la tuqaddimu...", "translation_az": "Ey iman gətirənlər! Allahın və Rəsulunun önünə keçməyin..."}
+      ]
+    },
+    {
+      "id": 50, "name_ar": "ق", "name_az": "Qaf", "name_trans": "Qaf",
+      "type": "Məkkə", "ayah_count": 45, "juz": 26,
+      "ayahs": [
+        {"number": 1, "arabic": "ق ۚ وَالْقُرْآنِ الْمَجِيدِ", "transliteration": "Qaf, wal-Qur'anil-Majid", "translation_az": "Qaf! Şanlı Qurana and olsun!"}
+      ]
+    },
+    {
+      "id": 51, "name_ar": "الذاريات", "name_az": "Zariyat", "name_trans": "Adh-Dhariyat",
+      "type": "Məkkə", "ayah_count": 60, "juz": 26,
+      "ayahs": [
+        {"number": 1, "arabic": "وَالذَّارِيَاتِ ذَرْوًا", "transliteration": "Wadh-dhariyati dharwa", "translation_az": "Toz-torpağı sovuranlara and olsun!"}
+      ]
+    },
+    {
+      "id": 52, "name_ar": "الطور", "name_az": "Tur", "name_trans": "At-Tur",
+      "type": "Məkkə", "ayah_count": 49, "juz": 27,
+      "ayahs": [
+        {"number": 1, "arabic": "وَالطُّورِ", "transliteration": "Wat-Tur", "translation_az": "And olsun Tur dağına!"}
+      ]
+    },
+    {
+      "id": 53, "name_ar": "النجم", "name_az": "Nəcm", "name_trans": "An-Najm",
+      "type": "Məkkə", "ayah_count": 62, "juz": 27,
+      "ayahs": [
+        {"number": 1, "arabic": "وَالنَّجْمِ إِذَا هَوَىٰ", "transliteration": "Wan-najmi idha hawa", "translation_az": "Batmaqda olan ulduza and olsun ki,"}
+      ]
+    },
+    {
+      "id": 54, "name_ar": "القمر", "name_az": "Qəmər", "name_trans": "Al-Qamar",
+      "type": "Məkkə", "ayah_count": 55, "juz": 27,
+      "ayahs": [
+        {"number": 1, "arabic": "اقْتَرَبَتِ السَّاعَةُ وَانشَقَّ الْقَمَرُ", "transliteration": "Iqtarabatis-sa'atu wanshaqqal-qamar", "translation_az": "Qiyamət yaxınlaşdı və Ay parçalandı!"}
+      ]
+    },
+    {
+      "id": 55, "name_ar": "الرحمن", "name_az": "Rəhman", "name_trans": "Ar-Rahman",
+      "type": "Mədinə", "ayah_count": 78, "juz": 27,
+      "ayahs": [
+        {"number": 1, "arabic": "الرَّحْمَٰنُ", "transliteration": "Ar-Rahman", "translation_az": "Rəhman!"},
+        {"number": 2, "arabic": "عَلَّمَ الْقُرْآنَ", "transliteration": "'Allamal-Qur'an", "translation_az": "Quranı öyrətdi."},
+        {"number": 3, "arabic": "خَلَقَ الْإِنسَانَ", "transliteration": "Khalaqal-insan", "translation_az": "İnsanı yaratdı."}
+      ]
+    },
+    {
+      "id": 56, "name_ar": "الواقعة", "name_az": "Vaqiə", "name_trans": "Al-Waqi'a",
+      "type": "Məkkə", "ayah_count": 96, "juz": 27,
+      "ayahs": [
+        {"number": 1, "arabic": "إِذَا وَقَعَتِ الْوَاقِعَةُ", "transliteration": "Idha waqa'atil-waqi'ah", "translation_az": "Qiyamət qopacağı zaman,"}
+      ]
+    },
+    {
+      "id": 57, "name_ar": "الحديد", "name_az": "Hədid", "name_trans": "Al-Hadid",
+      "type": "Mədinə", "ayah_count": 29, "juz": 27,
+      "ayahs": [
+        {"number": 1, "arabic": "سَبَّحَ لِلَّهِ مَا فِي السَّمَاوَاتِ وَالْأَرْضِ...", "transliteration": "Sabbaha lillahi ma fis-samawati wal-ard...", "translation_az": "Göylərdə və yerdə nə varsa, Allahı təqdis edir..."}
+      ]
+    },
+    {
+      "id": 58, "name_ar": "المجادلة", "name_az": "Mucadilə", "name_trans": "Al-Mujadila",
+      "type": "Mədinə", "ayah_count": 22, "juz": 28,
+      "ayahs": [
+        {"number": 1, "arabic": "قَدْ سَمِعَ اللَّهُ قَوْلَ الَّتِي تُجَادِلُكَ فِي زَوْجِهَا...", "transliteration": "Qad sami'allahu qawlallati tujadiluka...", "translation_az": "Allah əri barəsində səninlə mübahisə edən qadının sözünü eşitdi..."}
+      ]
+    },
+    {
+      "id": 59, "name_ar": "الحشر", "name_az": "Həşr", "name_trans": "Al-Hashr",
+      "type": "Mədinə", "ayah_count": 24, "juz": 28,
+      "ayahs": [
+        {"number": 1, "arabic": "سَبَّحَ لِلَّهِ مَا فِي السَّمَاوَاتِ وَمَا فِي الْأَرْضِ...", "transliteration": "Sabbaha lillahi ma fis-samawati wa ma fil-ard...", "translation_az": "Göylərdə və yerdə olanların hamısı Allahı təqdis edir..."}
+      ]
+    },
+    {
+      "id": 60, "name_ar": "الممتحنة", "name_az": "Mumtəhinə", "name_trans": "Al-Mumtahina",
+      "type": "Mədinə", "ayah_count": 13, "juz": 28,
+      "ayahs": [
+        {"number": 1, "arabic": "يَا أَيُّهَا الَّذِينَ آمَنُوا لَا تَتَّخِذُوا عَدُوِّي وَعَدُوَّكُمْ أَوْلِيَاءَ...", "transliteration": "Ya ayyuhal-ladhina amanu la tattakhidhu...", "translation_az": "Ey iman gətirənlər! Mənim düşmənimi də, öz düşməninizi də dost tutmayın..."}
+      ]
+    },
+    {
+      "id": 61, "name_ar": "الصف", "name_az": "Səff", "name_trans": "As-Saff",
+      "type": "Mədinə", "ayah_count": 14, "juz": 28,
+      "ayahs": [
+        {"number": 1, "arabic": "سَبَّحَ لِلَّهِ مَا فِي السَّمَاوَاتِ وَمَا فِي الْأَرْضِ...", "transliteration": "Sabbaha lillahi ma fis-samawati wa ma fil-ard...", "translation_az": "Göylərdə və yerdə olanların hamısı Allahı təqdis edir..."}
+      ]
+    },
+    {
+      "id": 62, "name_ar": "الجمعة", "name_az": "Cümə", "name_trans": "Al-Jumu'a",
+      "type": "Mədinə", "ayah_count": 11, "juz": 28,
+      "ayahs": [
+        {"number": 1, "arabic": "يُسَبِّحُ لِلَّهِ مَا فِي السَّمَاوَاتِ وَمَا فِي الْأَرْضِ...", "transliteration": "Yusabbihu lillahi ma fis-samawati...", "translation_az": "Göylərdə və yerdə olanların hamısı Allahı təqdis edir..."}
+      ]
+    },
+    {
+      "id": 63, "name_ar": "المنافقون", "name_az": "Munafiqun", "name_trans": "Al-Munafiqun",
+      "type": "Mədinə", "ayah_count": 11, "juz": 28,
+      "ayahs": [
+        {"number": 1, "arabic": "إِذَا جَاءَكَ الْمُنَافِقُونَ قَالُوا نَشْهَدُ إِنَّكَ لَرَسُولُ اللَّهِ...", "transliteration": "Idha ja'akal-munafiquna qalu...", "translation_az": "Munafiqlər sənin yanına gəldikləri zaman deyirlər: Şəhadət veririk ki, sən Allahın Rəsulusan..."}
+      ]
+    },
+    {
+      "id": 64, "name_ar": "التغابن", "name_az": "Təğabun", "name_trans": "At-Taghabun",
+      "type": "Mədinə", "ayah_count": 18, "juz": 28,
+      "ayahs": [
+        {"number": 1, "arabic": "يُسَبِّحُ لِلَّهِ مَا فِي السَّمَاوَاتِ وَمَا فِي الْأَرْضِ...", "transliteration": "Yusabbihu lillahi ma fis-samawati...", "translation_az": "Göylərdə və yerdə olanların hamısı Allahı təqdis edir..."}
+      ]
+    },
+    {
+      "id": 65, "name_ar": "الطلاق", "name_az": "Talaq", "name_trans": "At-Talaq",
+      "type": "Mədinə", "ayah_count": 12, "juz": 28,
+      "ayahs": [
+        {"number": 1, "arabic": "يَا أَيُّهَا النَّبِيُّ إِذَا طَلَّقْتُمُ النِّسَاءَ...", "transliteration": "Ya ayyuhan-nabiyyu idha tallaqtumun-nisa...", "translation_az": "Ey Peyğəmbər! Qadınları boşamaq istədiyiniz zaman..."}
+      ]
+    },
+    {
+      "id": 66, "name_ar": "التحريم", "name_az": "Təhrim", "name_trans": "At-Tahrim",
+      "type": "Mədinə", "ayah_count": 12, "juz": 28,
+      "ayahs": [
+        {"number": 1, "arabic": "يَا أَيُّهَا النَّبِيُّ لِمَ تُحَرِّمُ مَا أَحَلَّ اللَّهُ لَكَ...", "transliteration": "Ya ayyuhan-nabiyyu lima tuharrimu...", "translation_az": "Ey Peyğəmbər! Nə üçün Allahın sənə halal etdiyini özünə haram edirsən?"}
+      ]
+    },
+    {
+      "id": 67, "name_ar": "الملك", "name_az": "Mülk", "name_trans": "Al-Mulk",
+      "type": "Məkkə", "ayah_count": 30, "juz": 29,
+      "ayahs": [
+        {"number": 1, "arabic": "تَبَارَكَ الَّذِي بِيَدِهِ الْمُلْكُ وَهُوَ عَلَىٰ كُلِّ شَيْءٍ قَدِيرٌ", "transliteration": "Tabarakalladhi bi-yadihil-mulku wa Huwa 'ala kulli shay'in Qadir", "translation_az": "Mülk əlində olan Allah nə qədər ucadır! O, hər şeyə Qadirdir!"},
+        {"number": 2, "arabic": "الَّذِي خَلَقَ الْمَوْتَ وَالْحَيَاةَ لِيَبْلُوَكُمْ أَيُّكُمْ أَحْسَنُ عَمَلًا ۚ وَهُوَ الْعَزِيزُ الْغَفُورُ", "transliteration": "Alladhi khalaqal-mawta wal-hayata li-yabluwakum ayyukum ahsanu 'amala, wa Huwal-'Azizul-Ghafur", "translation_az": "Hansınızın əməlcə daha gözəl olduğunu sınamaq üçün ölümü və həyatı yaradan Odur. O, Qüdrətlidir, Bağışlayandır!"},
+        {"number": 3, "arabic": "الَّذِي خَلَقَ سَبْعَ سَمَاوَاتٍ طِبَاقًا ۖ مَّا تَرَىٰ فِي خَلْقِ الرَّحْمَٰنِ مِن تَفَاوُتٍ ۖ فَارْجِعِ الْبَصَرَ هَلْ تَرَىٰ مِن فُطُورٍ", "transliteration": "Alladhi khalaqa sab'a samawatin tibaqa...", "translation_az": "Yeddi göyü təbəqə-təbəqə yaradan Odur. Sən Rəhmanın yaratdığında heç bir uyğunsuzluq görməzsən. Gözünü çevir, heç bir çat görə bilərsənmi?"}
+      ]
+    },
+    {
+      "id": 68, "name_ar": "القلم", "name_az": "Qələm", "name_trans": "Al-Qalam",
+      "type": "Məkkə", "ayah_count": 52, "juz": 29,
+      "ayahs": [
+        {"number": 1, "arabic": "ن ۚ وَالْقَلَمِ وَمَا يَسْطُرُونَ", "transliteration": "Nun, wal-qalami wa ma yasturun", "translation_az": "Nun! Qələmə və yazdıqlarına and olsun ki,"}
+      ]
+    },
+    {
+      "id": 69, "name_ar": "الحاقة", "name_az": "Haqqə", "name_trans": "Al-Haqqa",
+      "type": "Məkkə", "ayah_count": 52, "juz": 29,
+      "ayahs": [
+        {"number": 1, "arabic": "الْحَاقَّةُ", "transliteration": "Al-Haqqah", "translation_az": "Haqq olan Qiyamət!"}
+      ]
+    },
+    {
+      "id": 70, "name_ar": "المعارج", "name_az": "Məaric", "name_trans": "Al-Ma'arij",
+      "type": "Məkkə", "ayah_count": 44, "juz": 29,
+      "ayahs": [
+        {"number": 1, "arabic": "سَأَلَ سَائِلٌ بِعَذَابٍ وَاقِعٍ", "transliteration": "Sa'ala sa'ilun bi-'adhabin waqi'", "translation_az": "Bir soruşan gələcək əzab barəsində soruşdu."}
+      ]
+    },
+    {
+      "id": 71, "name_ar": "نوح", "name_az": "Nuh", "name_trans": "Nuh",
+      "type": "Məkkə", "ayah_count": 28, "juz": 29,
+      "ayahs": [
+        {"number": 1, "arabic": "إِنَّا أَرْسَلْنَا نُوحًا إِلَىٰ قَوْمِهِ...", "transliteration": "Inna arsalna Nuhan ila qawmih...", "translation_az": "Həqiqətən, Biz Nuhu öz tayfasına peyğəmbər göndərdik..."}
+      ]
+    },
+    {
+      "id": 72, "name_ar": "الجن", "name_az": "Cinn", "name_trans": "Al-Jinn",
+      "type": "Məkkə", "ayah_count": 28, "juz": 29,
+      "ayahs": [
+        {"number": 1, "arabic": "قُلْ أُوحِيَ إِلَيَّ أَنَّهُ اسْتَمَعَ نَفَرٌ مِّنَ الْجِنِّ...", "transliteration": "Qul uhiya ilayya annahustama'a...", "translation_az": "De: Mənə vəhy olundu ki, bir dəstə cin qulaq asdı..."}
+      ]
+    },
+    {
+      "id": 73, "name_ar": "المزمل", "name_az": "Muzzəmmil", "name_trans": "Al-Muzzammil",
+      "type": "Məkkə", "ayah_count": 20, "juz": 29,
+      "ayahs": [
+        {"number": 1, "arabic": "يَا أَيُّهَا الْمُزَّمِّلُ", "transliteration": "Ya ayyuhal-muzzammil", "translation_az": "Ey paltarına bürünən!"}
+      ]
+    },
+    {
+      "id": 74, "name_ar": "المدثر", "name_az": "Muddəssir", "name_trans": "Al-Muddaththir",
+      "type": "Məkkə", "ayah_count": 56, "juz": 29,
+      "ayahs": [
+        {"number": 1, "arabic": "يَا أَيُّهَا الْمُدَّثِّرُ", "transliteration": "Ya ayyuhal-muddaththir", "translation_az": "Ey örtüyə bürünən!"}
+      ]
+    },
+    {
+      "id": 75, "name_ar": "القيامة", "name_az": "Qiyamə", "name_trans": "Al-Qiyama",
+      "type": "Məkkə", "ayah_count": 40, "juz": 29,
+      "ayahs": [
+        {"number": 1, "arabic": "لَا أُقْسِمُ بِيَوْمِ الْقِيَامَةِ", "transliteration": "La uqsimu bi-yawmil-qiyamah", "translation_az": "And içirəm Qiyamət gününə!"}
+      ]
+    },
+    {
+      "id": 76, "name_ar": "الإنسان", "name_az": "İnsan", "name_trans": "Al-Insan",
+      "type": "Mədinə", "ayah_count": 31, "juz": 29,
+      "ayahs": [
+        {"number": 1, "arabic": "هَلْ أَتَىٰ عَلَى الْإِنسَانِ حِينٌ مِّنَ الدَّهْرِ...", "transliteration": "Hal ata 'alal-insani hinum-minad-dahr...", "translation_az": "İnsanın üzərindən elə bir zaman keçdi ki, o, xatırlanan bir şey deyildi."}
+      ]
+    },
+    {
+      "id": 77, "name_ar": "المرسلات", "name_az": "Mursəlat", "name_trans": "Al-Mursalat",
+      "type": "Məkkə", "ayah_count": 50, "juz": 29,
+      "ayahs": [
+        {"number": 1, "arabic": "وَالْمُرْسَلَاتِ عُرْفًا", "transliteration": "Wal-mursalati 'urfa", "translation_az": "And olsun bir-birinin ardınca göndərilənlərə!"}
+      ]
+    },
+    {
+      "id": 78, "name_ar": "النبأ", "name_az": "Nəbə", "name_trans": "An-Naba",
+      "type": "Məkkə", "ayah_count": 40, "juz": 30,
+      "ayahs": [
+        {"number": 1, "arabic": "عَمَّ يَتَسَاءَلُونَ", "transliteration": "'Amma yatasa'alun", "translation_az": "Onlar nə barədə soruşurlar?"},
+        {"number": 2, "arabic": "عَنِ النَّبَإِ الْعَظِيمِ", "transliteration": "'Anin-naba'il-'azim", "translation_az": "Əzəmətli xəbər barəsində!"},
+        {"number": 3, "arabic": "الَّذِي هُمْ فِيهِ مُخْتَلِفُونَ", "transliteration": "Alladhi hum fihi mukhtalifun", "translation_az": "O xəbər ki, onun barəsində ixtilafdadırlar."},
+        {"number": 4, "arabic": "كَلَّا سَيَعْلَمُونَ", "transliteration": "Kalla saya'lamun", "translation_az": "Xeyr! Onlar biləcəklər!"},
+        {"number": 5, "arabic": "ثُمَّ كَلَّا سَيَعْلَمُونَ", "transliteration": "Thumma kalla saya'lamun", "translation_az": "Yenə xeyr! Onlar biləcəklər!"}
+      ]
+    },
+    {
+      "id": 79, "name_ar": "النازعات", "name_az": "Naziat", "name_trans": "An-Nazi'at",
+      "type": "Məkkə", "ayah_count": 46, "juz": 30,
+      "ayahs": [
+        {"number": 1, "arabic": "وَالنَّازِعَاتِ غَرْقًا", "transliteration": "Wan-nazi'ati gharqa", "translation_az": "And olsun şiddətlə çəkib alanlara!"}
+      ]
+    },
+    {
+      "id": 80, "name_ar": "عبس", "name_az": "Əbəsə", "name_trans": "'Abasa",
+      "type": "Məkkə", "ayah_count": 42, "juz": 30,
+      "ayahs": [
+        {"number": 1, "arabic": "عَبَسَ وَتَوَلَّىٰ", "transliteration": "'Abasa wa tawalla", "translation_az": "Qaşqabaqlı oldu və üz çevirdi."}
+      ]
+    },
+    {
+      "id": 81, "name_ar": "التكوير", "name_az": "Təkvir", "name_trans": "At-Takwir",
+      "type": "Məkkə", "ayah_count": 29, "juz": 30,
+      "ayahs": [
+        {"number": 1, "arabic": "إِذَا الشَّمْسُ كُوِّرَتْ", "transliteration": "Idhash-shamsu kuwwirat", "translation_az": "Günəş büküləcəyi zaman,"}
+      ]
+    },
+    {
+      "id": 82, "name_ar": "الإنفطار", "name_az": "İnfitar", "name_trans": "Al-Infitar",
+      "type": "Məkkə", "ayah_count": 19, "juz": 30,
+      "ayahs": [
+        {"number": 1, "arabic": "إِذَا السَّمَاءُ انفَطَرَتْ", "transliteration": "Idhas-sama'u infatarat", "translation_az": "Göy yarılacağı zaman,"}
+      ]
+    },
+    {
+      "id": 83, "name_ar": "المطففين", "name_az": "Mutəffifin", "name_trans": "Al-Mutaffifin",
+      "type": "Məkkə", "ayah_count": 36, "juz": 30,
+      "ayahs": [
+        {"number": 1, "arabic": "وَيْلٌ لِّلْمُطَفِّفِينَ", "transliteration": "Waylul-lil-mutaffifin", "translation_az": "Vay halına çəkidə və ölçüdə aldadanların!"}
+      ]
+    },
+    {
+      "id": 84, "name_ar": "الإنشقاق", "name_az": "İnşiqaq", "name_trans": "Al-Inshiqaq",
+      "type": "Məkkə", "ayah_count": 25, "juz": 30,
+      "ayahs": [
+        {"number": 1, "arabic": "إِذَا السَّمَاءُ انشَقَّتْ", "transliteration": "Idhas-sama'u inshaqqat", "translation_az": "Göy parçalanacağı zaman,"}
+      ]
+    },
+    {
+      "id": 85, "name_ar": "البروج", "name_az": "Buruc", "name_trans": "Al-Buruj",
+      "type": "Məkkə", "ayah_count": 22, "juz": 30,
+      "ayahs": [
+        {"number": 1, "arabic": "وَالسَّمَاءِ ذَاتِ الْبُرُوجِ", "transliteration": "Was-sama'i dhatil-buruj", "translation_az": "Bürclər sahibi olan göyə and olsun!"}
+      ]
+    },
+    {
+      "id": 86, "name_ar": "الطارق", "name_az": "Tariq", "name_trans": "At-Tariq",
+      "type": "Məkkə", "ayah_count": 17, "juz": 30,
+      "ayahs": [
+        {"number": 1, "arabic": "وَالسَّمَاءِ وَالطَّارِقِ", "transliteration": "Was-sama'i wat-tariq", "translation_az": "And olsun göyə və gecə gələnə!"}
+      ]
+    },
+    {
+      "id": 87, "name_ar": "الأعلى", "name_az": "Əla", "name_trans": "Al-A'la",
+      "type": "Məkkə", "ayah_count": 19, "juz": 30,
+      "ayahs": [
+        {"number": 1, "arabic": "سَبِّحِ اسْمَ رَبِّكَ الْأَعْلَى", "transliteration": "Sabbihisma rabbikal-a'la", "translation_az": "Ən Uca Rəbbinin adını təqdis et!"}
+      ]
+    },
+    {
+      "id": 88, "name_ar": "الغاشية", "name_az": "Ğaşiyə", "name_trans": "Al-Ghashiyah",
+      "type": "Məkkə", "ayah_count": 26, "juz": 30,
+      "ayahs": [
+        {"number": 1, "arabic": "هَلْ أَتَاكَ حَدِيثُ الْغَاشِيَةِ", "transliteration": "Hal ataka hadithul-ghashiyah", "translation_az": "Örtüb bürüyənin xəbəri sənə gəlib çatdımı?"}
+      ]
+    },
+    {
+      "id": 89, "name_ar": "الفجر", "name_az": "Fəcr", "name_trans": "Al-Fajr",
+      "type": "Məkkə", "ayah_count": 30, "juz": 30,
+      "ayahs": [
+        {"number": 1, "arabic": "وَالْفَجْرِ", "transliteration": "Wal-fajr", "translation_az": "And olsun dan yerinə!"}
+      ]
+    },
+    {
+      "id": 90, "name_ar": "البلد", "name_az": "Bələd", "name_trans": "Al-Balad",
+      "type": "Məkkə", "ayah_count": 20, "juz": 30,
+      "ayahs": [
+        {"number": 1, "arabic": "لَا أُقْسِمُ بِهَٰذَا الْبَلَدِ", "transliteration": "La uqsimu bi-hadhal-balad", "translation_az": "And içirəm bu şəhərə!"}
+      ]
+    },
+    {
+      "id": 91, "name_ar": "الشمس", "name_az": "Şəms", "name_trans": "Ash-Shams",
+      "type": "Məkkə", "ayah_count": 15, "juz": 30,
+      "ayahs": [
+        {"number": 1, "arabic": "وَالشَّمْسِ وَضُحَاهَا", "transliteration": "Wash-shamsi wa duhaha", "translation_az": "And olsun Günəşə və onun işığına!"}
+      ]
+    },
+    {
+      "id": 92, "name_ar": "الليل", "name_az": "Leyl", "name_trans": "Al-Layl",
+      "type": "Məkkə", "ayah_count": 21, "juz": 30,
+      "ayahs": [
+        {"number": 1, "arabic": "وَاللَّيْلِ إِذَا يَغْشَىٰ", "transliteration": "Wal-layli idha yaghsha", "translation_az": "And olsun qaranlığı ilə hər şeyi örtən gecəyə!"}
+      ]
+    },
+    {
+      "id": 93, "name_ar": "الضحى", "name_az": "Duha", "name_trans": "Ad-Duha",
+      "type": "Məkkə", "ayah_count": 11, "juz": 30,
+      "ayahs": [
+        {"number": 1, "arabic": "وَالضُّحَىٰ", "transliteration": "Wad-duha", "translation_az": "And olsun səhərə!"}
+      ]
+    },
+    {
+      "id": 94, "name_ar": "الشرح", "name_az": "Şərh", "name_trans": "Ash-Sharh",
+      "type": "Məkkə", "ayah_count": 8, "juz": 30,
+      "ayahs": [
+        {"number": 1, "arabic": "أَلَمْ نَشْرَحْ لَكَ صَدْرَكَ", "transliteration": "Alam nashrah laka sadrak", "translation_az": "Məgər Biz sənin üçün köksünü açmadıqmı?"}
+      ]
+    },
+    {
+      "id": 95, "name_ar": "التين", "name_az": "Tin", "name_trans": "At-Tin",
+      "type": "Məkkə", "ayah_count": 8, "juz": 30,
+      "ayahs": [
+        {"number": 1, "arabic": "وَالتِّينِ وَالزَّيْتُونِ", "transliteration": "Wat-tini waz-zaytun", "translation_az": "And olsun əncirə və zeytuna!"}
+      ]
+    },
+    {
+      "id": 96, "name_ar": "العلق", "name_az": "Ələq", "name_trans": "Al-'Alaq",
+      "type": "Məkkə", "ayah_count": 19, "juz": 30,
+      "ayahs": [
+        {"number": 1, "arabic": "اقْرَأْ بِاسْمِ رَبِّكَ الَّذِي خَلَقَ", "transliteration": "Iqra' bismi rabbikalladhi khalaq", "translation_az": "Oxu yaradan Rəbbinin adı ilə!"}
+      ]
+    },
+    {
+      "id": 97, "name_ar": "القدر", "name_az": "Qədr", "name_trans": "Al-Qadr",
+      "type": "Məkkə", "ayah_count": 5, "juz": 30,
+      "ayahs": [
+        {"number": 1, "arabic": "إِنَّا أَنزَلْنَاهُ فِي لَيْلَةِ الْقَدْرِ", "transliteration": "Inna anzalnahu fi laylatil-qadr", "translation_az": "Həqiqətən, Biz onu Qədr gecəsində nazil etdik!"},
+        {"number": 2, "arabic": "وَمَا أَدْرَاكَ مَا لَيْلَةُ الْقَدْرِ", "transliteration": "Wa ma adraka ma laylatul-qadr", "translation_az": "Sən nə bilirsən ki, Qədr gecəsi nədir?!"},
+        {"number": 3, "arabic": "لَيْلَةُ الْقَدْرِ خَيْرٌ مِّنْ أَلْفِ شَهْرٍ", "transliteration": "Laylatul-qadri khayrum-min alfi shahr", "translation_az": "Qədr gecəsi min aydan daha xeyirlidir!"},
+        {"number": 4, "arabic": "تَنَزَّلُ الْمَلَائِكَةُ وَالرُّوحُ فِيهَا بِإِذْنِ رَبِّهِم مِّن كُلِّ أَمْرٍ", "transliteration": "Tanazzalul-mala'ikatu war-ruhu fiha bi-idhni rabbihim min kulli amr", "translation_az": "Mələklər və Ruh o gecədə Rəbbinin izni ilə hər bir iş üçün enərlər."},
+        {"number": 5, "arabic": "سَلَامٌ هِيَ حَتَّىٰ مَطْلَعِ الْفَجْرِ", "transliteration": "Salamun hiya hatta matla'il-fajr", "translation_az": "O gecə dan yerinin açılmasına qədər salamatlıqdır!"}
+      ]
+    },
+    {
+      "id": 98, "name_ar": "البينة", "name_az": "Bəyyinə", "name_trans": "Al-Bayyina",
+      "type": "Mədinə", "ayah_count": 8, "juz": 30,
+      "ayahs": [
+        {"number": 1, "arabic": "لَمْ يَكُنِ الَّذِينَ كَفَرُوا مِنْ أَهْلِ الْكِتَابِ وَالْمُشْرِكِينَ مُنفَكِّينَ...", "transliteration": "Lam yakunilladhina kafaru...", "translation_az": "Kitab əhlindən kafir olanlar və müşriklər özlərinə aydın dəlil gələnə qədər ayrılmadılar."}
+      ]
+    },
+    {
+      "id": 99, "name_ar": "الزلزلة", "name_az": "Zilzal", "name_trans": "Az-Zalzala",
+      "type": "Mədinə", "ayah_count": 8, "juz": 30,
+      "ayahs": [
+        {"number": 1, "arabic": "إِذَا زُلْزِلَتِ الْأَرْضُ زِلْزَالَهَا", "transliteration": "Idha zulzilatil-ardu zilzalaha", "translation_az": "Yer titrəyib lərzəyə gələcəyi zaman,"}
+      ]
+    },
+    {
+      "id": 100, "name_ar": "العاديات", "name_az": "Adiyat", "name_trans": "Al-'Adiyat",
+      "type": "Məkkə", "ayah_count": 11, "juz": 30,
+      "ayahs": [
+        {"number": 1, "arabic": "وَالْعَادِيَاتِ ضَبْحًا", "transliteration": "Wal-'adiyati dabha", "translation_az": "And olsun tövşüyə-tövşüyə qaçan atlara!"}
+      ]
+    },
+    {
+      "id": 101, "name_ar": "القارعة", "name_az": "Qariə", "name_trans": "Al-Qari'a",
+      "type": "Məkkə", "ayah_count": 11, "juz": 30,
+      "ayahs": [
+        {"number": 1, "arabic": "الْقَارِعَةُ", "transliteration": "Al-Qari'ah", "translation_az": "Dəhşətli Qiyamət!"}
+      ]
+    },
+    {
+      "id": 102, "name_ar": "التكاثر", "name_az": "Təkasur", "name_trans": "At-Takathur",
+      "type": "Məkkə", "ayah_count": 8, "juz": 30,
+      "ayahs": [
+        {"number": 1, "arabic": "أَلْهَاكُمُ التَّكَاثُرُ", "transliteration": "Alhakumut-takathur", "translation_az": "Çoxluqla öyünmək sizi o qədər məşğul etdi ki,"}
+      ]
+    },
+    {
+      "id": 103, "name_ar": "العصر", "name_az": "Əsr", "name_trans": "Al-'Asr",
+      "type": "Məkkə", "ayah_count": 3, "juz": 30,
+      "ayahs": [
+        {"number": 1, "arabic": "وَالْعَصْرِ", "transliteration": "Wal-'asr", "translation_az": "And olsun əsirə!"},
+        {"number": 2, "arabic": "إِنَّ الْإِنسَانَ لَفِي خُسْرٍ", "transliteration": "Innal-insana lafi khusr", "translation_az": "Həqiqətən, insan ziyan içərisindədir!"},
+        {"number": 3, "arabic": "إِلَّا الَّذِينَ آمَنُوا وَعَمِلُوا الصَّالِحَاتِ وَتَوَاصَوْا بِالْحَقِّ وَتَوَاصَوْا بِالصَّبْرِ", "transliteration": "Illalladhina amanu wa 'amilus-salihati...", "translation_az": "Yalnız iman gətirən, saleh əməllər edən, bir-birinə haqqı tövsiyə edən və səbri tövsiyə edənlər istisnadır!"}
+      ]
+    },
+    {
+      "id": 104, "name_ar": "الهمزة", "name_az": "Huməzə", "name_trans": "Al-Humaza",
+      "type": "Məkkə", "ayah_count": 9, "juz": 30,
+      "ayahs": [
+        {"number": 1, "arabic": "وَيْلٌ لِّكُلِّ هُمَزَةٍ لُّمَزَةٍ", "transliteration": "Waylul-likulli humazatil-lumazah", "translation_az": "Vay halına qeybət edən və tənə vuran hər kəsin!"}
+      ]
+    },
+    {
+      "id": 105, "name_ar": "الفيل", "name_az": "Fil", "name_trans": "Al-Fil",
+      "type": "Məkkə", "ayah_count": 5, "juz": 30,
+      "ayahs": [
+        {"number": 1, "arabic": "أَلَمْ تَرَ كَيْفَ فَعَلَ رَبُّكَ بِأَصْحَابِ الْفِيلِ", "transliteration": "Alam tara kayfa fa'ala rabbuka bi-ashabil-fil", "translation_az": "Məgər Rəbbinin fil sahiblərinə nələr etdiyini görmədinmi?"}
+      ]
+    },
+    {
+      "id": 106, "name_ar": "قريش", "name_az": "Qüreyş", "name_trans": "Quraysh",
+      "type": "Məkkə", "ayah_count": 4, "juz": 30,
+      "ayahs": [
+        {"number": 1, "arabic": "لِإِيلَافِ قُرَيْشٍ", "transliteration": "Li-ilafi Quraysh", "translation_az": "Qüreyşin ülfəti üçün,"}
+      ]
+    },
+    {
+      "id": 107, "name_ar": "الماعون", "name_az": "Maun", "name_trans": "Al-Ma'un",
+      "type": "Məkkə", "ayah_count": 7, "juz": 30,
+      "ayahs": [
+        {"number": 1, "arabic": "أَرَأَيْتَ الَّذِي يُكَذِّبُ بِالدِّينِ", "transliteration": "Ara'aytalladhi yukadhdhibu bid-din", "translation_az": "Dini yalan sayanı gördünmü?"}
+      ]
+    },
+    {
+      "id": 108, "name_ar": "الكوثر", "name_az": "Kövsər", "name_trans": "Al-Kawthar",
+      "type": "Məkkə", "ayah_count": 3, "juz": 30,
+      "ayahs": [
+        {"number": 1, "arabic": "إِنَّا أَعْطَيْنَاكَ الْكَوْثَرَ", "transliteration": "Inna a'taynaka al-kawthar", "translation_az": "Həqiqətən, Biz sənə Kövsəri bəxş etdik!"}
+      ]
+    },
+    {
+      "id": 109, "name_ar": "الكافرون", "name_az": "Kafirun", "name_trans": "Al-Kafirun",
+      "type": "Məkkə", "ayah_count": 6, "juz": 30,
+      "ayahs": [
+        {"number": 1, "arabic": "قُلْ يَا أَيُّهَا الْكَافِرُونَ", "transliteration": "Qul ya ayyuhal-kafirun", "translation_az": "De: Ey kafirlər!"}
+      ]
+    },
+    {
+      "id": 110, "name_ar": "النصر", "name_az": "Nəsr", "name_trans": "An-Nasr",
+      "type": "Mədinə", "ayah_count": 3, "juz": 30,
+      "ayahs": [
+        {"number": 1, "arabic": "إِذَا جَاءَ نَصْرُ اللَّهِ وَالْفَتْحُ", "transliteration": "Idha ja'a nasrullahi wal-fath", "translation_az": "Allahın köməyi və zəfər gələcəyi zaman,"}
+      ]
+    },
+    {
+      "id": 111, "name_ar": "المسد", "name_az": "Məsəd", "name_trans": "Al-Masad",
+      "type": "Məkkə", "ayah_count": 5, "juz": 30,
+      "ayahs": [
+        {"number": 1, "arabic": "تَبَّتْ يَدَا أَبِي لَهَبٍ وَتَبَّ", "transliteration": "Tabbat yada abi Lahabiw-wa tabb", "translation_az": "Əbu Ləhəbin əlləri qurusun! O, özü də qurudu!"}
+      ]
+    },
+    {
+      "id": 112, "name_ar": "الإخلاص", "name_az": "İxlas", "name_trans": "Al-Ikhlas",
+      "type": "Məkkə", "ayah_count": 4, "juz": 30,
+      "ayahs": [
+        {"number": 1, "arabic": "قُلْ هُوَ اللَّهُ أَحَدٌ", "transliteration": "Qul Huwallahu Ahad", "translation_az": "De: O Allah Təkdir!"},
+        {"number": 2, "arabic": "اللَّهُ الصَّمَدُ", "transliteration": "Allahus-Samad", "translation_az": "Allah heç nəyə möhtac deyil, hər şey Ona möhtacdır!"},
+        {"number": 3, "arabic": "لَمْ يَلِدْ وَلَمْ يُولَدْ", "transliteration": "Lam yalid wa lam yulad", "translation_az": "O, nə doğmuş, nə də doğulmuşdur!"},
+        {"number": 4, "arabic": "وَلَمْ يَكُن لَّهُ كُفُوًا أَحَدٌ", "transliteration": "Wa lam yakul-lahu kufuwan ahad", "translation_az": "Və heç kəs Ona tay ola bilməz!"}
+      ]
+    },
+    {
+      "id": 113, "name_ar": "الفلق", "name_az": "Fələq", "name_trans": "Al-Falaq",
+      "type": "Məkkə", "ayah_count": 5, "juz": 30,
+      "ayahs": [
+        {"number": 1, "arabic": "قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ", "transliteration": "Qul a'udhu bi-rabbil-falaq", "translation_az": "De: Sığınıram sübhün Rəbbinə!"},
+        {"number": 2, "arabic": "مِن شَرِّ مَا خَلَقَ", "transliteration": "Min sharri ma khalaq", "translation_az": "Yaratdıqlarının şərindən,"},
+        {"number": 3, "arabic": "وَمِن شَرِّ غَاسِقٍ إِذَا وَقَبَ", "transliteration": "Wa min sharri ghasiqin idha waqab", "translation_az": "Qaranlığı çökən gecənin şərindən,"},
+        {"number": 4, "arabic": "وَمِن شَرِّ النَّفَّاثَاتِ فِي الْعُقَدِ", "transliteration": "Wa min sharrin-naffathati fil-'uqad", "translation_az": "Düyünlərə üfürən cadugərlərin şərindən"},
+        {"number": 5, "arabic": "وَمِن شَرِّ حَاسِدٍ إِذَا حَسَدَ", "transliteration": "Wa min sharri hasidin idha hasad", "translation_az": "Və paxıllıq edən paxılın şərindən!"}
+      ]
+    },
+    {
+      "id": 114, "name_ar": "الناس", "name_az": "Nas", "name_trans": "An-Nas",
+      "type": "Məkkə", "ayah_count": 6, "juz": 30,
+      "ayahs": [
+        {"number": 1, "arabic": "قُلْ أَعُوذُ بِرَبِّ النَّاسِ", "transliteration": "Qul a'udhu bi-rabbin-nas", "translation_az": "De: Sığınıram insanların Rəbbinə!"},
+        {"number": 2, "arabic": "مَلِكِ النَّاسِ", "transliteration": "Malikin-nas", "translation_az": "İnsanların Hökmdarına,"},
+        {"number": 3, "arabic": "إِلَٰهِ النَّاسِ", "transliteration": "Ilahin-nas", "translation_az": "İnsanların İlahına!"},
+        {"number": 4, "arabic": "مِن شَرِّ الْوَسْوَاسِ الْخَنَّاسِ", "transliteration": "Min sharril-waswasil-khannas", "translation_az": "Vəsvəsə verən və gizlənən Şeytanın şərindən,"},
+        {"number": 5, "arabic": "الَّذِي يُوَسْوِسُ فِي صُدُورِ النَّاسِ", "transliteration": "Alladhi yuwaswisu fi sudurin-nas", "translation_az": "O Şeytan ki, insanların qəlblərinə vəsvəsə salır,"},
+        {"number": 6, "arabic": "مِنَ الْجِنَّةِ وَالنَّاسِ", "transliteration": "Minal-jinnati wan-nas", "translation_az": "İstər cinlərdən olsun, istər insanlardan!"}
+      ]
+    }
+  ]
+};
