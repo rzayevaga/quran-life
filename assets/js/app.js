@@ -24,7 +24,9 @@
             city: 'Baku',
             azanFile: 'default.mp3',
             prayerNotify: false,
-            method: '2'
+            method: '2',
+            realtimeCompass: true,
+            hourlyAyah: true
         }
     };
 
@@ -66,6 +68,7 @@
         elements.searchContainer = document.getElementById('searchContainer');
         elements.searchInput = document.getElementById('searchInput');
         elements.searchClear = document.getElementById('searchClear');
+        elements.searchFilter = document.getElementById('searchFilter');
         elements.searchResults = document.getElementById('searchResults');
         elements.favoritesContainer = document.getElementById('favoritesContainer');
         elements.favoritesList = document.getElementById('favoritesList');
@@ -112,6 +115,11 @@
         elements.calPrev = document.getElementById('calPrev');
         elements.calNext = document.getElementById('calNext');
         elements.prayerTimesDaily = document.getElementById('prayerTimesDaily');
+        elements.permissionBtn = document.getElementById('permissionBtn');
+        elements.disableBatteryOptBtn = document.getElementById('disableBatteryOptBtn');
+        elements.scrollTopBtn = document.getElementById('scrollTopBtn');
+        elements.scrollBottomBtn = document.getElementById('scrollBottomBtn');
+        elements.notificationPanel = document.getElementById('notificationPanel');
     }
 
     function getSurahData(index) {
@@ -341,17 +349,21 @@
         }
 
         const q = query.toLowerCase().trim();
+        const filter = elements.searchFilter ? elements.searchFilter.value : "all";
         const results = [];
 
         QURAN_DATA.surahs.forEach((surah, sIdx) => {
             surah.ayahs.forEach((ayah, aIdx) => {
                 let score = 0;
+                if (filter === "all" || filter === "ayah") {
                 if (ayah.translation_az.toLowerCase().includes(q)) score += 3;
                 if (ayah.transliteration.toLowerCase().includes(q)) score += 2;
                 if (ayah.arabic.includes(q)) score += 1;
-                if (surah.name_az.toLowerCase().includes(q)) score += 5;
-                if (surah.name_ar.includes(q)) score += 4;
-
+                }
+                if ((filter === "all" || filter === "surah") && surah.name_az.toLowerCase().includes(q)) score += 5;
+                if ((filter === "all" || filter === "surah") && surah.name_ar.includes(q)) score += 4;
+                if ((filter === "all" || filter === "juz") && String(surah.juz || Math.ceil(surah.id * 0.85)) === q) score += 6;
+                
                 if (score > 0) {
                     results.push({ surahIndex: sIdx, ayahIndex: aIdx, score, surah, ayah });
                 }
@@ -528,6 +540,12 @@
     function sendNotification(title, body) {
         if (Notification.permission === 'granted') {
             new Notification(title, { body, icon: 'icons/icon-192.png' });
+            if (elements.notificationPanel) {
+                const n = document.createElement('div');
+                n.className = 'notif-item';
+                n.textContent = `${new Date().toLocaleTimeString('az-AZ')} — ${title}: ${body}`;
+                elements.notificationPanel.prepend(n);
+            }
         }
     }
 
@@ -740,11 +758,10 @@
     }
 
     function handleOrientation(e) {
-        if (e.webkitCompassHeading) {
-            const compass = e.webkitCompassHeading;
-            const rotation = (state.qiblaDegree - compass + 360) % 360;
-            elements.qiblaArrow.style.transform = `translateX(-50%) rotate(${rotation}deg)`;
-        }
+        const compass = e.webkitCompassHeading ?? (e.alpha != null ? 360 - e.alpha : null);
+        if (compass == null) return;
+        const rotation = (state.qiblaDegree - compass + 360) % 360;
+        elements.qiblaArrow.style.transform = `translateX(-50%) rotate(${rotation}deg)`;
     }
 
     function renderCalendar() {
@@ -842,6 +859,8 @@
             elements.searchResults.classList.remove('active');
             elements.searchResults.innerHTML = '';
         });
+
+        elements.searchFilter?.addEventListener('change', function(){ performSearch(elements.searchInput.value); });
 
         elements.searchInput.addEventListener('focus', function() {
             if (this.value.trim().length >= 2) {
@@ -956,6 +975,11 @@
             renderCalendar();
         });
 
+        elements.permissionBtn?.addEventListener('click', checkAndRequestPermissions);
+        elements.disableBatteryOptBtn?.addEventListener('click', () => alert('Android: Settings > Battery > Unrestricted. iOS: Low Power Mode söndürün.'));
+        elements.scrollTopBtn?.addEventListener('click', () => window.scrollTo({top:0,behavior:'smooth'}));
+        elements.scrollBottomBtn?.addEventListener('click', () => window.scrollTo({top:document.body.scrollHeight,behavior:'smooth'}));
+
         elements.calNext.addEventListener('click', function() {
             state.calendarDate.setMonth(state.calendarDate.getMonth() + 1);
             renderCalendar();
@@ -1010,6 +1034,29 @@
         }
     }
 
+    
+
+    async function checkAndRequestPermissions() {
+        const msgs = [];
+        if (Notification.permission !== 'granted') {
+            const p = await Notification.requestPermission();
+            msgs.push(`Bildiriş: ${p}`);
+        }
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(() => msgs.push('Məkan: ok'), () => msgs.push('Məkan: rədd edildi'));
+        }
+        showToast(msgs.join(' | ') || 'İcazələr yoxlandı');
+    }
+
+    function startHourlyAyahNotifications() {
+        setInterval(() => {
+            if (Notification.permission === 'granted') {
+                const a = getRandomAyah();
+                sendNotification(`Saatlıq ayə — ${a.surahName} ${a.number}`, a.translation.substring(0,120));
+            }
+        }, 3600000);
+    }
+
     function init() {
         cacheElements();
         loadSettings();
@@ -1027,7 +1074,9 @@
         setInterval(updateClock, 1000);
         updateClock();
 
-        fetchPrayerTimes(state.settings.city, state.settings.method).then(schedulePrayerMonitoring);
+        fetchPrayerTimes(state.settings.city, state.settings.method).then(() => { schedulePrayerMonitoring(); updateNextPrayer(); });
+        checkAndRequestPermissions();
+        startHourlyAyahNotifications();
 
         if (state.settings.reminder && Notification.permission === 'granted') {
             startReminders();
