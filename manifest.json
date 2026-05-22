@@ -2,7 +2,7 @@
     "name": "Qur'an Life [LM]",
     "short_name": "Qur'an Life",
     "description": "Quran oxu, tərcümə və transkripsiya ilə.",
-    "start_url": "./",
+    "start_url": "./?v=5.0.0",
     "scope": "./",
     "display": "standalone",
     "orientation": "portrait",
