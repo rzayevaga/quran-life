@@ -1,5 +1,5 @@
 // sw.js
-const CACHE_NAME = 'quran-life-v3.0.0';
+const CACHE_NAME = 'quran-life-v5.0.0';
 const ASSETS = [
     './',
     './index.html',
@@ -8,55 +8,19 @@ const ASSETS = [
     './data/quran.json',
     './manifest.json',
     './icons/icon-192.png',
-    './icons/icon-512.png'
+    './icons/icon-512.png',
+    './assets/azan/default.mp3'
 ];
-
-self.addEventListener('install', event => {
+self.addEventListener('install', e => {
     self.skipWaiting();
-    event.waitUntil(
-        caches.open(CACHE_NAME).then(cache => {
-            return Promise.all(
-                ASSETS.map(url => {
-                    return cache.add(url).catch(err => {
-                        console.warn('Failed to cache', url, err);
-                    });
-                })
-            );
-        })
-    );
+    e.waitUntil(caches.open(CACHE_NAME).then(cache => Promise.all(ASSETS.map(url => cache.add(url).catch(()=>{})))));
 });
-
-self.addEventListener('activate', event => {
-    event.waitUntil(
-        caches.keys().then(keys =>
-            Promise.all(
-                keys.filter(key => key !== CACHE_NAME).map(key => caches.delete(key))
-            )
-        ).then(() => {
-            clients.claim();
-            clients.matchAll({ type: 'window' }).then(clientsArr => {
-                clientsArr.forEach(client => {
-                    client.postMessage({ type: 'UPDATE_AVAILABLE' });
-                });
-            });
-        })
-    );
+self.addEventListener('activate', e => {
+    e.waitUntil(caches.keys().then(keys => Promise.all(keys.filter(k=>k!==CACHE_NAME).map(k=>caches.delete(k)))).then(()=>{
+        clients.claim(); clients.matchAll({type:'window'}).then(arr=>arr.forEach(c=>c.postMessage({type:'UPDATE_AVAILABLE'})));
+    }));
 });
-
-self.addEventListener('fetch', event => {
-    event.respondWith(
-        caches.match(event.request).then(response => {
-            return response || fetch(event.request).catch(() => {
-                if (event.request.mode === 'navigate') {
-                    return caches.match('./index.html');
-                }
-            });
-        })
-    );
+self.addEventListener('fetch', e => {
+    e.respondWith(caches.match(e.request).then(r=>r||fetch(e.request).catch(()=>caches.match('./index.html'))));
 });
-
-self.addEventListener('message', event => {
-    if (event.data && event.data.type === 'SKIP_WAITING') {
-        self.skipWaiting();
-    }
-});
+self.addEventListener('message', e => { if(e.data&&e.data.type==='SKIP_WAITING') self.skipWaiting(); });
