@@ -24,7 +24,9 @@
             city: 'Baku',
             azanFile: 'default.mp3',
             prayerNotify: false,
-            method: '2'
+            method: '2',
+            realtimeCompass: true,
+            hourlyAyah: true
         }
     };
 
@@ -35,6 +37,8 @@
     let mapInstance = null;
     let userMarker = null;
     let uploadedAzanUrl = null;
+    let lastHourlyAyahStamp = null;
+    let searchDebounce;
 
     const AZAN_OPTIONS = [
         { file: 'https://www.aladhan.com/audio/azan/1/azan1.mp3', name: 'Məkkə (1)' },
@@ -66,6 +70,7 @@
         elements.searchContainer = document.getElementById('searchContainer');
         elements.searchInput = document.getElementById('searchInput');
         elements.searchClear = document.getElementById('searchClear');
+        elements.searchFilter = document.getElementById('searchFilter');
         elements.searchResults = document.getElementById('searchResults');
         elements.favoritesContainer = document.getElementById('favoritesContainer');
         elements.favoritesList = document.getElementById('favoritesList');
@@ -104,14 +109,22 @@
         elements.qiblaCompass = document.getElementById('qiblaCompass');
         elements.qiblaArrow = document.getElementById('qiblaArrow');
         elements.qiblaDegree = document.getElementById('qiblaDegree');
+        elements.compassHeading = document.getElementById('compassHeading');
         elements.qiblaMap = document.getElementById('qiblaMap');
         elements.qiblaManualBtn = document.getElementById('qiblaManualBtn');
+        elements.qiblaCityInput = document.getElementById('qiblaCityInput');
+        elements.qiblaCityBtn = document.getElementById('qiblaCityBtn');
         elements.shareAppBtn = document.getElementById('shareAppBtn');
         elements.calGrid = document.getElementById('calendarGrid');
         elements.calMonthYear = document.getElementById('calMonthYear');
         elements.calPrev = document.getElementById('calPrev');
         elements.calNext = document.getElementById('calNext');
         elements.prayerTimesDaily = document.getElementById('prayerTimesDaily');
+        elements.permissionBtn = document.getElementById('permissionBtn');
+        elements.disableBatteryOptBtn = document.getElementById('disableBatteryOptBtn');
+        elements.scrollTopBtn = document.getElementById('scrollTopBtn');
+        elements.scrollBottomBtn = document.getElementById('scrollBottomBtn');
+        elements.notificationPanel = document.getElementById('notificationPanel');
     }
 
     function getSurahData(index) {
@@ -160,6 +173,27 @@
         elements.favoriteBtn.classList.toggle('active-fav', isFav);
 
         animateAyahCard();
+        saveLastReadPosition();
+    }
+
+    function saveLastReadPosition() {
+        localStorage.setItem('quran-last-position', JSON.stringify({
+            surahIndex: state.currentSurahIndex,
+            ayahIndex: state.currentAyahIndex,
+            ts: Date.now()
+        }));
+    }
+
+    function restoreLastReadPosition() {
+        try {
+            const saved = JSON.parse(localStorage.getItem('quran-last-position') || 'null');
+            if (!saved) return;
+            if (saved.surahIndex >= 0 && saved.surahIndex < QURAN_DATA.surahs.length) {
+                state.currentSurahIndex = saved.surahIndex;
+                const count = QURAN_DATA.surahs[saved.surahIndex].ayah_count;
+                state.currentAyahIndex = Math.max(0, Math.min(saved.ayahIndex || 0, count - 1));
+            }
+        } catch (e) {}
     }
 
     function animateAyahCard() {
@@ -341,17 +375,21 @@
         }
 
         const q = query.toLowerCase().trim();
+        const filter = elements.searchFilter ? elements.searchFilter.value : "all";
         const results = [];
 
         QURAN_DATA.surahs.forEach((surah, sIdx) => {
             surah.ayahs.forEach((ayah, aIdx) => {
                 let score = 0;
+                if (filter === "all" || filter === "ayah") {
                 if (ayah.translation_az.toLowerCase().includes(q)) score += 3;
                 if (ayah.transliteration.toLowerCase().includes(q)) score += 2;
                 if (ayah.arabic.includes(q)) score += 1;
-                if (surah.name_az.toLowerCase().includes(q)) score += 5;
-                if (surah.name_ar.includes(q)) score += 4;
-
+                }
+                if ((filter === "all" || filter === "surah") && surah.name_az.toLowerCase().includes(q)) score += 5;
+                if ((filter === "all" || filter === "surah") && surah.name_ar.includes(q)) score += 4;
+                if ((filter === "all" || filter === "juz") && String(surah.juz || Math.ceil(surah.id * 0.85)) === q) score += 6;
+                
                 if (score > 0) {
                     results.push({ surahIndex: sIdx, ayahIndex: aIdx, score, surah, ayah });
                 }
@@ -399,7 +437,7 @@
     function createParticles() {
         const container = elements.particles;
         container.innerHTML = '';
-        for (let i = 0; i < 25; i++) {
+        for (let i = 0; i < 12; i++) {
             const particle = document.createElement('div');
             particle.className = 'particle';
             particle.style.left = Math.random() * 100 + '%';
@@ -528,7 +566,36 @@
     function sendNotification(title, body) {
         if (Notification.permission === 'granted') {
             new Notification(title, { body, icon: 'icons/icon-192.png' });
+            if (elements.notificationPanel) {
+                const n = document.createElement('div');
+                n.className = 'notif-item';
+                n.textContent = `${new Date().toLocaleTimeString('az-AZ')} — ${title}: ${body}`;
+                elements.notificationPanel.prepend(n);
+                while (elements.notificationPanel.children.length > 50) {
+                    elements.notificationPanel.lastElementChild.remove();
+                }
+                persistNotificationFeed();
+            }
         }
+    }
+
+    function persistNotificationFeed() {
+        if (!elements.notificationPanel) return;
+        const entries = Array.from(elements.notificationPanel.children).map(el => el.textContent).slice(0, 50);
+        localStorage.setItem('quran-notification-feed', JSON.stringify(entries));
+    }
+
+    function restoreNotificationFeed() {
+        if (!elements.notificationPanel) return;
+        try {
+            const entries = JSON.parse(localStorage.getItem('quran-notification-feed') || '[]');
+            entries.forEach(text => {
+                const n = document.createElement('div');
+                n.className = 'notif-item';
+                n.textContent = text;
+                elements.notificationPanel.appendChild(n);
+            });
+        } catch (e) {}
     }
 
     function handleDailyAyahToggle() {
@@ -634,7 +701,11 @@
                 prayerTimesCache = cached;
                 return;
             }
-            const resp = await fetch(`https://api.aladhan.com/v1/timingsByCity?city=${encodeURIComponent(city)}&country=Azerbaijan&method=${method}`);
+            let apiUrl = `https://api.aladhan.com/v1/timingsByCity?city=${encodeURIComponent(city)}&country=Azerbaijan&method=${method}`;
+            if (state.userLocation?.lat && state.userLocation?.lng) {
+                apiUrl = `https://api.aladhan.com/v1/timings/${today}?latitude=${state.userLocation.lat}&longitude=${state.userLocation.lng}&method=${method}`;
+            }
+            const resp = await fetch(apiUrl);
             if (!resp.ok) throw new Error('Şəbəkə xətası');
             const data = await resp.json();
             prayerTimesCache = { city, method, date: today, timings: data.data.timings };
@@ -710,25 +781,30 @@
             return;
         }
         navigator.geolocation.getCurrentPosition(pos => {
-            state.userLocation = { lat: pos.coords.latitude, lng: pos.coords.longitude };
-            const qibla = calculateQibla(state.userLocation.lat, state.userLocation.lng);
-            state.qiblaDegree = qibla;
-            elements.qiblaDegree.textContent = `${qibla.toFixed(1)}° (Kəbə istiqaməti)`;
-            elements.qiblaArrow.style.transform = `translateX(-50%) rotate(${qibla}deg)`;
+            setQiblaLocation(pos.coords.latitude, pos.coords.longitude, 'GPS');
             if (window.DeviceOrientationEvent) {
                 window.addEventListener('deviceorientation', handleOrientation);
             }
+        }, () => showToast('Yer icazəsi verilmədi'));
+    }
+
+    function setQiblaLocation(lat, lng, label = 'Mövqe') {
+        state.userLocation = { lat, lng };
+        const qibla = calculateQibla(lat, lng);
+        state.qiblaDegree = qibla;
+        elements.qiblaDegree.textContent = `${label} • Qiblə: ${qibla.toFixed(1)}°`;
+        elements.qiblaArrow.style.transform = `translateX(-50%) rotate(${qibla}deg)`;
+        fetchPrayerTimes(state.settings.city, state.settings.method).then(() => updateNextPrayer());
             if (!mapInstance) {
-                mapInstance = L.map('qiblaMap').setView([state.userLocation.lat, state.userLocation.lng], 13);
+                mapInstance = L.map('qiblaMap').setView([lat, lng], 13);
                 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(mapInstance);
             }
             if (userMarker) mapInstance.removeLayer(userMarker);
-            userMarker = L.marker([state.userLocation.lat, state.userLocation.lng]).addTo(mapInstance);
+            userMarker = L.marker([lat, lng]).addTo(mapInstance);
             const kaaba = [21.4225, 39.8262];
             L.circleMarker(kaaba, { color: 'gold', radius: 6 }).addTo(mapInstance);
-            L.polyline([[state.userLocation.lat, state.userLocation.lng], kaaba], { color: '#ff7b2c', weight: 2 }).addTo(mapInstance);
-            mapInstance.setView([state.userLocation.lat, state.userLocation.lng], 13);
-        }, () => showToast('Yer icazəsi verilmədi'));
+            L.polyline([[lat, lng], kaaba], { color: '#ff7b2c', weight: 2 }).addTo(mapInstance);
+            mapInstance.setView([lat, lng], 13);
     }
 
     function calculateQibla(lat, lng) {
@@ -740,10 +816,12 @@
     }
 
     function handleOrientation(e) {
-        if (e.webkitCompassHeading) {
-            const compass = e.webkitCompassHeading;
-            const rotation = (state.qiblaDegree - compass + 360) % 360;
-            elements.qiblaArrow.style.transform = `translateX(-50%) rotate(${rotation}deg)`;
+        const compass = e.webkitCompassHeading ?? (e.alpha != null ? 360 - e.alpha : null);
+        if (compass == null) return;
+        const rotation = (state.qiblaDegree - compass + 360) % 360;
+        elements.qiblaArrow.style.transform = `translateX(-50%) rotate(${rotation}deg)`;
+        if (elements.compassHeading) {
+            elements.compassHeading.textContent = `Real kompas: ${compass.toFixed(1)}° • Qibləyə fərq: ${rotation.toFixed(1)}°`;
         }
     }
 
@@ -753,19 +831,28 @@
         const firstDay = new Date(year, month, 1).getDay(), daysInMonth = new Date(year, month + 1, 0).getDate();
         let html = '<div class="day-header">B.e</div><div class="day-header">Ç.a</div><div class="day-header">Ç</div><div class="day-header">C.a</div><div class="day-header">C</div><div class="day-header">Ş</div><div class="day-header">Ş</div>';
         for (let i = 0; i < (firstDay + 6) % 7; i++) html += '<div></div>';
+        const today = new Date();
         for (let d = 1; d <= daysInMonth; d++) {
             const date = new Date(year, month, d), isToday = date.toDateString() === new Date().toDateString();
-            html += `<div class="day-cell${isToday ? ' today' : ''}">${d}</div>`;
+            const weekend = [0,6].includes(date.getDay());
+            html += `<div class="day-cell${isToday ? ' today' : ''}${weekend ? ' special' : ''}" title="${date.toLocaleDateString('az-AZ')}">${d}</div>`;
         }
         elements.calGrid.innerHTML = html;
         if (prayerTimesCache) {
             const timings = prayerTimesCache.timings;
+            const nowMins = today.getHours() * 60 + today.getMinutes();
+            const fmt = (k) => timings[k] || '--:--';
+            const next = ['Fajr','Dhuhr','Asr','Maghrib','Isha'].find(k => {
+                const [h,m] = (timings[k]||'00:00').split(':').map(Number);
+                return (h*60+m) > nowMins;
+            }) || 'Fajr';
             elements.prayerTimesDaily.innerHTML = `
-                <div class="prayer-row"><span>Fəcr</span><span>${timings.Fajr}</span></div>
-                <div class="prayer-row"><span>Zöhr</span><span>${timings.Dhuhr}</span></div>
-                <div class="prayer-row"><span>Əsr</span><span>${timings.Asr}</span></div>
-                <div class="prayer-row"><span>Məğrib</span><span>${timings.Maghrib}</span></div>
-                <div class="prayer-row"><span>İşa</span><span>${timings.Isha}</span></div>`;
+                <div class="prayer-row"><span>Fəcr</span><span>${fmt('Fajr')}</span></div>
+                <div class="prayer-row"><span>Zöhr</span><span>${fmt('Dhuhr')}</span></div>
+                <div class="prayer-row"><span>Əsr</span><span>${fmt('Asr')}</span></div>
+                <div class="prayer-row"><span>Məğrib</span><span>${fmt('Maghrib')}</span></div>
+                <div class="prayer-row"><span>İşa</span><span>${fmt('Isha')}</span></div>
+                <div class="prayer-row"><span>Növbəti</span><strong>${next} (${fmt(next)})</strong></div>`;
         }
     }
 
@@ -833,7 +920,8 @@
         elements.searchInput.addEventListener('input', function() {
             const val = this.value;
             elements.searchClear.style.display = val ? 'flex' : 'none';
-            performSearch(val);
+            clearTimeout(searchDebounce);
+            searchDebounce = setTimeout(() => performSearch(val), 120);
         });
 
         elements.searchClear.addEventListener('click', function() {
@@ -842,6 +930,8 @@
             elements.searchResults.classList.remove('active');
             elements.searchResults.innerHTML = '';
         });
+
+        elements.searchFilter?.addEventListener('change', function(){ performSearch(elements.searchInput.value); });
 
         elements.searchInput.addEventListener('focus', function() {
             if (this.value.trim().length >= 2) {
@@ -947,7 +1037,20 @@
             const lng = prompt('Lng:');
             if (lat && lng) {
                 state.userLocation = { lat: parseFloat(lat), lng: parseFloat(lng) };
-                initQibla();
+                setQiblaLocation(state.userLocation.lat, state.userLocation.lng, 'Manual');
+            }
+        });
+        elements.qiblaCityBtn?.addEventListener('click', async function() {
+            const city = (elements.qiblaCityInput?.value || '').trim();
+            if (!city) return showToast('Şəhər adını yazın');
+            try {
+                const r = await fetch(`https://nominatim.openstreetmap.org/search?format=json&limit=1&q=${encodeURIComponent(city)}`);
+                const arr = await r.json();
+                if (!arr.length) return showToast('Şəhər tapılmadı');
+                const lat = parseFloat(arr[0].lat), lng = parseFloat(arr[0].lon);
+                setQiblaLocation(lat, lng, city);
+            } catch {
+                showToast('Şəbəkə xətası: şəhər tapılmadı');
             }
         });
 
@@ -955,6 +1058,11 @@
             state.calendarDate.setMonth(state.calendarDate.getMonth() - 1);
             renderCalendar();
         });
+
+        elements.permissionBtn?.addEventListener('click', checkAndRequestPermissions);
+        elements.disableBatteryOptBtn?.addEventListener('click', () => alert('Android: Settings > Battery > Unrestricted. iOS: Low Power Mode söndürün.'));
+        elements.scrollTopBtn?.addEventListener('click', () => window.scrollTo({top:0,behavior:'smooth'}));
+        elements.scrollBottomBtn?.addEventListener('click', () => window.scrollTo({top:document.body.scrollHeight,behavior:'smooth'}));
 
         elements.calNext.addEventListener('click', function() {
             state.calendarDate.setMonth(state.calendarDate.getMonth() + 1);
@@ -1010,9 +1118,36 @@
         }
     }
 
+    
+
+    async function checkAndRequestPermissions() {
+        const msgs = [];
+        if (Notification.permission !== 'granted') {
+            const p = await Notification.requestPermission();
+            msgs.push(`Bildiriş: ${p}`);
+        }
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(() => msgs.push('Məkan: ok'), () => msgs.push('Məkan: rədd edildi'));
+        }
+        showToast(msgs.join(' | ') || 'İcazələr yoxlandı');
+    }
+
+    function startHourlyAyahNotifications() {
+        setInterval(() => {
+            if (Notification.permission === 'granted') {
+                const hourStamp = new Date().toISOString().slice(0, 13);
+                if (lastHourlyAyahStamp === hourStamp) return;
+                lastHourlyAyahStamp = hourStamp;
+                const a = getRandomAyah();
+                sendNotification(`Saatlıq ayə — ${a.surahName} ${a.number}`, a.translation.substring(0,120));
+            }
+        }, 3600000);
+    }
+
     function init() {
         cacheElements();
         loadSettings();
+        restoreLastReadPosition();
         populateSurahSelect();
         initAzanSelect();
         autoSetNightMode();
@@ -1021,13 +1156,16 @@
         createParticles();
         bindEvents();
         switchTab('quran');
+        restoreNotificationFeed();
         handlePwaInstall();
         initServiceWorker();
         setInterval(autoSetNightMode, 60000);
         setInterval(updateClock, 1000);
         updateClock();
 
-        fetchPrayerTimes(state.settings.city, state.settings.method).then(schedulePrayerMonitoring);
+        fetchPrayerTimes(state.settings.city, state.settings.method).then(() => { schedulePrayerMonitoring(); updateNextPrayer(); });
+        checkAndRequestPermissions();
+        startHourlyAyahNotifications();
 
         if (state.settings.reminder && Notification.permission === 'granted') {
             startReminders();

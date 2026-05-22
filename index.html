@@ -118,7 +118,8 @@
                 <div class="search-3d-wrapper">
                     <div class="search-input-group">
                         <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8" stroke="currentColor" stroke-width="2.5" fill="none"/><path d="M17.5 17.5L22 22" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round"/></svg>
-                        <input type="text" id="searchInput" class="search-input" placeholder="Surə, ayə, söz və ya '36:5'...">
+                        <input type="text" id="searchInput" class="search-input" placeholder="Surə, ayə, cüz və ya 36:5">
+                        <select id="searchFilter" class="custom-select small-select"><option value="all">Hamısı</option><option value="surah">Surə</option><option value="ayah">Ayə</option><option value="juz">Cüz</option></select>
                         <button class="search-clear" id="searchClear" style="display:none;">
                             <svg width="18" height="18" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round"/></svg>
                         </button>
@@ -134,7 +135,7 @@
             </div>
             <div class="settings-panel" id="settingsPanel">
                 <div class="settings-card">
-                    <h3 class="settings-title">Ayarlar</h3>
+                    <h3 class="settings-title">Ayarlar</h3><div class="setting-group"><button id="permissionBtn" class="btn-close-settings">İcazələri yoxla və aktiv et</button><button id="disableBatteryOptBtn" class="btn-close-settings">Batareya optimizasiyasını söndürmə təlimatı</button></div>
                     <div class="setting-group">
                         <label class="setting-label">Ərəbcə Şrift Ölçüsü</label>
                         <input type="range" id="arabicFontSize" min="20" max="60" value="36" class="setting-range">
@@ -214,8 +215,17 @@
             <div class="about-panel" id="aboutPanel">
                 <div class="about-card">
                     <h3 class="about-title">Haqqında</h3>
-                    <p style="color:var(--text-secondary); margin-bottom:1rem;">Qur'an Life [LM] – Quran oxu, tərcümə, namaz təqvimi, qiblə tapıcı.</p>
-                    <p style="color:var(--text-muted); font-size:0.75rem;">Versiya 5.0.0</p>
+                    <p class="about-lead">Qur'an Life [LM] – Quran oxu, tərcümə, namaz təqvimi, qiblə tapıcı.</p>
+                    <div class="about-author">
+                        <span>Düzəldən</span>
+                        <strong>Agha Rzayeff</strong>
+                    </div>
+                    <div class="about-socials">
+                        <a href="https://t.me" target="_blank" rel="noopener">Telegram</a>
+                        <a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a>
+                        <a href="https://x.com" target="_blank" rel="noopener">X</a>
+                    </div>
+                    <p class="about-version">Versiya 5.2.0</p>
                     <button id="shareAppBtn" class="btn-close-settings">Tətbiqi paylaş</button>
                 </div>
             </div>
@@ -227,6 +237,9 @@
                         <div class="compass-arrow" id="qiblaArrow"></div>
                     </div>
                     <p id="qiblaDegree" style="text-align:center;color:var(--text-secondary);"></p>
+                    <p id="compassHeading" style="text-align:center;color:var(--text-secondary);font-size:.85rem;"></p>
+                    <input id="qiblaCityInput" class="text-input" placeholder="Şəhər adı ilə tap (məs: Baku)" style="margin-top:.45rem;">
+                    <button id="qiblaCityBtn" class="btn-close-settings" style="margin-top:0.5rem;">Şəhərə görə tap</button>
                     <div id="qiblaMap" style="height:200px; border-radius:12px; margin-top:0.5rem;"></div>
                     <button id="qiblaManualBtn" class="btn-close-settings" style="margin-top:0.5rem;">Manual yer seç</button>
                 </div>
@@ -288,6 +301,12 @@
             <button id="dismissBannerBtn">✕</button>
         </div>
     </div>
+    
+    <aside class="quick-scroll" id="quickScroll">
+        <button id="scrollTopBtn">↑</button>
+        <button id="scrollBottomBtn">↓</button>
+    </aside>
+    <section class="notification-panel" id="notificationPanel"></section>
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="data/quran.json"></script>
     <script src="assets/js/app.js"></script>

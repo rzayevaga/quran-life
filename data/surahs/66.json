@@ -1,0 +1,17 @@
+{
+  "id": 66,
+  "name_ar": "التحريم",
+  "name_az": "Təhrim",
+  "name_trans": "At-Tahrim",
+  "type": "Mədinə",
+  "ayah_count": 12,
+  "juz": 28,
+  "ayahs": [
+    {
+      "number": 1,
+      "arabic": "يَا أَيُّهَا النَّبِيُّ لِمَ تُحَرِّمُ مَا أَحَلَّ اللَّهُ لَكَ...",
+      "transliteration": "Ya ayyuhan-nabiyyu lima tuharrimu...",
+      "translation_az": "Ey Peyğəmbər! Nə üçün Allahın sənə halal etdiyini özünə haram edirsən?"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "id": 62,
+  "name_ar": "الجمعة",
+  "name_az": "Cümə",
+  "name_trans": "Al-Jumu'a",
+  "type": "Mədinə",
+  "ayah_count": 11,
+  "juz": 28,
+  "ayahs": [
+    {
+      "number": 1,
+      "arabic": "يُسَبِّحُ لِلَّهِ مَا فِي السَّمَاوَاتِ وَمَا فِي الْأَرْضِ...",
+      "transliteration": "Yusabbihu lillahi ma fis-samawati...",
+      "translation_az": "Göylərdə və yerdə olanların hamısı Allahı təqdis edir..."
+    }
+  ]
+}

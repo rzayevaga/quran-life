@@ -1,0 +1,17 @@
+{
+  "id": 35,
+  "name_ar": "فاطر",
+  "name_az": "Fatir",
+  "name_trans": "Fatir",
+  "type": "Məkkə",
+  "ayah_count": 45,
+  "juz": 22,
+  "ayahs": [
+    {
+      "number": 1,
+      "arabic": "الْحَمْدُ لِلَّهِ فَاطِرِ السَّمَاوَاتِ وَالْأَرْضِ...",
+      "transliteration": "Alhamdu lillahi fatiris-samawati wal-ard...",
+      "translation_az": "Göyləri və yeri yoxdan yaradan Allaha həmd olsun..."
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "id": 20,
+  "name_ar": "طه",
+  "name_az": "Taha",
+  "name_trans": "Ta-Ha",
+  "type": "Məkkə",
+  "ayah_count": 135,
+  "juz": 16,
+  "ayahs": [
+    {
+      "number": 1,
+      "arabic": "طه",
+      "transliteration": "Ta-Ha",
+      "translation_az": "Ta, Ha."
+    }
+  ]
+}

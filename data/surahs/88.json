@@ -1,0 +1,17 @@
+{
+  "id": 88,
+  "name_ar": "الغاشية",
+  "name_az": "Ğaşiyə",
+  "name_trans": "Al-Ghashiyah",
+  "type": "Məkkə",
+  "ayah_count": 26,
+  "juz": 30,
+  "ayahs": [
+    {
+      "number": 1,
+      "arabic": "هَلْ أَتَاكَ حَدِيثُ الْغَاشِيَةِ",
+      "transliteration": "Hal ataka hadithul-ghashiyah",
+      "translation_az": "Örtüb bürüyənin xəbəri sənə gəlib çatdımı?"
+    }
+  ]
+}

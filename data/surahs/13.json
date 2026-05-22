@@ -1,0 +1,17 @@
+{
+  "id": 13,
+  "name_ar": "الرعد",
+  "name_az": "Rəd",
+  "name_trans": "Ar-Ra'd",
+  "type": "Mədinə",
+  "ayah_count": 43,
+  "juz": 13,
+  "ayahs": [
+    {
+      "number": 1,
+      "arabic": "المر ۚ تِلْكَ آيَاتُ الْكِتَابِ...",
+      "transliteration": "Alif-Lam-Mim-Ra...",
+      "translation_az": "Əlif, Lam, Mim, Ra. Bunlar Kitabın ayələridir..."
+    }
+  ]
+}

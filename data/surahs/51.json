@@ -1,0 +1,17 @@
+{
+  "id": 51,
+  "name_ar": "الذاريات",
+  "name_az": "Zariyat",
+  "name_trans": "Adh-Dhariyat",
+  "type": "Məkkə",
+  "ayah_count": 60,
+  "juz": 26,
+  "ayahs": [
+    {
+      "number": 1,
+      "arabic": "وَالذَّارِيَاتِ ذَرْوًا",
+      "transliteration": "Wadh-dhariyati dharwa",
+      "translation_az": "Toz-torpağı sovuranlara and olsun!"
+    }
+  ]
+}

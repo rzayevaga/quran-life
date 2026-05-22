@@ -1,0 +1,17 @@
+{
+  "id": 41,
+  "name_ar": "فصلت",
+  "name_az": "Fussilət",
+  "name_trans": "Fussilat",
+  "type": "Məkkə",
+  "ayah_count": 54,
+  "juz": 24,
+  "ayahs": [
+    {
+      "number": 1,
+      "arabic": "حم",
+      "transliteration": "Ha-Mim",
+      "translation_az": "Ha, Mim."
+    }
+  ]
+}

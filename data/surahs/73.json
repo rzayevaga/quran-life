@@ -1,0 +1,17 @@
+{
+  "id": 73,
+  "name_ar": "المزمل",
+  "name_az": "Muzzəmmil",
+  "name_trans": "Al-Muzzammil",
+  "type": "Məkkə",
+  "ayah_count": 20,
+  "juz": 29,
+  "ayahs": [
+    {
+      "number": 1,
+      "arabic": "يَا أَيُّهَا الْمُزَّمِّلُ",
+      "transliteration": "Ya ayyuhal-muzzammil",
+      "translation_az": "Ey paltarına bürünən!"
+    }
+  ]
+}

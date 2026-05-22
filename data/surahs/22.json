@@ -1,0 +1,17 @@
+{
+  "id": 22,
+  "name_ar": "الحج",
+  "name_az": "Həcc",
+  "name_trans": "Al-Hajj",
+  "type": "Mədinə",
+  "ayah_count": 78,
+  "juz": 17,
+  "ayahs": [
+    {
+      "number": 1,
+      "arabic": "يَا أَيُّهَا النَّاسُ اتَّقُوا رَبَّكُمْ...",
+      "transliteration": "Ya ayyuhan-nasut-taqu rabbakum...",
+      "translation_az": "Ey insanlar! Rəbbinizdən qorxun..."
+    }
+  ]
+}

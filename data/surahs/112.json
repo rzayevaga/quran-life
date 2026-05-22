@@ -1,0 +1,35 @@
+{
+  "id": 112,
+  "name_ar": "الإخلاص",
+  "name_az": "İxlas",
+  "name_trans": "Al-Ikhlas",
+  "type": "Məkkə",
+  "ayah_count": 4,
+  "juz": 30,
+  "ayahs": [
+    {
+      "number": 1,
+      "arabic": "قُلْ هُوَ اللَّهُ أَحَدٌ",
+      "transliteration": "Qul Huwallahu Ahad",
+      "translation_az": "De: O Allah Təkdir!"
+    },
+    {
+      "number": 2,
+      "arabic": "اللَّهُ الصَّمَدُ",
+      "transliteration": "Allahus-Samad",
+      "translation_az": "Allah heç nəyə möhtac deyil, hər şey Ona möhtacdır!"
+    },
+    {
+      "number": 3,
+      "arabic": "لَمْ يَلِدْ وَلَمْ يُولَدْ",
+      "transliteration": "Lam yalid wa lam yulad",
+      "translation_az": "O, nə doğmuş, nə də doğulmuşdur!"
+    },
+    {
+      "number": 4,
+      "arabic": "وَلَمْ يَكُن لَّهُ كُفُوًا أَحَدٌ",
+      "transliteration": "Wa lam yakul-lahu kufuwan ahad",
+      "translation_az": "Və heç kəs Ona tay ola bilməz!"
+    }
+  ]
+}

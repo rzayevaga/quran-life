@@ -1,0 +1,17 @@
+{
+  "id": 45,
+  "name_ar": "الجاثية",
+  "name_az": "Casiyə",
+  "name_trans": "Al-Jathiya",
+  "type": "Məkkə",
+  "ayah_count": 37,
+  "juz": 25,
+  "ayahs": [
+    {
+      "number": 1,
+      "arabic": "حم",
+      "transliteration": "Ha-Mim",
+      "translation_az": "Ha, Mim."
+    }
+  ]
+}

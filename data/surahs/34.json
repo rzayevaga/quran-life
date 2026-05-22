@@ -1,0 +1,17 @@
+{
+  "id": 34,
+  "name_ar": "سبأ",
+  "name_az": "Səba",
+  "name_trans": "Saba",
+  "type": "Məkkə",
+  "ayah_count": 54,
+  "juz": 22,
+  "ayahs": [
+    {
+      "number": 1,
+      "arabic": "الْحَمْدُ لِلَّهِ الَّذِي لَهُ مَا فِي السَّمَاوَاتِ...",
+      "transliteration": "Alhamdu lillahil-ladhi lahu ma fis-samawati...",
+      "translation_az": "Göylərdə və yerdə nə varsa Ona məxsus olan Allaha həmd olsun..."
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "id": 57,
+  "name_ar": "الحديد",
+  "name_az": "Hədid",
+  "name_trans": "Al-Hadid",
+  "type": "Mədinə",
+  "ayah_count": 29,
+  "juz": 27,
+  "ayahs": [
+    {
+      "number": 1,
+      "arabic": "سَبَّحَ لِلَّهِ مَا فِي السَّمَاوَاتِ وَالْأَرْضِ...",
+      "transliteration": "Sabbaha lillahi ma fis-samawati wal-ard...",
+      "translation_az": "Göylərdə və yerdə nə varsa, Allahı təqdis edir..."
+    }
+  ]
+}

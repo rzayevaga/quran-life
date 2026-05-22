@@ -1,0 +1,17 @@
+{
+  "id": 9,
+  "name_ar": "التوبة",
+  "name_az": "Tövbə",
+  "name_trans": "At-Tawba",
+  "type": "Mədinə",
+  "ayah_count": 129,
+  "juz": 10,
+  "ayahs": [
+    {
+      "number": 1,
+      "arabic": "بَرَاءَةٌ مِّنَ اللَّهِ وَرَسُولِهِ...",
+      "transliteration": "Bara'atum-minallahi wa rasulih...",
+      "translation_az": "Allahdan və Onun Rəsulundan bir azad olma elanıdır..."
+    }
+  ]
+}

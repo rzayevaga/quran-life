@@ -1,0 +1,17 @@
+{
+  "id": 98,
+  "name_ar": "البينة",
+  "name_az": "Bəyyinə",
+  "name_trans": "Al-Bayyina",
+  "type": "Mədinə",
+  "ayah_count": 8,
+  "juz": 30,
+  "ayahs": [
+    {
+      "number": 1,
+      "arabic": "لَمْ يَكُنِ الَّذِينَ كَفَرُوا مِنْ أَهْلِ الْكِتَابِ وَالْمُشْرِكِينَ مُنفَكِّينَ...",
+      "transliteration": "Lam yakunilladhina kafaru...",
+      "translation_az": "Kitab əhlindən kafir olanlar və müşriklər özlərinə aydın dəlil gələnə qədər ayrılmadılar."
+    }
+  ]
+}

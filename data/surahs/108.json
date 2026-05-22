@@ -1,0 +1,17 @@
+{
+  "id": 108,
+  "name_ar": "الكوثر",
+  "name_az": "Kövsər",
+  "name_trans": "Al-Kawthar",
+  "type": "Məkkə",
+  "ayah_count": 3,
+  "juz": 30,
+  "ayahs": [
+    {
+      "number": 1,
+      "arabic": "إِنَّا أَعْطَيْنَاكَ الْكَوْثَرَ",
+      "transliteration": "Inna a'taynaka al-kawthar",
+      "translation_az": "Həqiqətən, Biz sənə Kövsəri bəxş etdik!"
+    }
+  ]
+}
