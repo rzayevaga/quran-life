@@ -1,0 +1,17 @@
+{
+  "id": 14,
+  "name_ar": "إبراهيم",
+  "name_az": "İbrahim",
+  "name_trans": "Ibrahim",
+  "type": "Məkkə",
+  "ayah_count": 52,
+  "juz": 13,
+  "ayahs": [
+    {
+      "number": 1,
+      "arabic": "الر ۚ كِتَابٌ أَنزَلْنَاهُ إِلَيْكَ...",
+      "transliteration": "Alif-Lam-Ra. Kitabun anzalnahu ilayk...",
+      "translation_az": "Əlif, Lam, Ra. Bu, sənə nazil etdiyimiz bir Kitabdır..."
+    }
+  ]
+}

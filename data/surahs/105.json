@@ -1,0 +1,17 @@
+{
+  "id": 105,
+  "name_ar": "الفيل",
+  "name_az": "Fil",
+  "name_trans": "Al-Fil",
+  "type": "Məkkə",
+  "ayah_count": 5,
+  "juz": 30,
+  "ayahs": [
+    {
+      "number": 1,
+      "arabic": "أَلَمْ تَرَ كَيْفَ فَعَلَ رَبُّكَ بِأَصْحَابِ الْفِيلِ",
+      "transliteration": "Alam tara kayfa fa'ala rabbuka bi-ashabil-fil",
+      "translation_az": "Məgər Rəbbinin fil sahiblərinə nələr etdiyini görmədinmi?"
+    }
+  ]
+}

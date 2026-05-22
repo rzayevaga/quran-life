@@ -1,10 +1,10 @@
 // sw.js
-const CACHE_NAME = 'quran-life-v5.0.0';
+const CACHE_NAME = 'quran-life-v5.1.0';
 const ASSETS = [
     './',
     './index.html',
-    './css/style.css',
-    './js/app.js',
+    './assets/css/style.css',
+    './assets/js/app.js',
     './data/quran.json',
     './manifest.json',
     './icons/icon-192.png',
@@ -21,6 +21,13 @@ self.addEventListener('activate', e => {
     }));
 });
 self.addEventListener('fetch', e => {
-    e.respondWith(caches.match(e.request).then(r=>r||fetch(e.request).catch(()=>caches.match('./index.html'))));
+    if (e.request.method !== 'GET') return;
+    e.respondWith(
+        fetch(e.request).then(response => {
+            const copy = response.clone();
+            caches.open(CACHE_NAME).then(cache => cache.put(e.request, copy)).catch(()=>{});
+            return response;
+        }).catch(() => caches.match(e.request).then(r => r || caches.match('./index.html')))
+    );
 });
 self.addEventListener('message', e => { if(e.data&&e.data.type==='SKIP_WAITING') self.skipWaiting(); });

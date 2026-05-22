@@ -1,0 +1,17 @@
+{
+  "id": 5,
+  "name_ar": "المائدة",
+  "name_az": "Maidə",
+  "name_trans": "Al-Ma'ida",
+  "type": "Mədinə",
+  "ayah_count": 120,
+  "juz": 6,
+  "ayahs": [
+    {
+      "number": 1,
+      "arabic": "يَا أَيُّهَا الَّذِينَ آمَنُوا أَوْفُوا بِالْعُقُودِ...",
+      "transliteration": "Ya ayyuhal-ladhina amanu awfu bil-'uqud...",
+      "translation_az": "Ey iman gətirənlər! Əhdlərə sadiq olun..."
+    }
+  ]
+}

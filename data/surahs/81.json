@@ -1,0 +1,17 @@
+{
+  "id": 81,
+  "name_ar": "التكوير",
+  "name_az": "Təkvir",
+  "name_trans": "At-Takwir",
+  "type": "Məkkə",
+  "ayah_count": 29,
+  "juz": 30,
+  "ayahs": [
+    {
+      "number": 1,
+      "arabic": "إِذَا الشَّمْسُ كُوِّرَتْ",
+      "transliteration": "Idhash-shamsu kuwwirat",
+      "translation_az": "Günəş büküləcəyi zaman,"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "id": 27,
+  "name_ar": "النمل",
+  "name_az": "Nəml",
+  "name_trans": "An-Naml",
+  "type": "Məkkə",
+  "ayah_count": 93,
+  "juz": 19,
+  "ayahs": [
+    {
+      "number": 1,
+      "arabic": "طس ۚ تِلْكَ آيَاتُ الْقُرْآنِ وَكِتَابٍ مُّبِينٍ",
+      "transliteration": "Ta-Sin. Tilka ayatul-Qur'ani wa Kitabin Mubin",
+      "translation_az": "Ta, Sin. Bunlar Quranın və aydın Kitabın ayələridir."
+    }
+  ]
+}

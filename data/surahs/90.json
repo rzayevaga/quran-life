@@ -1,0 +1,17 @@
+{
+  "id": 90,
+  "name_ar": "البلد",
+  "name_az": "Bələd",
+  "name_trans": "Al-Balad",
+  "type": "Məkkə",
+  "ayah_count": 20,
+  "juz": 30,
+  "ayahs": [
+    {
+      "number": 1,
+      "arabic": "لَا أُقْسِمُ بِهَٰذَا الْبَلَدِ",
+      "transliteration": "La uqsimu bi-hadhal-balad",
+      "translation_az": "And içirəm bu şəhərə!"
+    }
+  ]
+}

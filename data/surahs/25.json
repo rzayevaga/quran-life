@@ -1,0 +1,17 @@
+{
+  "id": 25,
+  "name_ar": "الفرقان",
+  "name_az": "Furqan",
+  "name_trans": "Al-Furqan",
+  "type": "Məkkə",
+  "ayah_count": 77,
+  "juz": 18,
+  "ayahs": [
+    {
+      "number": 1,
+      "arabic": "تَبَارَكَ الَّذِي نَزَّلَ الْفُرْقَانَ...",
+      "transliteration": "Tabarakalladhi nazzalal-Furqan...",
+      "translation_az": "Furqanı bəndəsinə nazil edən Allah nə qədər ucadır..."
+    }
+  ]
+}

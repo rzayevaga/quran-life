@@ -1,0 +1,17 @@
+{
+  "id": 77,
+  "name_ar": "المرسلات",
+  "name_az": "Mursəlat",
+  "name_trans": "Al-Mursalat",
+  "type": "Məkkə",
+  "ayah_count": 50,
+  "juz": 29,
+  "ayahs": [
+    {
+      "number": 1,
+      "arabic": "وَالْمُرْسَلَاتِ عُرْفًا",
+      "transliteration": "Wal-mursalati 'urfa",
+      "translation_az": "And olsun bir-birinin ardınca göndərilənlərə!"
+    }
+  ]
+}

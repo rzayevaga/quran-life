@@ -1,0 +1,17 @@
+{
+  "id": 17,
+  "name_ar": "الإسراء",
+  "name_az": "İsra",
+  "name_trans": "Al-Isra",
+  "type": "Məkkə",
+  "ayah_count": 111,
+  "juz": 15,
+  "ayahs": [
+    {
+      "number": 1,
+      "arabic": "سُبْحَانَ الَّذِي أَسْرَىٰ بِعَبْدِهِ لَيْلًا...",
+      "transliteration": "Subhanalladhi asra bi-'abdihi laylan...",
+      "translation_az": "Bəndəsini gecə vaxtı yürüdən Allah pakdır..."
+    }
+  ]
+}

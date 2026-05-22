@@ -1,0 +1,17 @@
+{
+  "id": 65,
+  "name_ar": "الطلاق",
+  "name_az": "Talaq",
+  "name_trans": "At-Talaq",
+  "type": "Mədinə",
+  "ayah_count": 12,
+  "juz": 28,
+  "ayahs": [
+    {
+      "number": 1,
+      "arabic": "يَا أَيُّهَا النَّبِيُّ إِذَا طَلَّقْتُمُ النِّسَاءَ...",
+      "transliteration": "Ya ayyuhan-nabiyyu idha tallaqtumun-nisa...",
+      "translation_az": "Ey Peyğəmbər! Qadınları boşamaq istədiyiniz zaman..."
+    }
+  ]
+}

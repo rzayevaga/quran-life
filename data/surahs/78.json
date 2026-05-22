@@ -1,0 +1,41 @@
+{
+  "id": 78,
+  "name_ar": "النبأ",
+  "name_az": "Nəbə",
+  "name_trans": "An-Naba",
+  "type": "Məkkə",
+  "ayah_count": 40,
+  "juz": 30,
+  "ayahs": [
+    {
+      "number": 1,
+      "arabic": "عَمَّ يَتَسَاءَلُونَ",
+      "transliteration": "'Amma yatasa'alun",
+      "translation_az": "Onlar nə barədə soruşurlar?"
+    },
+    {
+      "number": 2,
+      "arabic": "عَنِ النَّبَإِ الْعَظِيمِ",
+      "transliteration": "'Anin-naba'il-'azim",
+      "translation_az": "Əzəmətli xəbər barəsində!"
+    },
+    {
+      "number": 3,
+      "arabic": "الَّذِي هُمْ فِيهِ مُخْتَلِفُونَ",
+      "transliteration": "Alladhi hum fihi mukhtalifun",
+      "translation_az": "O xəbər ki, onun barəsində ixtilafdadırlar."
+    },
+    {
+      "number": 4,
+      "arabic": "كَلَّا سَيَعْلَمُونَ",
+      "transliteration": "Kalla saya'lamun",
+      "translation_az": "Xeyr! Onlar biləcəklər!"
+    },
+    {
+      "number": 5,
+      "arabic": "ثُمَّ كَلَّا سَيَعْلَمُونَ",
+      "transliteration": "Thumma kalla saya'lamun",
+      "translation_az": "Yenə xeyr! Onlar biləcəklər!"
+    }
+  ]
+}

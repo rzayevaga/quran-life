@@ -1,0 +1,17 @@
+{
+  "id": 6,
+  "name_ar": "الأنعام",
+  "name_az": "Ənam",
+  "name_trans": "Al-An'am",
+  "type": "Məkkə",
+  "ayah_count": 165,
+  "juz": 7,
+  "ayahs": [
+    {
+      "number": 1,
+      "arabic": "الْحَمْدُ لِلَّهِ الَّذِي خَلَقَ السَّمَاوَاتِ وَالْأَرْضَ...",
+      "transliteration": "Alhamdu lillahil-ladhi khalaqas-samawati wal-ard...",
+      "translation_az": "Göyləri və yeri yaradan Allaha həmd olsun..."
+    }
+  ]
+}

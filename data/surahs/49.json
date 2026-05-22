@@ -1,0 +1,17 @@
+{
+  "id": 49,
+  "name_ar": "الحجرات",
+  "name_az": "Hucurat",
+  "name_trans": "Al-Hujurat",
+  "type": "Mədinə",
+  "ayah_count": 18,
+  "juz": 26,
+  "ayahs": [
+    {
+      "number": 1,
+      "arabic": "يَا أَيُّهَا الَّذِينَ آمَنُوا لَا تُقَدِّمُوا بَيْنَ يَدَيِ اللَّهِ وَرَسُولِهِ...",
+      "transliteration": "Ya ayyuhal-ladhina amanu la tuqaddimu...",
+      "translation_az": "Ey iman gətirənlər! Allahın və Rəsulunun önünə keçməyin..."
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "id": 80,
+  "name_ar": "عبس",
+  "name_az": "Əbəsə",
+  "name_trans": "'Abasa",
+  "type": "Məkkə",
+  "ayah_count": 42,
+  "juz": 30,
+  "ayahs": [
+    {
+      "number": 1,
+      "arabic": "عَبَسَ وَتَوَلَّىٰ",
+      "transliteration": "'Abasa wa tawalla",
+      "translation_az": "Qaşqabaqlı oldu və üz çevirdi."
+    }
+  ]
+}

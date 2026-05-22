@@ -1,0 +1,17 @@
+{
+  "id": 75,
+  "name_ar": "القيامة",
+  "name_az": "Qiyamə",
+  "name_trans": "Al-Qiyama",
+  "type": "Məkkə",
+  "ayah_count": 40,
+  "juz": 29,
+  "ayahs": [
+    {
+      "number": 1,
+      "arabic": "لَا أُقْسِمُ بِيَوْمِ الْقِيَامَةِ",
+      "transliteration": "La uqsimu bi-yawmil-qiyamah",
+      "translation_az": "And içirəm Qiyamət gününə!"
+    }
+  ]
+}

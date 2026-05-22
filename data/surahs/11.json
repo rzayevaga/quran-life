@@ -1,0 +1,17 @@
+{
+  "id": 11,
+  "name_ar": "هود",
+  "name_az": "Hud",
+  "name_trans": "Hud",
+  "type": "Məkkə",
+  "ayah_count": 123,
+  "juz": 11,
+  "ayahs": [
+    {
+      "number": 1,
+      "arabic": "الر ۚ كِتَابٌ أُحْكِمَتْ آيَاتُهُ...",
+      "transliteration": "Alif-Lam-Ra. Kitabun uhkimat ayatuh...",
+      "translation_az": "Əlif, Lam, Ra. Bu elə bir Kitabdır ki, ayələri möhkəmləndirilmişdir..."
+    }
+  ]
+}

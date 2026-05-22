@@ -1,0 +1,17 @@
+{
+  "id": 8,
+  "name_ar": "الأنفال",
+  "name_az": "Ənfal",
+  "name_trans": "Al-Anfal",
+  "type": "Mədinə",
+  "ayah_count": 75,
+  "juz": 9,
+  "ayahs": [
+    {
+      "number": 1,
+      "arabic": "يَسْأَلُونَكَ عَنِ الْأَنفَالِ...",
+      "transliteration": "Yas'alunaka 'anil-anfal...",
+      "translation_az": "Səndən qənimətlər barəsində soruşurlar..."
+    }
+  ]
+}

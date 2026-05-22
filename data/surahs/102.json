@@ -1,0 +1,17 @@
+{
+  "id": 102,
+  "name_ar": "التكاثر",
+  "name_az": "Təkasur",
+  "name_trans": "At-Takathur",
+  "type": "Məkkə",
+  "ayah_count": 8,
+  "juz": 30,
+  "ayahs": [
+    {
+      "number": 1,
+      "arabic": "أَلْهَاكُمُ التَّكَاثُرُ",
+      "transliteration": "Alhakumut-takathur",
+      "translation_az": "Çoxluqla öyünmək sizi o qədər məşğul etdi ki,"
+    }
+  ]
+}

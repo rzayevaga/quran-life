@@ -1,0 +1,17 @@
+{
+  "id": 85,
+  "name_ar": "البروج",
+  "name_az": "Buruc",
+  "name_trans": "Al-Buruj",
+  "type": "Məkkə",
+  "ayah_count": 22,
+  "juz": 30,
+  "ayahs": [
+    {
+      "number": 1,
+      "arabic": "وَالسَّمَاءِ ذَاتِ الْبُرُوجِ",
+      "transliteration": "Was-sama'i dhatil-buruj",
+      "translation_az": "Bürclər sahibi olan göyə and olsun!"
+    }
+  ]
+}

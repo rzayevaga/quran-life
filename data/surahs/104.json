@@ -1,0 +1,17 @@
+{
+  "id": 104,
+  "name_ar": "الهمزة",
+  "name_az": "Huməzə",
+  "name_trans": "Al-Humaza",
+  "type": "Məkkə",
+  "ayah_count": 9,
+  "juz": 30,
+  "ayahs": [
+    {
+      "number": 1,
+      "arabic": "وَيْلٌ لِّكُلِّ هُمَزَةٍ لُّمَزَةٍ",
+      "transliteration": "Waylul-likulli humazatil-lumazah",
+      "translation_az": "Vay halına qeybət edən və tənə vuran hər kəsin!"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "id": 38,
+  "name_ar": "ص",
+  "name_az": "Sad",
+  "name_trans": "Sad",
+  "type": "Məkkə",
+  "ayah_count": 88,
+  "juz": 23,
+  "ayahs": [
+    {
+      "number": 1,
+      "arabic": "ص ۚ وَالْقُرْآنِ ذِي الذِّكْرِ",
+      "transliteration": "Sad, wal-Qur'ani dhidh-dhikr",
+      "translation_az": "Sad. Öyüd-nəsihətlə dolu Qurana and olsun!"
+    }
+  ]
+}

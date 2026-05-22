@@ -1,0 +1,41 @@
+{
+  "id": 113,
+  "name_ar": "الفلق",
+  "name_az": "Fələq",
+  "name_trans": "Al-Falaq",
+  "type": "Məkkə",
+  "ayah_count": 5,
+  "juz": 30,
+  "ayahs": [
+    {
+      "number": 1,
+      "arabic": "قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ",
+      "transliteration": "Qul a'udhu bi-rabbil-falaq",
+      "translation_az": "De: Sığınıram sübhün Rəbbinə!"
+    },
+    {
+      "number": 2,
+      "arabic": "مِن شَرِّ مَا خَلَقَ",
+      "transliteration": "Min sharri ma khalaq",
+      "translation_az": "Yaratdıqlarının şərindən,"
+    },
+    {
+      "number": 3,
+      "arabic": "وَمِن شَرِّ غَاسِقٍ إِذَا وَقَبَ",
+      "transliteration": "Wa min sharri ghasiqin idha waqab",
+      "translation_az": "Qaranlığı çökən gecənin şərindən,"
+    },
+    {
+      "number": 4,
+      "arabic": "وَمِن شَرِّ النَّفَّاثَاتِ فِي الْعُقَدِ",
+      "transliteration": "Wa min sharrin-naffathati fil-'uqad",
+      "translation_az": "Düyünlərə üfürən cadugərlərin şərindən"
+    },
+    {
+      "number": 5,
+      "arabic": "وَمِن شَرِّ حَاسِدٍ إِذَا حَسَدَ",
+      "transliteration": "Wa min sharri hasidin idha hasad",
+      "translation_az": "Və paxıllıq edən paxılın şərindən!"
+    }
+  ]
+}
