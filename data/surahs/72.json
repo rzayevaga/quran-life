@@ -1,0 +1,17 @@
+{
+  "id": 72,
+  "name_ar": "الجن",
+  "name_az": "Cinn",
+  "name_trans": "Al-Jinn",
+  "type": "Məkkə",
+  "ayah_count": 28,
+  "juz": 29,
+  "ayahs": [
+    {
+      "number": 1,
+      "arabic": "قُلْ أُوحِيَ إِلَيَّ أَنَّهُ اسْتَمَعَ نَفَرٌ مِّنَ الْجِنِّ...",
+      "transliteration": "Qul uhiya ilayya annahustama'a...",
+      "translation_az": "De: Mənə vəhy olundu ki, bir dəstə cin qulaq asdı..."
+    }
+  ]
+}

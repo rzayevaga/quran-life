@@ -1019,26 +1019,33 @@ body.night-mode .app-header {
 
 .bottom-nav {
     position: fixed;
+    left: 0;
+    right: 0;
     bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
+    z-index: 30;
+    display: flex;
+    justify-content: center;
     width: 100%;
-    max-width: 520px;
-    z-index: 20;
-    padding: 0 0.75rem 0.75rem;
+    padding-left: max(10px, env(safe-area-inset-left));
+    padding-right: max(10px, env(safe-area-inset-right));
+    padding-bottom: max(8px, env(safe-area-inset-bottom));
+    pointer-events: none;
 }
 
 .nav-3d-bar {
     display: flex;
-    background: var(--bg-card);
+    width: min(520px, 100%);
+    margin: 0 auto;
+    background: linear-gradient(135deg, rgba(28, 58, 106, 0.28), rgba(18, 36, 70, 0.18));
     border-radius: 1.375rem;
     padding: 0.375rem;
     gap: 0.25rem;
-    border: 1px solid var(--border);
-    box-shadow: 0 -4px 30px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,123,44,0.08);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(160, 205, 255, 0.2);
+    box-shadow: 0 -4px 30px rgba(0,0,0,0.35), 0 0 0 1px rgba(120,180,255,0.08);
+    backdrop-filter: blur(16px) saturate(125%);
+    -webkit-backdrop-filter: blur(16px) saturate(125%);
     overflow-x: auto;
+    pointer-events: auto;
 }
 
 .nav-tab {
@@ -1229,3 +1236,9 @@ body.fullscreen-mode .app-content {
 ::-webkit-scrollbar-track { background: transparent; }
 ::-webkit-scrollbar-thumb { background: var(--border-light); border-radius: 4px; }
 ::-webkit-scrollbar-thumb:hover { background: var(--primary-dark); }
+.quick-scroll{position:fixed;right:12px;bottom:110px;display:flex;flex-direction:column;gap:8px;z-index:40}
+.quick-scroll button{border:none;border-radius:999px;width:42px;height:42px;background:linear-gradient(180deg,#4aa3ff,#1f6fd6);color:white;font-size:20px;box-shadow:0 8px 20px rgba(0,0,0,.25)}
+.notification-panel{position:fixed;left:10px;right:10px;bottom:175px;max-height:160px;overflow:auto;z-index:35;display:flex;flex-direction:column;gap:6px}
+.notif-item{background:rgba(10,20,40,.78);border:1px solid rgba(120,190,255,.35);padding:8px 10px;border-radius:10px;font-size:.75rem}
+#searchFilter{margin-top:.5rem;width:100%}
+.app-container{padding-bottom:7rem}

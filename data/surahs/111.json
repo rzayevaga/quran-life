@@ -1,0 +1,17 @@
+{
+  "id": 111,
+  "name_ar": "المسد",
+  "name_az": "Məsəd",
+  "name_trans": "Al-Masad",
+  "type": "Məkkə",
+  "ayah_count": 5,
+  "juz": 30,
+  "ayahs": [
+    {
+      "number": 1,
+      "arabic": "تَبَّتْ يَدَا أَبِي لَهَبٍ وَتَبَّ",
+      "transliteration": "Tabbat yada abi Lahabiw-wa tabb",
+      "translation_az": "Əbu Ləhəbin əlləri qurusun! O, özü də qurudu!"
+    }
+  ]
+}

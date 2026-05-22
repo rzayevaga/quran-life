@@ -1,0 +1,17 @@
+{
+  "id": 29,
+  "name_ar": "العنكبوت",
+  "name_az": "Ənkəbut",
+  "name_trans": "Al-Ankabut",
+  "type": "Məkkə",
+  "ayah_count": 69,
+  "juz": 20,
+  "ayahs": [
+    {
+      "number": 1,
+      "arabic": "الم",
+      "transliteration": "Alif-Lam-Mim",
+      "translation_az": "Əlif, Lam, Mim."
+    }
+  ]
+}

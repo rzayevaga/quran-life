@@ -1,0 +1,17 @@
+{
+  "id": 32,
+  "name_ar": "السجدة",
+  "name_az": "Səcdə",
+  "name_trans": "As-Sajda",
+  "type": "Məkkə",
+  "ayah_count": 30,
+  "juz": 21,
+  "ayahs": [
+    {
+      "number": 1,
+      "arabic": "الم",
+      "transliteration": "Alif-Lam-Mim",
+      "translation_az": "Əlif, Lam, Mim."
+    }
+  ]
+}

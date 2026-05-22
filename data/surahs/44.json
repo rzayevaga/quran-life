@@ -1,0 +1,17 @@
+{
+  "id": 44,
+  "name_ar": "الدخان",
+  "name_az": "Duxan",
+  "name_trans": "Ad-Dukhan",
+  "type": "Məkkə",
+  "ayah_count": 59,
+  "juz": 25,
+  "ayahs": [
+    {
+      "number": 1,
+      "arabic": "حم",
+      "transliteration": "Ha-Mim",
+      "translation_az": "Ha, Mim."
+    }
+  ]
+}

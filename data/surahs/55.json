@@ -1,0 +1,29 @@
+{
+  "id": 55,
+  "name_ar": "الرحمن",
+  "name_az": "Rəhman",
+  "name_trans": "Ar-Rahman",
+  "type": "Mədinə",
+  "ayah_count": 78,
+  "juz": 27,
+  "ayahs": [
+    {
+      "number": 1,
+      "arabic": "الرَّحْمَٰنُ",
+      "transliteration": "Ar-Rahman",
+      "translation_az": "Rəhman!"
+    },
+    {
+      "number": 2,
+      "arabic": "عَلَّمَ الْقُرْآنَ",
+      "transliteration": "'Allamal-Qur'an",
+      "translation_az": "Quranı öyrətdi."
+    },
+    {
+      "number": 3,
+      "arabic": "خَلَقَ الْإِنسَانَ",
+      "transliteration": "Khalaqal-insan",
+      "translation_az": "İnsanı yaratdı."
+    }
+  ]
+}

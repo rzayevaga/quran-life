@@ -1,0 +1,17 @@
+{
+  "id": 61,
+  "name_ar": "الصف",
+  "name_az": "Səff",
+  "name_trans": "As-Saff",
+  "type": "Mədinə",
+  "ayah_count": 14,
+  "juz": 28,
+  "ayahs": [
+    {
+      "number": 1,
+      "arabic": "سَبَّحَ لِلَّهِ مَا فِي السَّمَاوَاتِ وَمَا فِي الْأَرْضِ...",
+      "transliteration": "Sabbaha lillahi ma fis-samawati wa ma fil-ard...",
+      "translation_az": "Göylərdə və yerdə olanların hamısı Allahı təqdis edir..."
+    }
+  ]
+}

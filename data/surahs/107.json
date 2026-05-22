@@ -1,0 +1,17 @@
+{
+  "id": 107,
+  "name_ar": "الماعون",
+  "name_az": "Maun",
+  "name_trans": "Al-Ma'un",
+  "type": "Məkkə",
+  "ayah_count": 7,
+  "juz": 30,
+  "ayahs": [
+    {
+      "number": 1,
+      "arabic": "أَرَأَيْتَ الَّذِي يُكَذِّبُ بِالدِّينِ",
+      "transliteration": "Ara'aytalladhi yukadhdhibu bid-din",
+      "translation_az": "Dini yalan sayanı gördünmü?"
+    }
+  ]
+}

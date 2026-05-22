@@ -1,0 +1,17 @@
+{
+  "id": 86,
+  "name_ar": "الطارق",
+  "name_az": "Tariq",
+  "name_trans": "At-Tariq",
+  "type": "Məkkə",
+  "ayah_count": 17,
+  "juz": 30,
+  "ayahs": [
+    {
+      "number": 1,
+      "arabic": "وَالسَّمَاءِ وَالطَّارِقِ",
+      "transliteration": "Was-sama'i wat-tariq",
+      "translation_az": "And olsun göyə və gecə gələnə!"
+    }
+  ]
+}

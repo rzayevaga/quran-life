@@ -1,0 +1,29 @@
+{
+  "id": 103,
+  "name_ar": "العصر",
+  "name_az": "Əsr",
+  "name_trans": "Al-'Asr",
+  "type": "Məkkə",
+  "ayah_count": 3,
+  "juz": 30,
+  "ayahs": [
+    {
+      "number": 1,
+      "arabic": "وَالْعَصْرِ",
+      "transliteration": "Wal-'asr",
+      "translation_az": "And olsun əsirə!"
+    },
+    {
+      "number": 2,
+      "arabic": "إِنَّ الْإِنسَانَ لَفِي خُسْرٍ",
+      "transliteration": "Innal-insana lafi khusr",
+      "translation_az": "Həqiqətən, insan ziyan içərisindədir!"
+    },
+    {
+      "number": 3,
+      "arabic": "إِلَّا الَّذِينَ آمَنُوا وَعَمِلُوا الصَّالِحَاتِ وَتَوَاصَوْا بِالْحَقِّ وَتَوَاصَوْا بِالصَّبْرِ",
+      "transliteration": "Illalladhina amanu wa 'amilus-salihati...",
+      "translation_az": "Yalnız iman gətirən, saleh əməllər edən, bir-birinə haqqı tövsiyə edən və səbri tövsiyə edənlər istisnadır!"
+    }
+  ]
+}

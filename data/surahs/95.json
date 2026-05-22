@@ -1,0 +1,17 @@
+{
+  "id": 95,
+  "name_ar": "التين",
+  "name_az": "Tin",
+  "name_trans": "At-Tin",
+  "type": "Məkkə",
+  "ayah_count": 8,
+  "juz": 30,
+  "ayahs": [
+    {
+      "number": 1,
+      "arabic": "وَالتِّينِ وَالزَّيْتُونِ",
+      "transliteration": "Wat-tini waz-zaytun",
+      "translation_az": "And olsun əncirə və zeytuna!"
+    }
+  ]
+}

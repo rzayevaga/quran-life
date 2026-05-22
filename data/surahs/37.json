@@ -1,0 +1,17 @@
+{
+  "id": 37,
+  "name_ar": "الصافات",
+  "name_az": "Saffat",
+  "name_trans": "As-Saffat",
+  "type": "Məkkə",
+  "ayah_count": 182,
+  "juz": 23,
+  "ayahs": [
+    {
+      "number": 1,
+      "arabic": "وَالصَّافَّاتِ صَفًّا",
+      "transliteration": "Wassaffati saffa",
+      "translation_az": "And olsun səf-səf duranlara!"
+    }
+  ]
+}

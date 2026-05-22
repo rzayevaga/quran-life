@@ -1,0 +1,71 @@
+{
+  "id": 36,
+  "name_ar": "يس",
+  "name_az": "Yasin",
+  "name_trans": "Ya-Sin",
+  "type": "Məkkə",
+  "ayah_count": 83,
+  "juz": 22,
+  "ayahs": [
+    {
+      "number": 1,
+      "arabic": "يس",
+      "transliteration": "Ya-Sin",
+      "translation_az": "Ya, Sin!"
+    },
+    {
+      "number": 2,
+      "arabic": "وَالْقُرْآنِ الْحَكِيمِ",
+      "transliteration": "Wal-Qur'anil-Hakim",
+      "translation_az": "Hikmətli Qurana and olsun ki,"
+    },
+    {
+      "number": 3,
+      "arabic": "إِنَّكَ لَمِنَ الْمُرْسَلِينَ",
+      "transliteration": "Innaka laminal-mursalin",
+      "translation_az": "Sən, həqiqətən, göndərilmiş peyğəmbərlərdənsən!"
+    },
+    {
+      "number": 4,
+      "arabic": "عَلَىٰ صِرَاطٍ مُّسْتَقِيمٍ",
+      "transliteration": "'Ala siratim-mustaqim",
+      "translation_az": "Doğru yol üzərində!"
+    },
+    {
+      "number": 5,
+      "arabic": "تَنزِيلَ الْعَزِيزِ الرَّحِيمِ",
+      "transliteration": "Tanzilal-'Azizir-Rahim",
+      "translation_az": "Bu Quran Qüdrətli və Rəhmli Allah tərəfindən nazil edilmişdir ki,"
+    },
+    {
+      "number": 6,
+      "arabic": "لِتُنذِرَ قَوْمًا مَّا أُنذِرَ آبَاؤُهُمْ فَهُمْ غَافِلُونَ",
+      "transliteration": "Litundhira qawmam-ma undhira aba'uhum fahum ghafilun",
+      "translation_az": "Ataları qorxudulmamış və özləri də qafil olan bir tayfanı qorxudasan."
+    },
+    {
+      "number": 7,
+      "arabic": "لَقَدْ حَقَّ الْقَوْلُ عَلَىٰ أَكْثَرِهِمْ فَهُمْ لَا يُؤْمِنُونَ",
+      "transliteration": "Laqad haqqal-qawlu 'ala aktharihim fahum la yu'minun",
+      "translation_az": "And olsun ki, onların əksəriyyəti barəsində söz gerçəkləşmişdir, onlar iman gətirməyəcəklər."
+    },
+    {
+      "number": 8,
+      "arabic": "إِنَّا جَعَلْنَا فِي أَعْنَاقِهِمْ أَغْلَالًا فَهِيَ إِلَى الْأَذْقَانِ فَهُم مُّقْمَحُونَ",
+      "transliteration": "Inna ja'alna fi a'naqihim aghlalan fahiya ilal-adhqani fahum muqmahun",
+      "translation_az": "Biz onların boyunlarına zəncir vurduq, o zəncirlər çənələrinə qədər çatmışdır. Buna görə də başları yuxarı qalxmışdır."
+    },
+    {
+      "number": 9,
+      "arabic": "وَجَعَلْنَا مِن بَيْنِ أَيْدِيهِمْ سَدًّا وَمِنْ خَلْفِهِمْ سَدًّا فَأَغْشَيْنَاهُمْ فَهُمْ لَا يُبْصِرُونَ",
+      "transliteration": "Wa ja'alna mim bayni aydihim saddaw-wa min khalfihim saddan fa-aghshaynahum fahum la yubsirun",
+      "translation_az": "Biz onların önlərindən bir sədd, arxalarından da bir sədd çəkdik və gözlərini bağladıq. Buna görə də onlar görməzlər."
+    },
+    {
+      "number": 10,
+      "arabic": "وَسَوَاءٌ عَلَيْهِمْ أَأَنذَرْتَهُمْ أَمْ لَمْ تُنذِرْهُمْ لَا يُؤْمِنُونَ",
+      "transliteration": "Wa sawa'un 'alayhim a-andhartahum am lam tundhirhum la yu'minun",
+      "translation_az": "Onları qorxutsan da, qorxutmasan da, onlar üçün birdir, iman gətirməyəcəklər."
+    }
+  ]
+}

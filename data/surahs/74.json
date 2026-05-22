@@ -1,0 +1,17 @@
+{
+  "id": 74,
+  "name_ar": "المدثر",
+  "name_az": "Muddəssir",
+  "name_trans": "Al-Muddaththir",
+  "type": "Məkkə",
+  "ayah_count": 56,
+  "juz": 29,
+  "ayahs": [
+    {
+      "number": 1,
+      "arabic": "يَا أَيُّهَا الْمُدَّثِّرُ",
+      "transliteration": "Ya ayyuhal-muddaththir",
+      "translation_az": "Ey örtüyə bürünən!"
+    }
+  ]
+}

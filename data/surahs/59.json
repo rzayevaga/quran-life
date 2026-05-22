@@ -1,0 +1,17 @@
+{
+  "id": 59,
+  "name_ar": "الحشر",
+  "name_az": "Həşr",
+  "name_trans": "Al-Hashr",
+  "type": "Mədinə",
+  "ayah_count": 24,
+  "juz": 28,
+  "ayahs": [
+    {
+      "number": 1,
+      "arabic": "سَبَّحَ لِلَّهِ مَا فِي السَّمَاوَاتِ وَمَا فِي الْأَرْضِ...",
+      "transliteration": "Sabbaha lillahi ma fis-samawati wa ma fil-ard...",
+      "translation_az": "Göylərdə və yerdə olanların hamısı Allahı təqdis edir..."
+    }
+  ]
+}

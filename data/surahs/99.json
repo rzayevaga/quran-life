@@ -1,0 +1,17 @@
+{
+  "id": 99,
+  "name_ar": "الزلزلة",
+  "name_az": "Zilzal",
+  "name_trans": "Az-Zalzala",
+  "type": "Mədinə",
+  "ayah_count": 8,
+  "juz": 30,
+  "ayahs": [
+    {
+      "number": 1,
+      "arabic": "إِذَا زُلْزِلَتِ الْأَرْضُ زِلْزَالَهَا",
+      "transliteration": "Idha zulzilatil-ardu zilzalaha",
+      "translation_az": "Yer titrəyib lərzəyə gələcəyi zaman,"
+    }
+  ]
+}

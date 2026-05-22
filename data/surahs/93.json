@@ -1,0 +1,17 @@
+{
+  "id": 93,
+  "name_ar": "الضحى",
+  "name_az": "Duha",
+  "name_trans": "Ad-Duha",
+  "type": "Məkkə",
+  "ayah_count": 11,
+  "juz": 30,
+  "ayahs": [
+    {
+      "number": 1,
+      "arabic": "وَالضُّحَىٰ",
+      "transliteration": "Wad-duha",
+      "translation_az": "And olsun səhərə!"
+    }
+  ]
+}

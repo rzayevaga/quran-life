@@ -1,0 +1,17 @@
+{
+  "id": 101,
+  "name_ar": "القارعة",
+  "name_az": "Qariə",
+  "name_trans": "Al-Qari'a",
+  "type": "Məkkə",
+  "ayah_count": 11,
+  "juz": 30,
+  "ayahs": [
+    {
+      "number": 1,
+      "arabic": "الْقَارِعَةُ",
+      "transliteration": "Al-Qari'ah",
+      "translation_az": "Dəhşətli Qiyamət!"
+    }
+  ]
+}

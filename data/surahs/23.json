@@ -1,0 +1,17 @@
+{
+  "id": 23,
+  "name_ar": "المؤمنون",
+  "name_az": "Muminun",
+  "name_trans": "Al-Mu'minun",
+  "type": "Məkkə",
+  "ayah_count": 118,
+  "juz": 18,
+  "ayahs": [
+    {
+      "number": 1,
+      "arabic": "قَدْ أَفْلَحَ الْمُؤْمِنُونَ",
+      "transliteration": "Qad aflahal-mu'minun",
+      "translation_az": "Möminlər, həqiqətən, nicat tapmışlar!"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "id": 110,
+  "name_ar": "النصر",
+  "name_az": "Nəsr",
+  "name_trans": "An-Nasr",
+  "type": "Mədinə",
+  "ayah_count": 3,
+  "juz": 30,
+  "ayahs": [
+    {
+      "number": 1,
+      "arabic": "إِذَا جَاءَ نَصْرُ اللَّهِ وَالْفَتْحُ",
+      "transliteration": "Idha ja'a nasrullahi wal-fath",
+      "translation_az": "Allahın köməyi və zəfər gələcəyi zaman,"
+    }
+  ]
+}

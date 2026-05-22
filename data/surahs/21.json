@@ -1,0 +1,17 @@
+{
+  "id": 21,
+  "name_ar": "الأنبياء",
+  "name_az": "Ənbiya",
+  "name_trans": "Al-Anbiya",
+  "type": "Məkkə",
+  "ayah_count": 112,
+  "juz": 17,
+  "ayahs": [
+    {
+      "number": 1,
+      "arabic": "اقْتَرَبَ لِلنَّاسِ حِسَابُهُمْ...",
+      "transliteration": "Iqtaraba lin-nasi hisabuhum...",
+      "translation_az": "İnsanların haqq-hesab günü yaxınlaşdı..."
+    }
+  ]
+}

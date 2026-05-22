@@ -1,0 +1,17 @@
+{
+  "id": 106,
+  "name_ar": "قريش",
+  "name_az": "Qüreyş",
+  "name_trans": "Quraysh",
+  "type": "Məkkə",
+  "ayah_count": 4,
+  "juz": 30,
+  "ayahs": [
+    {
+      "number": 1,
+      "arabic": "لِإِيلَافِ قُرَيْشٍ",
+      "transliteration": "Li-ilafi Quraysh",
+      "translation_az": "Qüreyşin ülfəti üçün,"
+    }
+  ]
+}

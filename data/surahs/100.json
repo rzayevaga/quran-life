@@ -1,0 +1,17 @@
+{
+  "id": 100,
+  "name_ar": "العاديات",
+  "name_az": "Adiyat",
+  "name_trans": "Al-'Adiyat",
+  "type": "Məkkə",
+  "ayah_count": 11,
+  "juz": 30,
+  "ayahs": [
+    {
+      "number": 1,
+      "arabic": "وَالْعَادِيَاتِ ضَبْحًا",
+      "transliteration": "Wal-'adiyati dabha",
+      "translation_az": "And olsun tövşüyə-tövşüyə qaçan atlara!"
+    }
+  ]
+}

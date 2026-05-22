@@ -1,0 +1,17 @@
+{
+  "id": 109,
+  "name_ar": "الكافرون",
+  "name_az": "Kafirun",
+  "name_trans": "Al-Kafirun",
+  "type": "Məkkə",
+  "ayah_count": 6,
+  "juz": 30,
+  "ayahs": [
+    {
+      "number": 1,
+      "arabic": "قُلْ يَا أَيُّهَا الْكَافِرُونَ",
+      "transliteration": "Qul ya ayyuhal-kafirun",
+      "translation_az": "De: Ey kafirlər!"
+    }
+  ]
+}

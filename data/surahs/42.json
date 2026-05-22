@@ -1,0 +1,17 @@
+{
+  "id": 42,
+  "name_ar": "الشورى",
+  "name_az": "Şura",
+  "name_trans": "Ash-Shura",
+  "type": "Məkkə",
+  "ayah_count": 53,
+  "juz": 25,
+  "ayahs": [
+    {
+      "number": 1,
+      "arabic": "حم",
+      "transliteration": "Ha-Mim",
+      "translation_az": "Ha, Mim."
+    }
+  ]
+}
