@@ -1,0 +1,47 @@
+{
+  "id": 114,
+  "name_ar": "الناس",
+  "name_az": "Nas",
+  "name_trans": "An-Nas",
+  "type": "Məkkə",
+  "ayah_count": 6,
+  "juz": 30,
+  "ayahs": [
+    {
+      "number": 1,
+      "arabic": "قُلْ أَعُوذُ بِرَبِّ النَّاسِ",
+      "transliteration": "Qul a'udhu bi-rabbin-nas",
+      "translation_az": "De: Sığınıram insanların Rəbbinə!"
+    },
+    {
+      "number": 2,
+      "arabic": "مَلِكِ النَّاسِ",
+      "transliteration": "Malikin-nas",
+      "translation_az": "İnsanların Hökmdarına,"
+    },
+    {
+      "number": 3,
+      "arabic": "إِلَٰهِ النَّاسِ",
+      "transliteration": "Ilahin-nas",
+      "translation_az": "İnsanların İlahına!"
+    },
+    {
+      "number": 4,
+      "arabic": "مِن شَرِّ الْوَسْوَاسِ الْخَنَّاسِ",
+      "transliteration": "Min sharril-waswasil-khannas",
+      "translation_az": "Vəsvəsə verən və gizlənən Şeytanın şərindən,"
+    },
+    {
+      "number": 5,
+      "arabic": "الَّذِي يُوَسْوِسُ فِي صُدُورِ النَّاسِ",
+      "transliteration": "Alladhi yuwaswisu fi sudurin-nas",
+      "translation_az": "O Şeytan ki, insanların qəlblərinə vəsvəsə salır,"
+    },
+    {
+      "number": 6,
+      "arabic": "مِنَ الْجِنَّةِ وَالنَّاسِ",
+      "transliteration": "Minal-jinnati wan-nas",
+      "translation_az": "İstər cinlərdən olsun, istər insanlardan!"
+    }
+  ]
+}

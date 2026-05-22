@@ -1,0 +1,17 @@
+{
+  "id": 4,
+  "name_ar": "النساء",
+  "name_az": "Nisa",
+  "name_trans": "An-Nisa",
+  "type": "Mədinə",
+  "ayah_count": 176,
+  "juz": 4,
+  "ayahs": [
+    {
+      "number": 1,
+      "arabic": "يَا أَيُّهَا النَّاسُ اتَّقُوا رَبَّكُمُ...",
+      "transliteration": "Ya ayyuhan-nasut-taqu rabbakum...",
+      "translation_az": "Ey insanlar! Sizi tək bir nəfərdən yaradan Rəbbinizdən qorxun..."
+    }
+  ]
+}

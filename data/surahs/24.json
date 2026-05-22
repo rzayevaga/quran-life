@@ -1,0 +1,17 @@
+{
+  "id": 24,
+  "name_ar": "النور",
+  "name_az": "Nur",
+  "name_trans": "An-Nur",
+  "type": "Mədinə",
+  "ayah_count": 64,
+  "juz": 18,
+  "ayahs": [
+    {
+      "number": 1,
+      "arabic": "سُورَةٌ أَنزَلْنَاهَا وَفَرَضْنَاهَا...",
+      "transliteration": "Suratun anzalnaha wa faradnaha...",
+      "translation_az": "Bu, nazil etdiyimiz və vacib buyurduğumuz bir surədir..."
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "id": 43,
+  "name_ar": "الزخرف",
+  "name_az": "Zuxruf",
+  "name_trans": "Az-Zukhruf",
+  "type": "Məkkə",
+  "ayah_count": 89,
+  "juz": 25,
+  "ayahs": [
+    {
+      "number": 1,
+      "arabic": "حم",
+      "transliteration": "Ha-Mim",
+      "translation_az": "Ha, Mim."
+    }
+  ]
+}

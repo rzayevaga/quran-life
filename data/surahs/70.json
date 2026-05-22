@@ -1,0 +1,17 @@
+{
+  "id": 70,
+  "name_ar": "المعارج",
+  "name_az": "Məaric",
+  "name_trans": "Al-Ma'arij",
+  "type": "Məkkə",
+  "ayah_count": 44,
+  "juz": 29,
+  "ayahs": [
+    {
+      "number": 1,
+      "arabic": "سَأَلَ سَائِلٌ بِعَذَابٍ وَاقِعٍ",
+      "transliteration": "Sa'ala sa'ilun bi-'adhabin waqi'",
+      "translation_az": "Bir soruşan gələcək əzab barəsində soruşdu."
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "id": 71,
+  "name_ar": "نوح",
+  "name_az": "Nuh",
+  "name_trans": "Nuh",
+  "type": "Məkkə",
+  "ayah_count": 28,
+  "juz": 29,
+  "ayahs": [
+    {
+      "number": 1,
+      "arabic": "إِنَّا أَرْسَلْنَا نُوحًا إِلَىٰ قَوْمِهِ...",
+      "transliteration": "Inna arsalna Nuhan ila qawmih...",
+      "translation_az": "Həqiqətən, Biz Nuhu öz tayfasına peyğəmbər göndərdik..."
+    }
+  ]
+}

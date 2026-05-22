@@ -1,0 +1,17 @@
+{
+  "id": 89,
+  "name_ar": "الفجر",
+  "name_az": "Fəcr",
+  "name_trans": "Al-Fajr",
+  "type": "Məkkə",
+  "ayah_count": 30,
+  "juz": 30,
+  "ayahs": [
+    {
+      "number": 1,
+      "arabic": "وَالْفَجْرِ",
+      "transliteration": "Wal-fajr",
+      "translation_az": "And olsun dan yerinə!"
+    }
+  ]
+}

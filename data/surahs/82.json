@@ -1,0 +1,17 @@
+{
+  "id": 82,
+  "name_ar": "الإنفطار",
+  "name_az": "İnfitar",
+  "name_trans": "Al-Infitar",
+  "type": "Məkkə",
+  "ayah_count": 19,
+  "juz": 30,
+  "ayahs": [
+    {
+      "number": 1,
+      "arabic": "إِذَا السَّمَاءُ انفَطَرَتْ",
+      "transliteration": "Idhas-sama'u infatarat",
+      "translation_az": "Göy yarılacağı zaman,"
+    }
+  ]
+}

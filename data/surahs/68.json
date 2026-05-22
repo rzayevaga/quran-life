@@ -1,0 +1,17 @@
+{
+  "id": 68,
+  "name_ar": "القلم",
+  "name_az": "Qələm",
+  "name_trans": "Al-Qalam",
+  "type": "Məkkə",
+  "ayah_count": 52,
+  "juz": 29,
+  "ayahs": [
+    {
+      "number": 1,
+      "arabic": "ن ۚ وَالْقَلَمِ وَمَا يَسْطُرُونَ",
+      "transliteration": "Nun, wal-qalami wa ma yasturun",
+      "translation_az": "Nun! Qələmə və yazdıqlarına and olsun ki,"
+    }
+  ]
+}

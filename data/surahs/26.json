@@ -1,0 +1,17 @@
+{
+  "id": 26,
+  "name_ar": "الشعراء",
+  "name_az": "Şüəra",
+  "name_trans": "Ash-Shu'ara",
+  "type": "Məkkə",
+  "ayah_count": 227,
+  "juz": 19,
+  "ayahs": [
+    {
+      "number": 1,
+      "arabic": "طسم",
+      "transliteration": "Ta-Sin-Mim",
+      "translation_az": "Ta, Sin, Mim."
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "id": 46,
+  "name_ar": "الأحقاف",
+  "name_az": "Əhqaf",
+  "name_trans": "Al-Ahqaf",
+  "type": "Məkkə",
+  "ayah_count": 35,
+  "juz": 26,
+  "ayahs": [
+    {
+      "number": 1,
+      "arabic": "حم",
+      "transliteration": "Ha-Mim",
+      "translation_az": "Ha, Mim."
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "id": 7,
+  "name_ar": "الأعراف",
+  "name_az": "Əraf",
+  "name_trans": "Al-A'raf",
+  "type": "Məkkə",
+  "ayah_count": 206,
+  "juz": 8,
+  "ayahs": [
+    {
+      "number": 1,
+      "arabic": "المص",
+      "transliteration": "Alif-Lam-Mim-Sad",
+      "translation_az": "Əlif, Lam, Mim, Sad."
+    }
+  ]
+}

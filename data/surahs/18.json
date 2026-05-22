@@ -1,0 +1,17 @@
+{
+  "id": 18,
+  "name_ar": "الكهف",
+  "name_az": "Kəhf",
+  "name_trans": "Al-Kahf",
+  "type": "Məkkə",
+  "ayah_count": 110,
+  "juz": 15,
+  "ayahs": [
+    {
+      "number": 1,
+      "arabic": "الْحَمْدُ لِلَّهِ الَّذِي أَنزَلَ عَلَىٰ عَبْدِهِ الْكِتَابَ...",
+      "transliteration": "Alhamdu lillahil-ladhi anzala 'ala 'abdihil-Kitab...",
+      "translation_az": "Bəndəsinə Kitabı nazil edən Allaha həmd olsun..."
+    }
+  ]
+}

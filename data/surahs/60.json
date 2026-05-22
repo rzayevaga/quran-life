@@ -1,0 +1,17 @@
+{
+  "id": 60,
+  "name_ar": "الممتحنة",
+  "name_az": "Mumtəhinə",
+  "name_trans": "Al-Mumtahina",
+  "type": "Mədinə",
+  "ayah_count": 13,
+  "juz": 28,
+  "ayahs": [
+    {
+      "number": 1,
+      "arabic": "يَا أَيُّهَا الَّذِينَ آمَنُوا لَا تَتَّخِذُوا عَدُوِّي وَعَدُوَّكُمْ أَوْلِيَاءَ...",
+      "transliteration": "Ya ayyuhal-ladhina amanu la tattakhidhu...",
+      "translation_az": "Ey iman gətirənlər! Mənim düşmənimi də, öz düşməninizi də dost tutmayın..."
+    }
+  ]
+}

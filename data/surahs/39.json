@@ -1,0 +1,17 @@
+{
+  "id": 39,
+  "name_ar": "الزمر",
+  "name_az": "Zumər",
+  "name_trans": "Az-Zumar",
+  "type": "Məkkə",
+  "ayah_count": 75,
+  "juz": 23,
+  "ayahs": [
+    {
+      "number": 1,
+      "arabic": "تَنزِيلُ الْكِتَابِ مِنَ اللَّهِ الْعَزِيزِ الْحَكِيمِ",
+      "transliteration": "Tanzilul-Kitabi minallahil-'Azizil-Hakim",
+      "translation_az": "Kitabın nazil edilməsi Qüdrətli və Hikmətli Allahdandır."
+    }
+  ]
+}

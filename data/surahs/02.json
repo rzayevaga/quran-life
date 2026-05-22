@@ -1,0 +1,47 @@
+{
+  "id": 2,
+  "name_ar": "البقرة",
+  "name_az": "Bəqərə",
+  "name_trans": "Al-Baqara",
+  "type": "Mədinə",
+  "ayah_count": 286,
+  "juz": 1,
+  "ayahs": [
+    {
+      "number": 1,
+      "arabic": "الم",
+      "transliteration": "Alif-Lam-Mim",
+      "translation_az": "Əlif, Lam, Mim."
+    },
+    {
+      "number": 2,
+      "arabic": "ذَٰلِكَ الْكِتَابُ لَا رَيْبَ ۛ فِيهِ ۛ هُدًى لِّلْمُتَّقِينَ",
+      "transliteration": "Dhalikal-kitabu la rayba fih, hudal-lil-muttaqin",
+      "translation_az": "Bu, heç bir şübhə doğurmayan, müttəqilərə doğru yol göstərən Kitabdır."
+    },
+    {
+      "number": 3,
+      "arabic": "الَّذِينَ يُؤْمِنُونَ بِالْغَيْبِ وَيُقِيمُونَ الصَّلَاةَ وَمِمَّا رَزَقْنَاهُمْ يُنفِقُونَ",
+      "transliteration": "Alladhina yu'minuna bil-ghaybi wa yuqimunas-salata wa mimma razaqnahum yunfiqun",
+      "translation_az": "O kəslər ki, qeybə inanır, namaz qılır və onlara verdiyimiz ruzidən xərcləyirlər."
+    },
+    {
+      "number": 4,
+      "arabic": "وَالَّذِينَ يُؤْمِنُونَ بِمَا أُنزِلَ إِلَيْكَ وَمَا أُنزِلَ مِن قَبْلِكَ وَبِالْآخِرَةِ هُمْ يُوقِنُونَ",
+      "transliteration": "Walladhina yu'minuna bima unzila ilayka wa ma unzila min qablika wa bil-akhirati hum yuqinun",
+      "translation_az": "Onlar sənə nazil edilənə və səndən əvvəl nazil edilənlərə inanır və axirətə qəti surətdə əmindirlər."
+    },
+    {
+      "number": 5,
+      "arabic": "أُولَٰئِكَ عَلَىٰ هُدًى مِّن رَّبِّهِمْ ۖ وَأُولَٰئِكَ هُمُ الْمُفْلِحُونَ",
+      "transliteration": "Ula'ika 'ala hudam-mir-rabbihim wa ula'ika humul-muflihun",
+      "translation_az": "Onlar öz Rəbbindən doğru yol üzərindədirlər və onlar nicat tapanlardır."
+    },
+    {
+      "number": 255,
+      "arabic": "اللَّهُ لَا إِلَٰهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ...",
+      "transliteration": "Allahu la ilaha illa Huwal-Hayyul-Qayyum...",
+      "translation_az": "Allah! Ondan başqa ilah yoxdur. O, əbədi Diridir..."
+    }
+  ]
+}

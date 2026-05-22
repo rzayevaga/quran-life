@@ -1,0 +1,17 @@
+{
+  "id": 15,
+  "name_ar": "الحجر",
+  "name_az": "Hicr",
+  "name_trans": "Al-Hijr",
+  "type": "Məkkə",
+  "ayah_count": 99,
+  "juz": 14,
+  "ayahs": [
+    {
+      "number": 1,
+      "arabic": "الر ۚ تِلْكَ آيَاتُ الْكِتَابِ وَقُرْآنٍ مُّبِينٍ",
+      "transliteration": "Alif-Lam-Ra. Tilka ayatul-Kitabi wa Qur'anin Mubin",
+      "translation_az": "Əlif, Lam, Ra. Bunlar Kitabın və aydın Quranın ayələridir."
+    }
+  ]
+}

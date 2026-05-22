@@ -1,0 +1,17 @@
+{
+  "id": 31,
+  "name_ar": "لقمان",
+  "name_az": "Loğman",
+  "name_trans": "Luqman",
+  "type": "Məkkə",
+  "ayah_count": 34,
+  "juz": 21,
+  "ayahs": [
+    {
+      "number": 1,
+      "arabic": "الم",
+      "transliteration": "Alif-Lam-Mim",
+      "translation_az": "Əlif, Lam, Mim."
+    }
+  ]
+}

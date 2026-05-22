@@ -1,0 +1,17 @@
+{
+  "id": 47,
+  "name_ar": "محمد",
+  "name_az": "Məhəmməd",
+  "name_trans": "Muhammad",
+  "type": "Mədinə",
+  "ayah_count": 38,
+  "juz": 26,
+  "ayahs": [
+    {
+      "number": 1,
+      "arabic": "الَّذِينَ كَفَرُوا وَصَدُّوا عَن سَبِيلِ اللَّهِ...",
+      "transliteration": "Alladhina kafaru wa saddu 'an sabilillah...",
+      "translation_az": "Kafir olanların və insanları Allah yolundan döndərənlərin əməllərini Allah boşa çıxarar."
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "id": 92,
+  "name_ar": "الليل",
+  "name_az": "Leyl",
+  "name_trans": "Al-Layl",
+  "type": "Məkkə",
+  "ayah_count": 21,
+  "juz": 30,
+  "ayahs": [
+    {
+      "number": 1,
+      "arabic": "وَاللَّيْلِ إِذَا يَغْشَىٰ",
+      "transliteration": "Wal-layli idha yaghsha",
+      "translation_az": "And olsun qaranlığı ilə hər şeyi örtən gecəyə!"
+    }
+  ]
+}

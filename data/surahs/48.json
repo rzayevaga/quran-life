@@ -1,0 +1,17 @@
+{
+  "id": 48,
+  "name_ar": "الفتح",
+  "name_az": "Fəth",
+  "name_trans": "Al-Fath",
+  "type": "Mədinə",
+  "ayah_count": 29,
+  "juz": 26,
+  "ayahs": [
+    {
+      "number": 1,
+      "arabic": "إِنَّا فَتَحْنَا لَكَ فَتْحًا مُّبِينًا",
+      "transliteration": "Inna fatahna laka fathan mubina",
+      "translation_az": "Həqiqətən, Biz sənə aydın bir zəfər bəxş etdik!"
+    }
+  ]
+}

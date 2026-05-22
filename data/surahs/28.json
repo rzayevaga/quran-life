@@ -1,0 +1,17 @@
+{
+  "id": 28,
+  "name_ar": "القصص",
+  "name_az": "Qəsəs",
+  "name_trans": "Al-Qasas",
+  "type": "Məkkə",
+  "ayah_count": 88,
+  "juz": 20,
+  "ayahs": [
+    {
+      "number": 1,
+      "arabic": "طسم",
+      "transliteration": "Ta-Sin-Mim",
+      "translation_az": "Ta, Sin, Mim."
+    }
+  ]
+}

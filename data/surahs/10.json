@@ -1,0 +1,17 @@
+{
+  "id": 10,
+  "name_ar": "يونس",
+  "name_az": "Yunus",
+  "name_trans": "Yunus",
+  "type": "Məkkə",
+  "ayah_count": 109,
+  "juz": 11,
+  "ayahs": [
+    {
+      "number": 1,
+      "arabic": "الر ۚ تِلْكَ آيَاتُ الْكِتَابِ الْحَكِيمِ",
+      "transliteration": "Alif-Lam-Ra. Tilka ayatul-Kitabil-Hakim",
+      "translation_az": "Əlif, Lam, Ra. Bunlar hikmətli Kitabın ayələridir."
+    }
+  ]
+}

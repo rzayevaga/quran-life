@@ -1,0 +1,17 @@
+{
+  "id": 54,
+  "name_ar": "القمر",
+  "name_az": "Qəmər",
+  "name_trans": "Al-Qamar",
+  "type": "Məkkə",
+  "ayah_count": 55,
+  "juz": 27,
+  "ayahs": [
+    {
+      "number": 1,
+      "arabic": "اقْتَرَبَتِ السَّاعَةُ وَانشَقَّ الْقَمَرُ",
+      "transliteration": "Iqtarabatis-sa'atu wanshaqqal-qamar",
+      "translation_az": "Qiyamət yaxınlaşdı və Ay parçalandı!"
+    }
+  ]
+}

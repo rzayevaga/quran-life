@@ -1,0 +1,17 @@
+{
+  "id": 19,
+  "name_ar": "مريم",
+  "name_az": "Məryəm",
+  "name_trans": "Maryam",
+  "type": "Məkkə",
+  "ayah_count": 98,
+  "juz": 16,
+  "ayahs": [
+    {
+      "number": 1,
+      "arabic": "كهيعص",
+      "transliteration": "Kaf-Ha-Ya-'Ayn-Sad",
+      "translation_az": "Kaf, Ha, Ya, Ayn, Sad."
+    }
+  ]
+}

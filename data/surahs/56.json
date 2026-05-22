@@ -1,0 +1,17 @@
+{
+  "id": 56,
+  "name_ar": "الواقعة",
+  "name_az": "Vaqiə",
+  "name_trans": "Al-Waqi'a",
+  "type": "Məkkə",
+  "ayah_count": 96,
+  "juz": 27,
+  "ayahs": [
+    {
+      "number": 1,
+      "arabic": "إِذَا وَقَعَتِ الْوَاقِعَةُ",
+      "transliteration": "Idha waqa'atil-waqi'ah",
+      "translation_az": "Qiyamət qopacağı zaman,"
+    }
+  ]
+}
