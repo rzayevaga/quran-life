@@ -38,6 +38,7 @@
     let userMarker = null;
     let uploadedAzanUrl = null;
     let lastHourlyAyahStamp = null;
+    let searchDebounce;
 
     const AZAN_OPTIONS = [
         { file: 'https://www.aladhan.com/audio/azan/1/azan1.mp3', name: 'Məkkə (1)' },
@@ -436,7 +437,7 @@
     function createParticles() {
         const container = elements.particles;
         container.innerHTML = '';
-        for (let i = 0; i < 25; i++) {
+        for (let i = 0; i < 12; i++) {
             const particle = document.createElement('div');
             particle.className = 'particle';
             particle.style.left = Math.random() * 100 + '%';
@@ -919,7 +920,8 @@
         elements.searchInput.addEventListener('input', function() {
             const val = this.value;
             elements.searchClear.style.display = val ? 'flex' : 'none';
-            performSearch(val);
+            clearTimeout(searchDebounce);
+            searchDebounce = setTimeout(() => performSearch(val), 120);
         });
 
         elements.searchClear.addEventListener('click', function() {
