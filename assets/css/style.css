@@ -1229,10 +1229,11 @@ body.fullscreen-mode .app-content {
 ::-webkit-scrollbar-track { background: transparent; }
 ::-webkit-scrollbar-thumb { background: var(--border-light); border-radius: 4px; }
 ::-webkit-scrollbar-thumb:hover { background: var(--primary-dark); }
-.bottom-nav{position:sticky;bottom:0;z-index:20;padding-bottom:env(safe-area-inset-bottom);}
-.nav-3d-bar{background:linear-gradient(90deg,rgba(52,120,255,.35),rgba(78,170,255,.2));backdrop-filter:blur(14px);}
+.bottom-nav{position:fixed;left:0;right:0;bottom:0;z-index:30;padding:0 max(8px,env(safe-area-inset-right)) calc(env(safe-area-inset-bottom) + 6px) max(8px,env(safe-area-inset-left));display:flex;justify-content:center;pointer-events:none}
+.nav-3d-bar{width:min(520px,100%);margin:0 auto;background:linear-gradient(90deg,rgba(52,120,255,.35),rgba(78,170,255,.2));backdrop-filter:blur(14px);border-radius:18px;pointer-events:auto}
 .quick-scroll{position:fixed;right:12px;bottom:110px;display:flex;flex-direction:column;gap:8px;z-index:40}
 .quick-scroll button{border:none;border-radius:999px;width:42px;height:42px;background:linear-gradient(180deg,#4aa3ff,#1f6fd6);color:white;font-size:20px;box-shadow:0 8px 20px rgba(0,0,0,.25)}
 .notification-panel{position:fixed;left:10px;right:10px;bottom:175px;max-height:160px;overflow:auto;z-index:35;display:flex;flex-direction:column;gap:6px}
 .notif-item{background:rgba(10,20,40,.78);border:1px solid rgba(120,190,255,.35);padding:8px 10px;border-radius:10px;font-size:.75rem}
 #searchFilter{margin-top:.5rem;width:100%}
+.app-container{padding-bottom:7rem}
